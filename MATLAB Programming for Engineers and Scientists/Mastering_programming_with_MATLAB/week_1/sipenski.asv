@@ -1,0 +1,4 @@
+function sipenski(depth)
+c=[0;0];s=1;
+axis([c(1)-s/2,)
+end
