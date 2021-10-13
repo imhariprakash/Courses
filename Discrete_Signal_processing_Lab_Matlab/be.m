@@ -1,5 +1,3 @@
-%low pass
-
 clear;clc;
  a1=input("Enter the passband ripple: ");
 a2=input("Enter the stopband ripple: ");

@@ -1,4 +1,5 @@
 %%unit step
+clc;clear;
 % when n is negative y is zero else one
 n=input("Enter the interval: ");
 n=-n:n;
@@ -110,3 +111,4 @@ stem(y);
 title("Random wave");
 xlabel("Time");
 ylabel("Amplitude")
+clc;clear;
