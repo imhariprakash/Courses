@@ -1,0 +1,445 @@
+whoami
+whoami --help
+id
+logname
+echo hello
+echo $0
+hostname
+uname
+uname -a
+history  //AND UP ARROW 
+clear
+uptime
+cal
+cal --help
+cal -j
+date
+date +"%T"
+date +"%A %d %B %Y"
+man
+
+top --help //how to quit + 
+top  //q to quit
+top  // ^+C to quit
+htop
+htop --help
+htop // F1
+nano // ^ = ctrl  carret (circumflex accent)
+vim // :q and also escape then :q
+//CTRL + C expanation (sometimes quits the program, but not always)
+
+
+hello
+worm
+firework
+rain
+hanoi
+knight
+
+pwd
+whoami
+ls
+cd /
+pwd
+ls
+cd
+pwd
+cd /home
+ls
+cd /
+pwd
+cd /bin
+ls
+cd /
+ls
+cd /sys
+ls
+cd
+
+
+//RELATIVE PATHS
+
+pwd
+ls -a 
+cd ..
+pwd
+cd user
+pwd
+cd ../..
+pwd
+ls
+cd sys
+ls
+cd module
+cd drm
+ls
+cd parameters
+ls
+cd ../../..
+ls -a
+cd /sys/module
+cd /sys
+cd ./module
+cd 
+ls
+cd program.c
+
+ls
+file program.c
+nano f
+hello!   (CTRL + O then ENTER then CTRL + X)
+file f
+realpath f
+cd /
+ls
+file bin
+cd bin
+ls
+file cat
+file busybox
+realpath cat
+cd /sys/kernel
+ls
+file notes
+file fscaps
+which realpath
+which cat
+which which
+which file
+
+pwd
+touch file
+ls
+rm file
+ls
+touch my file
+ls
+rm my
+rm file
+touch my\ file
+ls
+ls -l
+rm my\ file
+touch 'my file'
+rm 'my file'
+rm '
+'  // OR CTRL + D (sometimes twice); or CTRL + Z (suspend); CTRL + C does not work
+(
+)  // OR CTRL + D (sometimes twice); or CTRL + Z (suspend) CTRL + C does not work
+"
+"
+{
+}
+touch my_file (with underscore)
+rm my_file
+
+nano file.txt
+here is a text file
+with a second line
+cat file.txt
+echo "hello world"
+echo "hello world" > file2.txt
+cat file2.txt
+cat file2.txt > file3.txt
+cat file3.txt
+cat > anotherfile.txt
+this is anotherfile
+with a new second also (CTRL + D twice!)
+cat anotherfile.txt
+cat /etc/services
+cat /etc/services > listOfServices.txt
+nano listOfServices.txt
+cat /etc/services | more
+cat /etc/services | less    (navigating: space bar, arrows or j,k, G, g)
+more anotherfile.txt
+less anotherfile.txt
+ls /usr/bin
+ls /usr/bin | less
+searching: Forward Search
+/ – search for a pattern which will take you to the next occurrence.
+n – for next match in forward
+N – for previous match in backward
+Backward Search
+? – search for a pattern which will take you to the previous occurrence.
+n – for next match in backward direction
+N – for previous match in forward direction
+less --help  (see N and M options)
+ls /usr/bin | less -NM
+
+mkdir folder
+ls
+ls -l
+cd folder
+touch f1
+touch f2
+mkdir subfolder
+ls
+cd subfolder
+pwd
+touch f3
+touch f4
+touch f5
+cd
+pwd
+rm folder   (error: is a directory)
+rm -r folder
+mkdir folder
+cd folder
+touch f1
+touch f2
+cd
+rm -ri folder
+y y y
+mkdir folder
+cd folder
+touch f1
+touch f2
+cd
+yes   (CTR + C)
+ls
+yes | rm -ri folder
+mkdir D1/D2/D3/D4/D5
+mkdir -p D1/D2/D3/D4/D5
+
+get out of vim:
+vim
+i
+insert some text
+ESCAPE + :q or sometimes :q!
+'
+'
+'  CTRL + D
+"
+"
+"  CTRL + D
+(
+)
+cat > file.txt
+this is a file   CTRL + D twice
+cat file.txt
+cat > file2.txt
+this is a file
+CTRL + D  (only once because empty line)
+cat file2.txt
+
+worst case : kill a program
+rain
+open second terminal
+htop  F9  send the SIGKILL signal
+
+touch f1
+mkdir d1
+mv f1 d1
+mv d1/f1 .  (or mv ./d1/f1 .)
+mkdir bigdir
+mv d1 bigdir
+cd bigdir/d1
+ls
+mv f1 ../..
+ls ../..
+mkdir ../../otherdir
+mv ../../f1 ../../otherdir
+pwd
+mv . ../..    ERROR
+cd
+mv bigdir smalldir   (RENAMING)
+mv otherdir/f1 f2    (MOVING AND RENAMING at the same time)
+mv smalldir/d1 otherdir/d2   (MOVING AND RENAMING at the same time)
+cat > f5
+hello
+CTRL + D
+cat > f6
+world
+CTRL + D
+cat f5
+cat f6
+mv f6 f5
+f5 is lost ! BE CAREFUL
+mv --help
+mv -i   or  mv -n  TO NOT OVERWRITE! FOR MORE SECURITY
+
+cat > f1
+hello
+CTRL + D
+cp f1 f2
+cat f1
+cat f2
+mkdir d1
+mv f1 d1
+cp d1 d2
+cp -r d1 d2
+cp -r d1 d2
+cp -r d1 d2
+cp --help
+cp -ri d1 d2
+
+locate file
+updatedb
+echo p*
+echo /usr/bin/a*
+echo /usr/bin/a??
+echo /usr/bin/???
+find
+find /
+find .
+find . -name "program.c"
+find . -name "prog*"
+find / -name "hello"
+find / -name "hello" 2>/dev/null
+find / -name "*joe*" 2>/dev/null
+find / -iname "*joe*" 2>/dev/null
+find / -ipath "*joe*" 2>/dev/null
+find / -ipath "*joe*" 2>/dev/null | less
+
+./program
+ls
+file program.c
+file program
+cp program.c otherprogram.c
+./otherprogram
+ls
+
+ls
+gcc program.c
+ls
+file a.out
+./a.out
+gcc program.c -o program
+ls
+file program
+./program
+gcc -std=c11 -Wall -fmax-errors=10 -Wextra program.c -o program
+
+free --help
+free
+free -b
+free -k
+free -m
+free -g
+top --help
+s
+(VSZ - or VIRT for other top versions) : virtual size (memory quantity used by the program)  1496 KB used for top
+htop
+(visual representation)
+(VIRT)
+F6 (sort by) then choose M_SIZE (Memory_SIZE)
+
+
+Code discussed in this video:
+
+#include <stdio.h>
+
+int main(){
+    char arr[1000000];
+    char c;
+    printf("please enter to exit");
+    scanf("%c",&c);
+    return 0;
+}
+
+Commands and changes discussed in this video:
+
+go to the second terminal
+htop
+program is using 1800
+quit htop
+go back to the first terminal
+
+change to int instead of char for arr
+second terminal 
+htop 
+program is using 4728
+quit htop
+go back to the first terminal
+
+change to double instead of char for arr
+second terminal 
+htop 
+program is using 8632
+quit htop
+go back to the first terminal
+
+Code discussed in this video:
+
+#include <stdio.h>
+
+int main(){
+    char familyName[50];
+    char firstName[50];
+    int age;
+    printf("What is your family name?\n");
+    scanf("%s", familyName);
+    printf("What is your first name?\n");
+    scanf("%s", firstName);
+    printf("What is your age?\n");
+    scanf("%d",&age);
+    printf("%s %s %d\n",familyName,firstName,age);
+    return 0;
+}
+
+Change discussed in this video:
+
+then without \n \n \n
+then with fflush(stdout) after each printf
+
+#include <stdio.h>
+
+int main(){
+    char familyName[50];
+    char firstName[50];
+    int age;
+    printf("What is your family name?\n");
+    scanf("%s", familyName);
+    printf("What is your first name?\n");
+    scanf("%s", firstName);
+    printf("What is your age?\n");
+    scanf("%d",&age);
+    printf("%s %s %d\n",familyName,firstName,age);
+    return 0;
+}
+Commands discussed in this video:
+
+cat > responses
+sharrock
+remi
+18
+
+cat responses | ./program
+
+./program < responses
+
+never use scanf with user interaction to get a string. It's too dangerous!
+use fgets instead, it is better:
+}
+
+Code discussed in this video:
+
+#include <stdio.h>
+
+int main(){
+    char familyName[50];
+    char firstName[50];
+    int age;
+    printf("What is your family name?\n");
+    scanf("%s", familyName);
+    printf("What is your first name?\n");
+    scanf("%s", firstName);
+    printf("What is your age?\n");
+    scanf("%d",&age);
+    printf("%s %s %d\n",familyName,firstName,age);
+    return 0;
+}
+Commands discussed in this video:
+
+sharrock remi 18
+
+never use scanf with user interaction to get a string. It's too dangerous!
+
+you can use fgets and you will get all spaces but also the new line at the end.
+
+On POSIX systems, you have getline. It is able to read an arbitrarily wide line.
+
+You can also repeatedly call fgetc ... 
+
+On Linux, you can read an editable line from the terminal (that is, stdin when it is a tty) using GNU readline.
+
