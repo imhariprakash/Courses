@@ -1,0 +1,66 @@
+Makefile code discussed in this video:
+
+program: program.o weatherstats.o
+	gcc -std=c11 -Wall -fmax-errors=10 -Wextra program.o weatherstats.o -o program
+	
+program.o: program.c weatherstats.h
+	gcc -std=c11 -Wall -fmax-errors=10 -Wextra -c program.c -o program.o
+	
+weatherstats.o: weatherstats.c
+	gcc -std=c11 -Wall -fmax-errors=10 -Wextra -c weatherstats.c -o weatherstats.o
+
+launch: program
+	./program
+_______________________________________________________________________________________________________________________
+
+program.c
+
+#include <stdio.h>
+#include "weatherstats.h"
+
+int main(void) {
+	double temperatures[7] = {6.9, 12.3, 9.0, 15.3, 9.8, 1.8, 0.3};
+	double average = averageTemp(temperatures, 7);
+	double max = maxTemp(temperatures, 7); 
+	printf("Average 7-day temp: %.2lf\n", average);
+	printf("Highest temp: %.2lf\n", max);
+	printf("Lowest temperature: %.2lf\n", minTemp(temperatures,7));
+	return 0;
+}
+Header file weatherstats.h:
+
+double averageTemp(double *temps, int numOfTemps);
+double maxTemp(double *temps, int numOfTemps);
+double minTemp(double *temps, int numOfTemps);
+Source file weatherstats.c
+
+double averageTemp(double *temps, int numOfTemps) {
+	double result = 0.0;
+	int i;
+	for (i=0; i<numOfTemps; i++) {
+		result = result + temps[i];
+	}
+	result = result / (double) numOfTemps;
+	return result;
+}
+
+double maxTemp(double *temps, int numOfTemps) {
+	double max = temps[0];
+	int i;
+	for (i=0; i<numOfTemps; i++) {
+		if (max < temps[i]) {
+			max = temps[i];
+		}
+	}
+	return max;
+}
+double minTemp(double *temps, int numOfTemps) {
+	double min = temps[0];
+	int i;
+	for (i=0; i<numOfTemps; i++) {
+		if (min > temps[i]) {
+			min = temps[i];
+		}
+	}
+	return min;
+}
