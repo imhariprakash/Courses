@@ -18,3 +18,13 @@ double maxTemp(double *temps, int numOfTemps) {
 	}
 	return max;
 }
+double minTemp(double *temps, int numOfTemps) {
+	double min = temps[0];
+	int i;
+	for (i=0; i<numOfTemps; i++) {
+		if (min > temps[i]) {
+			min = temps[i];
+		}
+	}
+	return min;
+}
