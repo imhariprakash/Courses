@@ -65,3 +65,11 @@ double minTemp(double *temps, int numOfTemps) {
 	}
 	return min;
 }
+
+
+Update library:
+
+ar rcs libweather.a weatherio.o weatherstats.o
+link program:
+
+gcc -std=c11 -Wall -fmax-errors=10 -Wextra -o program program.o -L. -lweather
