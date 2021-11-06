@@ -14,13 +14,14 @@ w2=2*ws/fs;
 w=0:0.01:pi;
 [H,omega]=freqz(b,a,w);
 mag=20*log(abs(H));
-subplot(4,2,1);
+figure(1)
+subplot(2,1,1);
 plot(omega/pi,mag);
 xlabel("Normalized frequency");
 ylabel("Magnitude");
-title("Low pass - Magnitude plot");
+title("Magnitude plot");
 ang=angle(H);
-subplot(4,2,2);
+subplot(2,1,2);
 plot(omega/pi,ang);
 xlabel("Normalized frequency");
 ylabel("Phase");
@@ -39,17 +40,18 @@ fs=2*(wp+ws);   % the value of fs muist be greater then only the w1,w2 is normal
 w1=2*wp/fs;     %w1,w2 must be between 0 and 1 for buttord function
 w2=2*ws/fs;
 [N,wn]=buttord(w1,w2,a1,a2); 
+figure(2)
 [b,a]=butter(N,wn,'high');
 w=0:0.01:pi;
 [H,omega]=freqz(b,a,w);
 mag=20*log(abs(H));
-subplot(4,2,3);
+subplot(2,1,1);
 plot(omega/pi,mag);
 xlabel("Normalized frequency");
 ylabel("Magnitude");
-title("High pass - Magnitude plot");
+title("Magnitude plot");
 ang=angle(H);
-subplot(4,2,4);
+subplot(2,1,2);
 plot(omega/pi,ang);
 xlabel("Normalized frequency");
 ylabel("Phase");
@@ -68,18 +70,19 @@ fs=2*(wp+ws);   % the value of fs muist be greater then only the w1,w2 is normal
 w1=2*wp/fs;     %w1,w2 must be between 0 and 1 for buttord function
 w2=2*ws/fs;
 [N,wn]=buttord(w1,w2,a1,a2); 
+figure(3)
 wn=[w1,w2];
 [b,a]=butter(N,wn,'bandpass');
 w=0:0.01:pi;
 [H,omega]=freqz(b,a,w);
 mag=20*log(abs(H));
-subplot(4,2,5);
+subplot(2,1,1);
 plot(omega/pi,mag);
 xlabel("Normalized frequency");
 ylabel("Magnitude");
-title("Band pass - Magnitude plot");
+title("Magnitude plot");
 ang=angle(H);
-subplot(4,2,6);
+subplot(2,1,2);
 plot(omega/pi,ang);
 xlabel("Normalized frequency");
 ylabel("Phase");
@@ -98,18 +101,19 @@ fs=2*(wp+ws);   % the value of fs muist be greater then only the w1,w2 is normal
 w1=2*wp/fs;     %w1,w2 must be between 0 and 1 for buttord function
 w2=2*ws/fs;
 [N,wn]=buttord(w1,w2,a1,a2); 
+figure(4)
 wn=[w1,w2];
 [b,a]=butter(N,wn,'stop');
 w=0:0.01:pi;
 [H,omega]=freqz(b,a,w);
 mag=20*log(abs(H));
-subplot(4,2,7);
+subplot(2,1,1);
 plot(omega/pi,mag);
 xlabel("Normalized frequency");
 ylabel("Magnitude");
-title("Band stop - Magnitude plot");
+title("Magnitude plot");
 ang=angle(H);
-subplot(4,2,8);
+subplot(2,1,2);
 plot(omega/pi,ang);
 xlabel("Normalized frequency");
 ylabel("Phase");
