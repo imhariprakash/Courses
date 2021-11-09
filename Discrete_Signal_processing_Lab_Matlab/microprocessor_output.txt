@@ -1,0 +1,118 @@
+ADD 
+
+GO C000
+	 Executing....
+                  Micro-50eb Serial Monitor, Ver-2.0
+           (c)1999, Vi Microsystems Pvt. Ltd., Chennai -96
+#SD 8000
+	 Substitute Data  8000:367A-1111
+	 Substitute Data  8001:0268-1111
+	 Substitute Data  8002:67FF-1111
+	 Substitute Data  8003:FFFE-1111
+	 Substitute Data  8004:0C18-1111
+	 Substitute Data  8005:7200-1111
+	 Substitute Data  8006:8000-1111
+	 Substitute Data  8007:0500-1111
+	 Substitute Data  8008:4292-
+	 Substitute Data  8009:7468-
+                  Micro-50eb Serial Monitor, Ver-2.0
+           (c)1999, Vi Microsystems Pvt. Ltd., Chennai -96
+#GO 800
+                  Micro-50eb Serial Monitor, Ver-2.0
+           (c)1999, Vi Microsystems Pvt. Ltd., Chennai -96
+#GO C000
+	 Executing....
+                  Micro-50eb Serial Monitor, Ver-2.0
+           (c)1999, Vi Microsystems Pvt. Ltd., Chennai -96
+#SD 8000
+	 Substitute Data  8000:1111-
+	 Substitute Data  8001:1111-
+	 Substitute Data  8002:1111-
+	 Substitute Data  8003:1111-
+	 Substitute Data  8004:1111-
+	 Substitute Data  8005:1111-
+	 Substitute Data  8006:1111-
+	 Substitute Data  8007:1111-
+	 Substitute Data  8008:2222-
+	 Substitute Data  8009:2222-
+	 Substitute Data  800A:2222-
+	 Substitute Data  800B:2222-
+
+
+
+SUB
+
+GO C000
+	 Executing....
+                  Micro-50eb Serial Monitor, Ver-2.0
+           (c)1999, Vi Microsystems Pvt. Ltd., Chennai -96
+#SD 8000
+	 Substitute Data  8000:1111-1111
+	 Substitute Data  8001:1111-1111
+	 Substitute Data  8002:1111-1111
+	 Substitute Data  8003:1111-1111
+	 Substitute Data  8004:1111-1111
+	 Substitute Data  8005:1111-1111
+	 Substitute Data  8006:1111-1111
+	 Substitute Data  8007:1111-1111
+	 Substitute Data  8008:0000-
+	 Substitute Data  8009:0000-
+                  Micro-50eb Serial Monitor, Ver-2.0
+           (c)1999, Vi Microsystems Pvt. Ltd., Chennai -96
+#GO C000
+	 Executing....
+                  Micro-50eb Serial Monitor, Ver-2.0
+           (c)1999, Vi Microsystems Pvt. Ltd., Chennai -96
+#SD 8000
+	 Substitute Data  8000:1111-
+	 Substitute Data  8001:1111-
+	 Substitute Data  8002:1111-
+	 Substitute Data  8003:1111-
+	 Substitute Data  8004:1111-
+	 Substitute Data  8005:1111-
+	 Substitute Data  8006:1111-
+	 Substitute Data  8007:1111-
+	 Substitute Data  8008:0000-
+	 Substitute Data  8009:0000-
+	 Substitute Data  800A:0000-
+	 Substitute Data  800B:0000-
+
+MUL
+
+#GO C000
+	 Executing....
+                  Micro-50eb Serial Monitor, Ver-2.0
+           (c)1999, Vi Microsystems Pvt. Ltd., Chennai -96
+#SD 8000
+	 Substitute Data  8000:000A-1111
+	 Substitute Data  8001:0003-2222
+	 Substitute Data  8002:001E-3333
+	 Substitute Data  8003:0000-4444
+	 Substitute Data  8004:0011-5555
+	 Substitute Data  8005:0011-6666
+	 Substitute Data  8006:0011-7777
+	 Substitute Data  8007:0011-8888
+	 Substitute Data  8008:0000-
+	 Substitute Data  8009:0000-
+	 Substitute Data  800A:0000-
+	 Substitute Data  800B:0000-
+                  Micro-50eb Serial Monitor, Ver-2.0
+           (c)1999, Vi Microsystems Pvt. Ltd., Chennai -96
+#GO C000
+	 Executing....
+                  Micro-50eb Serial Monitor, Ver-2.0
+           (c)1999, Vi Microsystems Pvt. Ltd., Chennai -96
+#SD 8000
+	 Substitute Data  8000:000A-
+	 Substitute Data  8001:0003-
+	 Substitute Data  8002:001E-
+	 Substitute Data  8003:0000-
+	 Substitute Data  8004:5555-
+	 Substitute Data  8005:6666-
+	 Substitute Data  8006:7777-
+	 Substitute Data  8007:8888-
+	 Substitute Data  8008:0000-
+	 Substitute Data  8009:0000-
+	 Substitute Data  800A:0000-
+	 Substitute Data  800B:0000-
+
