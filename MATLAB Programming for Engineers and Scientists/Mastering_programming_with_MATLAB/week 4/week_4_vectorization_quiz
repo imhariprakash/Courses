@@ -1,0 +1,89 @@
+Vectorization and Other Speed Ups
+Total points 4
+1.
+Question 1
+Which of the following statements is false?
+
+
+1 / 1 point
+
+A vector command is an operator or function that works on an entire vector or array.
+
+
+
+Vectorization is an automated process carried out by the MATLAB environment.
+
+
+
+The advantages of implicit looping includes better performance and simpler, cleaner code. 
+
+
+Correct - 
+2.
+Question 2
+An input argument to a MATLAB function
+
+
+1 / 1 point
+
+is passed by reference resulting in efficient code automatically.
+
+
+
+is always copied on the stack, so care must be taken not to pass large variables to functions.
+
+
+
+is passed by value from the user's point of view, but it may passed by reference in reality for efficiency unless the code inside the function changes its value.
+
+
+Correct
+3.
+Question 3
+What can we do to make sure our program is efficient when preallocation of a matrix is not possible?
+
+
+1 / 1 point
+
+Allocate a big array and hope it is large enough.
+
+
+
+Nothing.
+
+
+
+Keep in mind that MATLAB stores arrays in column major order and write our code so that the number of array reallocation and copying is minimized.
+
+
+Correct
+4.
+Question 4
+Which of the following is false?
+
+
+1 / 1 point
+
+The command parfor stands for parallel for.
+
+
+
+Any for loop can use parfor instead, if our computer has multiple cores.
+
+
+
+The command parfor can only be used if different iterations of the body of the loop are independent of each other. 
+
+
+
+MATLAB does not guarantee the order of different iterations of the body of a parfor loop.
+
+
+Correct
+
+
+
+1. Vectorization is an automated process carried out by the MATLAB environment.
+2. is passed by value from the user's point of view, but it may passed by reference in reality for efficiency unless the code inside the function changes its value.
+3. Keep in mind that MATLAB stores arrays in column major order and write our code so that the number of array reallocation and copying is minimized.
+4. Any for loop can use parfor instead, if our computer has multiple cores.
