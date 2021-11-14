@@ -1,0 +1,120 @@
+What is the name of the built-in class that supports pointer semantics?
+
+
+1 / 1 point
+
+h​andle class
+
+
+
+l​ink class
+
+
+
+o​bject class
+
+
+
+a​ccess class
+
+
+Correct
+2.
+Question 2
+A user can modify a property of an instance of a value class inside a method of the class by
+
+
+1 / 1 point
+
+deleting the object and recreating it again.
+
+
+
+ensuring the output argument of the method is set to be the object.
+
+
+
+defining a new property with a new value.
+
+
+
+There is no way to do that in a value class.
+
+
+Correct
+3.
+Question 3
+Handle classes should be used carefully because
+
+
+1 / 1 point
+
+a user can write methods that change the properties of an object within the class definition that will be visible outside of the method's scope.
+
+
+
+t​he properties inside the handle class are unknown.
+
+
+
+the methods inside the handle class are unknown.
+
+
+
+a variable can be easily modified from the workspace.
+
+
+Correct
+4.
+Question 4
+How can a class prevent direct access to its properties?
+
+
+1 / 1 point
+
+By setting the properties to empty matrices.
+
+
+
+By making them private.
+
+
+
+By setting methods to restricted access.
+
+
+
+It cannot. All properties must be public so methods can use them.
+
+
+Correct
+5.
+Question 5
+Which of the following is incorrect?
+
+
+1 / 1 point
+
+If a class declares its properties private,  the properties of its subclasses become private as well.
+
+
+
+A class can consist of public, protected and private properties
+
+
+
+Private properties can be viewed by creating a display function or defining a get-access method.
+
+
+
+A class can specify which other classes can access its properties.
+
+
+Correct
+
+
+1. h​andle class
+2. ensuring the output argument of the method is set to be the object.
+3. a user can write methods that change the properties of an object within the class definition that will be visible outside of the method's scope.
+4. By making them private.
+5. If a class declares its properties private,  the properties of its subclasses become private as well.

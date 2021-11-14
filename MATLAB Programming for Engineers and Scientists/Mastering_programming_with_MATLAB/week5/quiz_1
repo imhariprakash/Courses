@@ -1,0 +1,121 @@
+An object’s type ...
+
+
+1 / 1 point
+
+is defined by MATLAB.
+
+
+
+is called “method.”
+
+
+
+is called “classtype.”
+
+
+
+is defined using keyword “classdef."
+
+
+Correct
+2.
+Question 2
+In OOP, the following statements are true about an object except for
+
+
+1 / 1 point
+
+Objects can contain data and functions
+
+
+
+Objects are stored in a variables.
+
+
+
+An object is like a struct data type with fewer features.
+
+
+
+All of the above are correct.
+
+
+Correct
+3.
+Question 3
+A class can contain the following except for
+
+
+1 / 1 point
+
+constructor method
+
+
+
+s​ave-access method
+
+
+
+set-access method
+
+
+
+properties
+
+
+Correct
+4.
+Question 4
+A new sub-class that inherits from a super class (or a base class) cannot
+
+
+1 / 1 point
+
+modify the set-access methods inherited from the super class.
+
+
+
+call the super class constructor after the object has been used in the class.
+
+
+
+create new properties and methods.
+
+
+
+inherit all the properties from the super class.
+
+
+Correct
+5.
+Question 5
+If a user made a change in a class definition,
+
+
+1 / 1 point
+
+the change affects the current instances of that class.
+
+
+
+the change does not affect the current instances of its sub-classes.
+
+
+
+​the current instances of the class are only affected if the change is in a method.
+
+
+
+nothing will change in the current instances.
+
+
+Correct
+
+
+
+1. is defined using keyword “classdef."
+2. An object is like a struct data type with fewer features.
+3. s​ave-access method
+4. call the super class constructor after the object has been used in the class.
+5. the change affects the current instances of that class.
