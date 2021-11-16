@@ -1,0 +1,81 @@
+%Read the image
+
+img = imread('course1image.jpg');
+
+B=img(1:341,1:400);
+
+G=img(342:682,1:400);
+
+R=img(683:1023,1:400);
+
+b=double(B);
+
+g=double(G);
+
+r=double(R);
+
+b1=double(b(146:196,175:225));
+
+g1=double(g(146:196,175:225));
+
+r1=double(r(146:196,175:225));
+
+ref_img_region = double(g1);
+
+ref_img_region = double(ref_img_region);
+
+error = inf;
+
+for i = -10:10
+
+    for j = -10:10
+
+        shiftr1=circshift(r1,[i,j]);
+
+        temp1 = sum(sum((double(g1) - double(shiftr1)) .^ 2));
+
+        if temp1 < error
+
+            error = temp1;
+
+            shiftr_row = i;
+
+            shiftr_col = j;
+
+        end
+
+    end
+
+end 
+
+error = inf;
+
+for i = -10:10
+
+    for j = -10:10
+
+        shiftb2=circshift(b1,[i,j]);
+
+        temp2 = sum(sum((double(g1) - double(shiftb2)) .^ 2));
+
+        if temp2 < error
+
+            error = temp2;
+
+            shiftb_row = i;
+
+            shiftb_col = j;
+
+        end
+
+    end
+
+end
+
+shiftr=circshift(r,[shiftr_row,shiftr_col]);
+
+shiftb=circshift(b,[shiftb_row,shiftb_col]);
+
+ColorImg_aligned=cat(3,uint8(shiftr),uint8(g),uint8(shiftb));
+
+imshow(ColorImg_aligned)

@@ -1,0 +1,93 @@
+First of all, simply read the image. Now, divide the image into the 3 parts which consists of B, G, R parts of the actual image.
+Next step consists of converting the 3 new images from 'uin8' data type to 'double' data type by using function double rather than im2double.
+Now, select the Region Of Interest from the images obtained from step 2 (which is the center of the image) and again convert them to the 'double' data type and store them in the new variables.
+For the ref_img_region, convert the green channel image obtained at step 3 to 'double' data type and then store it in ref_img_region. After this, again assign the ref_img_region variable with its 'double' value.
+Now, assign a variable with value either inf or 10-digit positive integer.
+Start the 2 for loops from range -10 to 10 and inside them apply the circshift function to the red image value obtained in the step 3. NOTE: circshift function is not to be applied on the green image since it is the reference image.
+Calculate the SSD for the green image of step 3 and red image of step 6 using the formula done in MATLAB assignment of week 1 of this course.
+Compare the SSD with the variable of step 5 and if true, change the values of variables.
+Repeat the steps 5-8 for the blue image with the green image as reference.
+Now apply the circshift function on the red and blue images of step 2 with the help of variables obtained in the step 8.
+Now 'cat' the red image from step 10, green image from the step 2 and blue image from step 10 in the same order and store the result in the variable named 'ColorImg_aligned' and display the image.
+0 Upvotes  
+
+%Read the image
+
+img = imread('course1image.jpg');
+
+[r,c] = size(img);
+
+B = img(1:r/3,:);
+
+G = img((r/3)+1:(2*r/3),:);
+
+R = img((2*r/3)+1:r,:);
+
+ref_img_region = G;
+
+[rg,cg] = size(ref_img_region);
+
+ref_img_region = ref_img_region(ceil((rg-50)/2) :ceil((rg-50)/2) + 50,ceil((cg-50)/2) :ceil((cg-50)/2) + 50);
+
+ref_img_region = double(ref_img_region);
+
+nR = align(G,R);
+
+nB = align(G,B);
+
+ColorImg_aligned = cat(3,nR,G,nB);
+
+imshow(ColorImg_aligned);
+
+function aligned = align(green,red)
+
+    [red_row,red_col] = size(red);
+
+    [green_row,green_col] = size(green);
+
+    % checking SSD for cropped part of the images for faster calculation 
+
+    cropped_red = red(ceil((red_row-50)/2) : ceil((red_row-50)/2) + 50,ceil((red_col-50)/2) :ceil((red_col-50)/2) + 50);
+
+cropped_green = green(ceil((green_row-50)/2) : ceil((green_row-50)/2) + 50,ceil((green_col-50)/2) :ceil((green_col-50)/2) + 50);
+
+    MiN = 9999999999;
+
+    r_index = 0;
+
+    r_dim = 1;
+
+    % Modifications
+
+    for i = -10:10
+
+        for j = -10:10
+
+            ssd = SSD(cropped_green,circshift(cropped_red,[i,j])); %circshift(A,[i,j])
+
+            if ssd < MiN
+
+                MiN = ssd;
+
+                r_index = i;
+
+                r_dim = j;
+
+            end
+
+        end
+
+    end
+
+    aligned = circshift(red,[r_index,r_dim]);
+
+end       
+
+function ssd = SSD(a1,a2)
+
+    x = double(a1)-double(a2);
+
+    ssd = sum(x(:).^2);
+
+end
+

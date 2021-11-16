@@ -1,0 +1,192 @@
+                                           PIN HOLE CAMERA 
+
+[MUSIC] The counterpart for the human eye in computer vision is a camera. There are many variants of a camera which differ in the lens configurations and image sensors. The most basic camera model is a pinhole camera model.
+Play video starting at ::19 and follow transcript0:19
+In this model, conceptually, all light passes through a vanishingly small pinhole placed at the origin and illuminates an image plane beneath it. The images formed on the image plane follow the laws of projective geometry. When using a pinhole camera model, this geometric mapping from 3D to 2D is called as perspective projection. Clearly, we are losing the depth dimension of the scene in these projected 2D images. Human vision evolves significantly to identify several cues from the 2D images to perceive depth from a single image. Perspective projection makes parallel lines in the real world appear that they might be converging.
+Play video starting at :1:1 and follow transcript1:01
+The point of convergence is called its vanishing point.
+Play video starting at :1:5 and follow transcript1:05
+Vanishing points play an important role in deciphering the planar structure of the scene as well as the relative depth. To simplify camera projections, weak perspective find an orthographic camera models are explored. Before we venture into the concepts of projective geometry, let us look at the motivation for using homogeneous coordinate system.
+Play video starting at :1:28 and follow transcript1:28
+Homogeneous coordinate representation is very useful when dealing with common vector operations such as translation, rotation, scaling, and perspective projection.
+Play video starting at :1:39 and follow transcript1:39
+Let us concentrate the simple camera set up where we have the image plane at z equals to 1, and we have a ray that is intersecting the plane at x comma y. Now, any point on this ray will be mapped onto that particular point on the image plane. So all the points on the ray map to a single point on the plane, which means if we have an arbitrary 3D point X, Y, Z, it is going to be mapped to a location X by Z comma Y by Z comma 1. Now, this gives rise to an interesting correspondence where take an example of 1 comma 3. The homogeneous co-ordinates for 1 comma 3 are 1 comma 3 comma 1, 2 comma 6 comma 2, and so on and so forth.
+Play video starting at :2:27 and follow transcript2:27
+As all the points on the ray correspond to a single point on the image, you can create visual art which capitalizes on that concept.
+Play video starting at :2:39 and follow transcript2:39
+Look a this art piece where you have these connecting lines, which are actually in the 3D space.
+Play video starting at :2:47 and follow transcript2:47
+Whereas the geometric figures are painted on the wall. It's interesting what you can achieve by the usage of perspective projection. To understand perspective projection in depth, let us examine the pinhole camera model.
+Play video starting at :3:3 and follow transcript3:03
+Here, we have a pinhole, and we have the image plane. By definition, the distance between the pinhole and the image plane is the focal length. The light rays from the 3D objects in the real world pass through the pinhole and the image forms inverted. For the sake of mathematical convenience, we use virtual image plane, which is exactly placed at the focal length distance from the pinhole but in front of the pinhole camera. Let us simplify this set up to the pinhole and the image plane, and derive perspective projection equations. This is the camera co-ordinate system where Z is the optic axis, and image plane is located at the distance f. And now this is world coordinate system.
+Play video starting at :3:57 and follow transcript3:57
+Now, you may wonder why can't we make the camera coordinate system the world coordinate system?
+Play video starting at :4:3 and follow transcript4:03
+Well, you should have a reference frame if you would like to add more cameras to this setup.
+Play video starting at :4:10 and follow transcript4:10
+Anyways, let’s move on with this particular set-up where we have the camera coordinate system and world coordinate system. And if we go a little further, we have the image coordinate system. As you can see, we just have two dimensions to it, X and Y.
+Play video starting at :4:32 and follow transcript4:32
+The image coordinate system axes are continuous. Because the image is going to be digital, we need digital image coordinate system which is discrete.
+Play video starting at :4:44 and follow transcript4:44
+The values of U and V are going to be integers. This is actually forward projection, which is used in the field of computer graphics. Given a real-world point X, Y, Z, The point in the camera coordinate system is going to be Xc, Yc, and Zc. And the same point, when imaged on the image plane, it's going to be x comma y. And finally, when it is discretized, you're going to end up with the coordinates u comma v.
+Play video starting at :5:19 and follow transcript5:19
+Now, a challenging problem would be backward projection where you have a bunch of digital images through which you have to get the image plane, camera coordinates, as well as the world coordinates of the objects.
+Play video starting at :5:34 and follow transcript5:34
+Now, computer deals with this problem.
+Play video starting at :5:38 and follow transcript5:38
+For a start, we'll look at the forward projection of camera coordinates to image plane coordinates using this simple setup.
+Play video starting at :5:49 and follow transcript5:49
+In this simplified camera model, the world coordinate system as well as the camera coordinate system are the same.
+Play video starting at :5:58 and follow transcript5:58
+That is why I don't have a separate coordinate access for the camera.
+Play video starting at :6:4 and follow transcript6:04
+Anyways, let us consider this point X, Y, Z in the real world, which is imaged at the location x, y, f on the image plane. Now, let us pause here for a moment and validate our claim.
+Play video starting at :6:22 and follow transcript6:22
+The distance between the camera origin and the image plane is focal length f, which is in the z-axis direction. So that's why we have the z-coordinate as f, along with the small x and y coordinates. This graphic has a lot going on in it. Let me break it down to you step by step.
+Play video starting at :6:44 and follow transcript6:44
+The homogeneous coordinates of x, y, z are x by z comma y by z comma 1. Similarly, for x, y, f you have x by f comma y by f comma 1.
+Play video starting at :6:58 and follow transcript6:58
+As both these coordinates are on the same ray, you can have these equations x by f equals to x by z. Another way to prove is by using similar triangles rule.
+Play video starting at :7:12 and follow transcript7:12
+The highlighted right angle triangle is similar to this bigger right angle triangle, okay? So x by f equals to capital X by Z.
+Play video starting at :7:24 and follow transcript7:24
+Similarly, we can prove for Y by f as well. Now that you're convinced that these equations are correct, we're going to rewrite them to have perspective projection equations.
+Play video starting at :7:43 and follow transcript7:43
+The X and Y coordinates are scaled by the depth Z.
+Play video starting at :7:51 and follow transcript7:51
+Here is an example that shows perspective projection in action.
+Play video starting at :7:56 and follow transcript7:56
+Those two highlighted regions are of the same length in the physical world, but in the image, clearly those distances are scaled based on the depth dimension.
+Play video starting at :8:11 and follow transcript8:11
+Orthographic projection is an assumption few computer vision applications make, but it's way too unrealistic. You'll have to have an image plane that is of the same size as the object to be able to get the orthographic projection. The next model we're paying attention to is weak perspective projection. If you ever tried to take a picture by zooming your camera way too far, you would have witnessed the weak perspective projection. In weak perspective projection the distance of the objects from the camera
+Play video starting at :8:47 and follow transcript8:47
+is very large when compared to the distance between them.
+Play video starting at :8:52 and follow transcript8:52
+So we can rewrite the perspective projection equations this way.
+Play video starting at :8:58 and follow transcript8:58
+And that's going to preserve the relative depth ratio
+
+                                            DIGITAL CAMERAS
+
+Re-inventing the eye is the area where we've had the most success in the field of computer vision. Over the past few decades, we have created sensors and image processors that match and in some ways exceed the capabilities of the human eyes, with larger more optically perfect lenses and semiconductor pixels fabricated at manometer scales the precision and sensitivity of modern cameras is nothing short of incredible. After starting from one or more light sources, reflecting of one or more surfaces in the world and passing through the camera's optics light finally reaches the imaging sensor. How are the photos from the light sources arriving in the sensor converted into the digital RGB values that we observe in the digital image? We need to develop a simple model that accounts for the most important effects such as exposure, nonlinear mappings, sampling and aliasing and noise associated with the cameras. Once the light from a scene reaches the camera it must still pass through the lens before reaching the sensor. For many applications, it suffices to treat the lens as an ideal pinhole that simply projects all rays through a common center of projection. However, if we want to deal with the issues such as focus exposure, vignetting or aberration. We must develop a more sophisticated model which is where the study of optics comes in. Light falling on an imaging sensor is usually picked up by an active sensing area integrated for the duration of the exposure. This is usually expressed as the shutter speed. The two main kinds of sensors that are used in still and video cameras today are charged coupled devices or CCD and complementary metal oxide on silicon or CMOS. In CCD photons are accumulated in each active well during the exposure time. The main factors affecting the performance of digital image sensors are shutter speed, sampling pitch, chip size, analog gain, sensor noise, and the quality of analog-to-digital converter. Let us look at these factors in more detail. Here is a digital imaging pipeline where the object is illuminated and is captured using a digital camera and then there is some kind of post-processing, but our main focus will be on the digital camera. The key components of a digital camera are optics and the imaging sensor as well as the image processors. Moving away from the simple pinhole camera model, digital cameras are equipped with sophisticated lens optics. Hence, it is important for us to take them into account in understanding digital images. Here is a visual that shows chromatic aberration caused by a lens which needs to be accounted for. Vignetting is another effect caused by the lens optics which needs to be compensated for. Light after passing through the optics hits the imaging sensor. Photoelectric effect is the principle behind digital imaging. Intensity at an image pixel is dependent on several factors one of the main factors being exposure time or shutter speed, it is also dependent on the quantum efficiency of the photo-sensor. As you can see smaller sensor pixels saturate faster than the larger sensor pixels. Hence, we are going to list the pixel size chip size as well as the sampling pitch as the factors that affect the intensity and density pixel. Finally, noise as the integral part of any imaging process. Shot noise and dark noise are few key factors that affect the intensity at an image pixel.
+Play video starting at :4:32 and follow transcript4:32
+Let us look at the digital camera pipeline. We have discussed optics, so light travels through the optics and it is controlled by the aperture, the size of the aperture decides how much light enters and the shutter decides the exposure time, the time for which the image sensor is exposed to the light. Finally, light reaches the sensor. This is just the tip of the iceberg in the digital camera pipeline. There is a huge lineup of processes that have to take place before you get to save. The key processes we are going to explore are gain, demosaicing, denoising, white balance, gamma correction, and compression. All these processes are going to be covered in much more detail later on. But just think about the progress that has been made in digital imaging. Just with a click of a button, all these processes happen and finally, you see the image saved on your camera.
+
+
+Week One: Overview
+The objective of Computer Vision is to make computers see and interpret the world like humans or possibly even better than. However, recreating human vision isn’t just a hard problem, it’s a set of problems- each which relies on the other.
+
+Computer Vision is concerned with the automatic extraction, analysis, and understanding of useful information from a single image or sequence of images.  It involves the development of a theoretical and algorithmic basis to achieve automatic visual understanding.
+
+Dual goal of Computer Vision: From the biological science point of view, Computer Vision aims to come up with computational models of the human visual system.  From the engineering point of view, Computer Vision aims to build autonomous systems to perform some tasks the human visual system can perform and it even surpasses human capabilities in many cases.
+
+Computer Vision systems contain these basic elements:
+
+1.      A power source
+
+2.      At least one camera
+
+3.      A processor
+
+4.      Control and communication cables or some kind of wireless interconnection mechanism
+
+5.      Configurable software
+
+6.      A display in order to monitor the system
+
+Some of the applications of Computer Vision include: facial recognition in smartphone cameras, analysis of surroundings in self-driving cars, and factory robots that navigate around coworkers.
+
+The field of Computer Vision heavily incorporates concepts from the areas of digital processing, neuroscience, computer graphics, solid-state physics, photogrammetry, and artificial intelligence.
+
+The field of Digital Image Processing predominantly deals with image-to-image transformations.  Typical image processing operations include image compression, image restoration, and image enhancement.
+
+Computer Graphics studies the techniques that produce image data from 3D models, whereas computer vision works to produce 3D models from image data.
+
+Machine Vision is the process of applying a range of technologies and methods to provide imaging-based automatic inspection, process control, and robot guidance in industrial applications.
+
+Photogrammetry is the science of making measurements from photographs, especially for recovering the exact positions of surface points captured in the image.
+
+The field of Computer Vision emerged in the 1950s, with research along three distinct lines: replicating the eye, replicating the visual cortex, and replicating the rest of the brain.
+
+Optical Character Recognition (OCR) makes typed, handwritten, or printed text intelligible for computers.
+
+Convolutional Neural Networks (CNNs) have been applied to identify faces, objects, and traffic signs, as well as powering vision in robots and self driving cars.
+
+Computer Vision is outperforming humans on certain restricted real world tasks such as circuit board inspections and facial recognition under controlled conditions.
+
+Week Two: Color, Light, & Image Formation
+A point light source originates at a single location in a 3 dimensional space, like a small light bulb, or potentially at infinity like the sun.
+
+The key factors that affect the “color” of a pixel are:
+
+1.      The light sources
+
+2.      Object surface properties
+
+3.      Emittance and reflective spectrum
+
+4.      Relative position and orientation
+
+The most basic camera model is a pinhole camera model.  In this model, conceptually, all light passes through a vanishingly small pinhole placed at the origin and illuminates an image plan beneath it. When using a pinhole camera model, this geometric mapping from 3D to 2D is called a perspective projection.
+
+Perspective projection makes parallel lines in the real world appear that they might be converging.  The point of convergence is called a vanishing point.
+
+The two main kinds of sensors used in still and video cameras today are charge-coupled devices (CCD) and complementary metal oxide on silicon (CMOS).
+
+The main factors affecting the performance of a digital image sensor are:
+
+1.      Shutter speed
+
+2.      Sampling pitch
+
+3.      Chip size
+
+4.      Analog gain
+
+5.      Sensor noise
+
+6.      The quality of the analog-to-digital converter
+
+The retina of the human eye has two types of photo-receptors: Rods and Cones. Rods are sensitive to light intensity, while cones are color sensitive.
+
+When incoming light hits an imaging sensor, light from different parts of the spectrum is integrated into the discrete red, green, and blue (RGB) color values that we see in a digital image.
+
+Week Three: Low, Mid, & High-Level Vision
+Three levels in David Marr’s paradigm:
+
+1.      Computational theory – describes what the device is supposed to do
+
+2.      Representation and algorithm – addresses precisely how the computation may be carried out
+
+3.      Implementation – includes physical realization of the algorithm, programs, and hardware
+
+A bottom-up reasoning approach that mimics what is found in the brain is most promising for research in Computer Vision. A computer can apply a series of transformations to an image and discover the edges and the objects they imply. The process amounts to the computer trying to match the shapes it sees with shapes it has been trained to recognize.
+
+The paradigm of 3R’s requires us to study the interaction among the processes of recognition, reconstruction, and reorganization and work towards the goal of a unified framework for computer vision.
+
+Computer Vision concepts can be broadly categorized as low, mid and high-level vision techniques:
+
+Low-level vision constitutes of image processing techniques, feature detection, image matching, and early segmentation.
+    o  Research on low-level vision is concentrated in discovering what information about the world can be initially extracted from the image. The low-level image processing techniques involve extracting fundamental image primitives like edges and corners and performing filtering, and morphology etc.
+
+Mid-level vision is where things start to come together attributing meaning.
+    o  The two major aspects in mid-level vision are inferring the scene geometry and inferring the camera and object motion (answering the question of “how does the object move?”). Some fundamental concepts of geometric vision include: multi-view geometry, stereo, and structure from motion (SfM), all of which infer 3D scene information from 2D images.
+
+High-level vision tasks are the algorithms which make sense of the visual content and make computer vision live up to the capabilities of human vision.
+    o  The objective of High-level vision is to infer the semantics, for example, object recognition and scene understanding. A challenging question for many decades has been “how do you recognize 3D objects from different view directions?” There have been two approaches for recognition: model-based recognition and learning-based recognition.
+
+Image segmentation is the process of identifying which areas in the image belong to the object.
+
+Week Four: Mathematics for Computer Vision
+Computer Vision is used to solve vital problems in a vast array of fields including medical imaging, surveillance, face and object detection and identification. The techniques that linear algebra provides for solving complicated mathematical models are essential to solve problems in each of these fields.
+
+Singular value decomposition (SVD) is the most common and useful linear algebra technique in Computer Vision because it helps to achieve the goal of Computer Vision, which is to explain the three dimensional world through two dimensional pictures.
+Calculus has two major branches: 
+
+Differential calculus - concerning instantaneous rates of change and slopes of curves
+Integral calculus - concerned with the theory and applications of integrals. It deals with total size or value, such as lengths, areas, and volumes.
+Computer Vision uses derivatives, integrals and partial differential equations extensively in several low and mid-level vision tasks.
+Artificial intelligence deals with making decisions in the real world, often in the presence of great uncertainty. Therefore, we can conjecture that the visual world is uncertain and should be described through the language of probabilities.
+
+Computer Vision benefits from Computer Science algorithms and numerical methods for mathematical optimizations.
+
