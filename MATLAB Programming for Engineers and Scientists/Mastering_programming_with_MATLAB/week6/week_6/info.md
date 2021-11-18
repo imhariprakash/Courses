@@ -1,4 +1,4 @@
-# Got from the website [Berkeley Earth](http://berkeleyearth.lbl.gov/auto/Global/Land_and_Ocean_complete.txt)
+#  source : From the website [Berkeley Earth](http://berkeleyearth.lbl.gov/auto/Global/Land_and_Ocean_complete.txt)
 
 % This file contains a detailed summary of the changes in Earth's global average
 % surface temperature estimated by combining the Berkeley Earth land-surface
