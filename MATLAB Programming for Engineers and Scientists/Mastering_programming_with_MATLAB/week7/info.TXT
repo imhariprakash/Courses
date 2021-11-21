@@ -1,0 +1,48 @@
+The goal of the final project is to synthesize a number of new concepts learned in this course and apply them in practice solving a real-world problem. Specifically, you will need to use Object Oriented Programming techniques and create an application with a modern graphical user interface to process and visualize COVID-19 related data.
+
+Review criteria
+less 
+The problem specification outlines a list of requirements about the functionality and the required approach. Grading is based on how many of the requirements are satisfied by the given solution. 
+
+Step-By-Step Assignment Instructions
+less 
+The goal of the final project is to create a MATLAB program that processes and visualizes COVID-19 pandemic data. The data (obtained from the Coronavirus Resource Center at the Johns Hopkins University) is available from the .mat file attached below. Once you load it, you will get a single variable called covid_data that is a large cell array. (Make sure your app loads the file!) It contains the global case and death counts by country and state and by date. Specifically, the first row of the cell array specifies what each column contains: Country and State followed by a number of dates starting from "1/22/20," that is, January 22, 2020. Do not hardcode the end date, since we anticipate updating the data regularly as time progresses. Each data cell for a given country and date contains a 2-element vector of doubles: the first element is the cumulative case count, while the second is the cumulative number of deaths.
+
+Your program must convert this data into a set of objects: one object per country and state. States should be contained by their countries. Countries could be stored in a vector of country objects in the app itself. Another way is to create an instance of the same class you use for countries and states, call it global, and have it store all the countries. The app would then contain the single global object as a property. This option would create a 3-level hierarchy: the global object stores data for the entire world and a vector of country objects, while the objects of countries that have states in the database would store their corresponding states. Again, you can use the same class definition for all three kinds of objects because they store essentially the same kind of data.
+
+The graphical user interface of your program must contain a number of widgets:
+
+A single area where you plot the data. The title of the plot should be informative displaying what country/state is being shown and also indicating the relevant options that were used to generate the plot. (See below.) The x labels should be dates. You need to implement different y scales for the two plots on the left and right as shown below.
+
+A list box showing all available countries. The first element should be called "Global" and selecting it should plot the global data. This is not contained in the database, so you will need to compute it.
+
+Another list box showing all states of the currently selected country. The first option should be "All." As most countries do not have states, regions, territories or provinces associated with them in the database, this will be the only option for them. Selecting it should show the data for the country itself. There are two kinds of countries with states in the database. Australia, Canada, China and the United States have all their states, provinces, etc. listed. Other countries such as the UK, the Netherlands or Denmark are not subdivided, but they have a number of overseas territories listed. For example, the UK is not broken down to England, Scotland, Wales and Northern Ireland, but it has additional territories, such as the Falkland Islands, listed.
+
+A widget to select the number of days used for computing a moving average of the data (from 1 to 15). Make sure that the selection is an integer. Selecting 1 means no averaging. Note that the moving average should use the past N-1 days and the current day, where N is the number of days selected.
+
+A widget to select what to plot: cases, deaths, or both.
+
+A widget to select whether to plot cumulative data or daily numbers. The database contains cumulative data. You must compute the daily data taking care of potential data errors. Specifically, make sure that you do not plot negative values ever.
+
+Anytime any of the GUI widgets change, the plot and its title should be immediately updated.
+
+Below is a screen shot of an example implementation. Watch the provided video for a brief demo of the "official" solution.
+
+
+Note that you have flexibility in how you solve the problem. Just make sure to satisfy the requirements above. You can  add extra features if you like. For example, having a search box, so that the user does not have to scroll and find countries manually in the listbox, would be a nice feature. Changing the range of dates to plot would be useful too.
+
+Also note that the course has not covered a number of things you need to use for the project. For example, we never taught you how  to have the x labels show up as nicely formatted date values. Why are we doing this to you? Simply because once you try to use your MATLAB skills in real life, you will run into many cases where you have to figure out how to solve a problem with built-in MATLAB functions and techniques you have not seen before. There is no way we can cover everything that is MATLAB in 2 or 3 courses. So, it is an important skill to be able to find new techniques, tools, classes and functions that you can use when running into a problem. Use the MATLAB documentation and Google. 
+
+For example, if you Google "matlab plot date labels," the first hit, at least for me, is this page. It contains everything you need to have to set up the date labels as shown above. The page does not show an exactly matching example, so you still have work to do. Welcome to programming. 
+
+covid_data
+MAT File
+Download file
+Note: the mat file has been updated to include data up till January 30th, 2021.
+
+How to submit:
+
+Submit all MATLAB files necessary to run your program in a single ZIP file.
+
+Typically, you would have three files: the app file (.mlapp), the m file with the class definition of your country/state objects and the .mat file with the data. The latter is useful to make sure that graders test your program with the data you tested it with since we plan to update the data file regularly as time progress. Before you submit, copy all these files into a blank folder and try your app to make sure you are not missing any files.
+
