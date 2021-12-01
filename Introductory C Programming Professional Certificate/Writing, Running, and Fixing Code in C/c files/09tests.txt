@@ -1,0 +1,24 @@
+aaaaa bbbbb
+aaaaa bbbbc
+aaaaa bbbcc
+aaaaa bbccc
+aaaaa bcccc
+aaaaa ccccc
+aaaab bbbbb
+aaaab bbbbc
+aaaab bbbcc
+aaaab bbccc
+aaaab bcccc
+aaaab ccccc
+aaabb bbccc
+aaabc bbccc
+aaaa bbbbb
+aaaaa bbbb
+aaa bbb ccc
+a
+13333 ? ???
+aaaaa bbbbbb
+üüüüö uuuua
+aaaaA aaaaa
+aabcd aabbb
+abcde fghij
