@@ -1,0 +1,12 @@
+cd learn2prog
+cd 0_apple
+emacs README
+ctrl+x ctrl+f ->fruit.txt
+apple
+ctrl+x ctrl+s
+git add fruit.txt
+git commit -a -m "assignment 1"
+git push
+grade
+git pull
+

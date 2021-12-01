@@ -1,0 +1,10 @@
+emacs README
+ctrl+x ctrl+f  - > open file -> type hello.txt in buffer
+ctrl+x ctrl+s  - > save file
+git add hello.txt
+git commit -m "First assignment"
+git push
+fg
+grade
+git pull
+
