@@ -1,0 +1,13 @@
+Grading at Sat 04 Dec 2021 08:18:32 AM UTC
+Attempting to compile rotate.c
+Running testcase 1
+Your file matched the expected output
+testcase1 passed
+Running testcase 1
+Your file matched the expected output
+testcase1 passed
+Running testcase 1
+Your file matched the expected output
+testcase1 passed
+
+Overall Grade: A
