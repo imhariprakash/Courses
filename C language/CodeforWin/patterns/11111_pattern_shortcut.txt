@@ -1,0 +1,8 @@
+Pattern Diagonals 
+1ST Diagonal i == j
+2nd Diagonal  i + j == n-1
+
+Right Triangle  i >= j
+Inverted Ryt Triangle i <=j
+Mirror Ryt Triangle i + j >= n-1
+Inverted Ryt Traingle i + j <= n-1
