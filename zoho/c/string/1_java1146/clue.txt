@@ -1,0 +1,36 @@
+Java1146 - Javb1246
+BusRoute112 - BusRovte123
+aBuzZ9900 - aBuzC9012
+
+a - by b , 1 by 2
+u by v , 1 by 2
+Z by C - since A,B are already there , 9 to 0 , 0 to 1, 0 to 2
+
+
+approach - num[10],alpha[26] - when full(all 1) - 01234567890123456789 - first round : all become one - remaining 0123456789 is ignored
+
+caps - remains caps and small remains small
+
+step 1:  digit - if num[that number] = num[0] is '\0' - perfect just print make num[0] as 1 - no more 0 is allowed to print here after
+step 2:  if num[number] is not \0 just increment by 1 - check if its already printed - no -print , yes - increment by 1 repeatedly (checking  for   
+         full - when full just ignored)
+         
+alphabet 
+
+step 1: same as digit increment by 1 if already printed - need to restore capital/small
+
+if 9 can't increment - just make it 0 (cycle)
+if 'z' or 'Z' makee it 'a' , 'A' respectively
+
+
+atoi is for strings - giving char address take string - not intended result
+
+'0' -> 48  so (int)ch - 48 gives digit (initially)
+then increment and decrement make it 0 if 9 using the temp(-48 done number)
+
+tolower(character)-98 gives index from 0 to 25 for character to index in array
+
+'z'-25 or 'Z'-25 will give 'a' and 'A'  - > cycling
+
+thats solved - tempc is used just to avoid many tolower inside indexing alpha - array name
+
