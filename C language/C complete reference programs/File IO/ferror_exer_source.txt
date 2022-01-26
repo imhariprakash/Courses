@@ -1,0 +1,11 @@
+hello
+hi
+bye
+dragon
+dracula
+eye
+nose
+tears
+transform
+mouse
+keyboard
