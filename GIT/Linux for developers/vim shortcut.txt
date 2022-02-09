@@ -1,0 +1,62 @@
+i, I
+change to insert mode
+
+h, j, k, l
+move left, down, up, right
+
+w, b, e, ge
+move word at a time
+
+[n][action/movement]
+do n times, e.g. 3w
+
+x, X
+remove a character
+
+a, A
+append
+
+f[char]
+move to next given char in line
+
+F[char]
+move to previous char in line
+
+; and ,
+repeat last f or F
+
+/yourtext and then: n, N
+Search text
+
+d[movement]
+delete by giving movement
+
+r[char]
+replaces character below cursor
+
+0, $
+move to start/end of line
+
+o, O
+add new line
+
+%
+Goto corresponding parentheses
+
+ci[movement]
+change inside of given movement
+
+D
+delete to end of line
+
+S
+clear current line; to insert mode
+
+gg / G
+move to start / end of buffer
+
+yy
+copy current line
+
+p
+Paste copied text after cursor.
