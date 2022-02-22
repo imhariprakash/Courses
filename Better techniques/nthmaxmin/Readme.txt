@@ -1,3 +1,5 @@
+(random idea struck - looks like working with little optimization of the algorithm)
+
 best case - when 1st min is the one to be found - linear time
 worst case - find n th min - where n is the number of elements
 
