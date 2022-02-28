@@ -1,0 +1,89 @@
+Multiple columns : 
+
+
+SELECT prod_name, prod_id, prod_price 
+FROM Products;
+
+
+All columns : 
+
+
+SELECT * FROM
+FROM Products;
+
+
+Distinct values alone: 
+
+
+SELECT DISTINCT vend_id, prod_price FROM Products
+
+
+First five rows: 
+
+
+SELECT prod_name FROM Prodcts LIMIT 5;
+
+
+Select 5 to 9 rows: 
+
+SELECT prod_name FROM Products LIMIT 5 OFFSET 5  -- start from 5  selects 5,6,7,8,9
+SELECT prod_name FROM Products LIMIT 5,10;     --offset,limit(start from 5 - 10 elements
+
+
+Sorting: 
+
+
+SELECT prod_name FROM Products
+ORDER BY prod_name;
+
+"sort by retrieved data, non retrieved data, sort using multiple columns - when collision occurs - sort using the second and upcoming columns"
+
+SELECT prod_id, prod_price, prod_name
+FROM Products
+ORDER BY 2,3;      --2 - prod_price, 3 - prod_name (retrieved data)
+
+
+SELECT prod_id, prod_price, prod_name
+FROM Products
+ORDER BY prod_price, prod_name;
+
+
+Descending sort, Ascending order
+
+ORDER BY prod_price DESC, prod_name;
+
+DESC / DESCENDING
+ASC / ASCENDING
+
+
+
+Filtering
+
+WHERE prod_price = 3.49;
+
+WHERE prod_price BETWEEN 5 AND 10
+
+WHERE prod_price ISNULL;
+
+Logical operator - multiple where
+
+AND
+OR
+NOT
+
+IN operator
+
+WHERE vend_id IN ('DLL01', 'BRS01');
+
+
+WildCarding search using patterns
+
+% - match any number of occurences - 0 / 1 / more
+_ - match exactly one occurence
+[] - not valid in all sql versions - match only characters in square 
+
+
+
+Concatenating - || ( w3 schools)
+
+Column aliasing - AS vendor_title  -- (say)
