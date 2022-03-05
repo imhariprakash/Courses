@@ -64,3 +64,12 @@ class BorderAlternate10{
 111111111
 
 */
+
+/*
+
+logic - go down from start = 0 to end = 8 or start = 1 to end = 7(n - 1 - start)
+        go right from start + 1 to end 
+        go up from end - 1 to start
+        go left from end -1 to start 
+        
+ */
