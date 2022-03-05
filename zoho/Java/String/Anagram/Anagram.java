@@ -32,17 +32,13 @@ class Anagram{
         count = 0;
 
         // check anagram between
-
         for(i = 0; i < nword - 1; i++){
             temp = "";
             int icount = 0;
             for(int j = i + 1; j < nword; j++){
-                if(countArray[i] != countArray[j]){
-                    continue;
-                }
-                else if(isAnagram(strArray[i], strArray[j], countArray[i])){ 
+                if((countArray[i] == countArray[j]) && (isAnagram(strArray[i], strArray[j], countArray[i]))){ 
                     temp = temp + "," + strArray[j];
-                    countArray[j]--;
+                    countArray[j] += j;  // say make all as zero means - many values all similar - make it unique - add to unique number thats j
                     icount++;
                 }
             }
@@ -60,6 +56,9 @@ class Anagram{
     }
 
     public static boolean isAnagram(String str1, String str2, int len){
+        if(len == 0){
+            return false;
+        }
         char[] alpha1 = new char[26];
         char[] alpha2 = new char[26];
         for(int i = 0; i < len; i++){
@@ -146,4 +145,10 @@ Group 2 : [was,saw]
 I saw a dog
 
 No anagrams.
+
+ivan avni nvai vain ianv dan and
+
+Group 1 : [ivan,avni,nvai,vain,ianv]
+Group 2 : [dan,and]
+
 */
