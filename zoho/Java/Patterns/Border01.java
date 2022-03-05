@@ -57,4 +57,5 @@ for 0,5
 
 j >= 0 and j <= 8  - satisfied
 
+ref if conditions
 */
