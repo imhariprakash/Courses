@@ -1,6 +1,5 @@
 import java.util.*;
 public class MyClass {
-    public static int myvar = 0;
     public static void main(String args[]) {
         Scanner sc = new Scanner(System.in);
         String str = sc.nextLine();//Malayalam Googlelgoog
@@ -13,11 +12,12 @@ public class MyClass {
             }
         }
         for(int i=start;i<=end;System.out.print(str.charAt(i++)));
-        System.out.println("\n" + myvar);
     }
     private static int[] longestPalindrome(String str, int i, int j){
         int arr[] = new int[2],start=-1,end=-1,count=-1, c=i;
-        while(i < j){
+        while(i <= j){
+            for(int k=i;k<=j;System.out.print(str.charAt(k++)));
+            System.out.println();
             if(str.charAt(i) == str.charAt(j) || str.charAt(i)+32 ==  str.charAt(j) || str.charAt(j)+32 == str.charAt(i)) {
                 if(count == -1){
                     start = i;
@@ -27,8 +27,11 @@ public class MyClass {
                 i++; 
             }
             else{
-                count=start=end=-1;
-                i=c;
+                if(count != -1){
+                    j=end;
+                    count=start=end=-1;
+                    i=c;
+                }
             } 
             j--;
         }
