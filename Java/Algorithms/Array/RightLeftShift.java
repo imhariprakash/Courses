@@ -19,23 +19,19 @@ class RightLeftShift{
     }
 
     public static void shiftArray(int[] array, int n, int num){
-        int elem = array[0], temp;
-        if(n % 2 != 0){
-            for(int i = 0; i < n; i++){
-                temp = array[(num * (i + 1)) % n];
-                array[(num * (i + 1)) % n] = elem;
-                elem = temp;
-            }
+        for(int i = 0; i < num; i++){
+            RightShift(array, n);
         }
-        else{
-            for(int i = 0; i < n; i++){
-                printArray(array, n);
-                int s = ((num * (i + 1)) - ((num * (i + 1)) / n)) % n;
-                temp = array[s];
-                array[s] = elem;
-                elem = temp;
-            }
+    }
+
+    public static void RightShift(int[] array, int n){
+        int elem = array[0];
+        for(int i = 0; i < n - 1; i++){
+            int temp = array[i + 1];
+            array[i + 1] = elem;
+            elem = temp;
         }
+        array[0] = elem;
     }
 
     public static int getShift(int num, int size){
@@ -62,3 +58,5 @@ class RightLeftShift{
         System.out.println();
     }
 }
+
+// O(n^2) algorithm
