@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-class UniversalRotate_wrong_attempt{
+class UniversalRotate_Odd_length_Array{
     public static void main(String[] args){
         Scanner sc = new Scanner(System.in);
         System.out.print("Enter the number of elements: ");
@@ -11,21 +11,28 @@ class UniversalRotate_wrong_attempt{
         System.out.print("Enter how many times to shift : ");
         int num = sc.nextInt();
         num = getShift(n, num);
-        if(n != 0){
+        if(num != 0){
             rightShift(array, n, num);
         }
         printArray(array, n);
     }
 
     public static void rightShift(int[] array, int n, int num){
-        int count = 0, elem = array[0];
-        if(n % 2 != 0){
-            for(int i = 0; count != n; i = ((i + num) % n)){
-                int temp = array[(i + num) % n];
-                array[(i + num) % n] = elem;
-                elem = temp;
-                count++;
+        int count = 0, elem = array[0], temp;
+
+        for(int i = num, start= 0; count != n;){
+            temp = array[i];
+            array[i] = elem;
+            if(start == i){
+                start++;
+                i = start + num;
+                elem = array[start];
             }
+            else{
+                i = (i + num) % n;
+                elem = temp;
+            }
+            count++;
         }
     }
 
@@ -54,3 +61,10 @@ class UniversalRotate_wrong_attempt{
         }
     }
 }
+
+//  1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45
+
+//  1 2 3 4 5 6 7 8 9 10 11
+
+
+// problem : leet code - slow
