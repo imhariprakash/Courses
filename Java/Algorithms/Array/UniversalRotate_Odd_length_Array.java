@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-class UniversalRotate_Odd_length_Array{
+class UniversalRotate_wrong_attempt{
     public static void main(String[] args){
         Scanner sc = new Scanner(System.in);
         System.out.print("Enter the number of elements: ");
