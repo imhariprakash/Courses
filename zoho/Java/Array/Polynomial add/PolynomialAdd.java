@@ -1,3 +1,9 @@
+/*
+
+only works no repitation - and powers in descending order - better version needed
+
+*/
+
 import java.util.Scanner;
 class PolynomialAdd{
     public static void main(String[] args){
@@ -65,3 +71,4 @@ class PolynomialAdd{
         }
     }
 }
+
