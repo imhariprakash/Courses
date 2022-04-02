@@ -1,0 +1,65 @@
+<h4>Table Constraints Exercise Solution</h4>
+
+<p>Defining The employees table:</p>
+
+
+
+
+
+<pre class="prettyprint linenums">CREATE TABLE employees (
+    id INT AUTO_INCREMENT NOT NULL,
+    first_name VARCHAR(255) NOT NULL,
+    last_name VARCHAR(255) NOT NULL,
+    middle_name VARCHAR(255),
+    age INT NOT NULL,
+    current_status VARCHAR(255) NOT NULL DEFAULT 'employed',
+    PRIMARY KEY(id)
+);</pre>
+
+
+
+
+
+
+
+
+
+<p>Another way of defining a primary key:</p>
+
+
+
+
+
+<p><br></p>
+
+
+
+<pre class="prettyprint linenums">CREATE TABLE employees (
+    id INT AUTO_INCREMENT NOT NULL PRIMARY KEY,
+    first_name VARCHAR(255) NOT NULL,
+    last_name VARCHAR(255) NOT NULL,
+    middle_name VARCHAR(255),
+    age INT NOT NULL,
+    current_status VARCHAR(255) NOT NULL DEFAULT 'employed'
+);</pre>
+
+
+
+
+
+
+
+
+
+<p>A test INSERT:</p>
+
+
+
+
+
+
+
+
+
+<pre class="prettyprint linenums">INSERT INTO employees(first_name, last_name, age) VALUES
+('Dora', 'Smith', 58);</pre>
