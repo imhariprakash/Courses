@@ -1,0 +1,41 @@
+/*
+
+CREATE DATABASE cats;
+USE cats;
+
+
+
+CREATE TABLE cat(
+    cat_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    cat_name VARCHAR(100),
+    breed varchar(100),
+    age INT
+    ); 
+
+desc cat;
+
+
+INSERT INTO cat(cat_name, breed, age) 
+VALUES ('Ringo', 'Tabby', 4),
+       ('Cindy', 'Maine Coon', 10),
+       ('Dumbledore', 'Maine Coon', 11),
+       ('Egg', 'Persian', 4),
+       ('Misty', 'Tabby', 13),
+       ('George Michael', 'Ragdoll', 9),
+       ('Jackson', 'Sphynx', 7);
+
+
+-- change jackson's name to jackson 
+
+UPDATE cat SET cat_name = 'jack' 
+WHERE cat_name = 'Jackson';
+
+UPDATE cat SET breed = 'British shorthair' 
+WHERE cat_name = 'Ringo';
+
+
+UPDATE cat SET age = 12
+WHERE breed = 'Maine Coon';
+
+
+*/

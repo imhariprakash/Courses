@@ -1,0 +1,81 @@
+<h4>CODE: Preparing Our Data</h4>
+
+<p>Let's drop the existing cats table:</p>
+
+
+
+
+
+
+
+<p><code>DROP TABLE cats;</code> </p>
+
+
+
+
+
+
+
+
+
+<p>Recreate a new cats table:</p>
+
+
+
+
+
+
+
+
+
+<pre class="prettyprint linenums">CREATE TABLE cats 
+  ( 
+     cat_id INT NOT NULL AUTO_INCREMENT, 
+     name   VARCHAR(100), 
+     breed  VARCHAR(100), 
+     age    INT, 
+     PRIMARY KEY (cat_id) 
+  ); </pre>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<p><code>DESC cats;</code> </p>
+
+
+
+
+
+
+
+
+
+<p>And finally insert some new cats:</p>
+
+
+
+
+
+
+
+
+
+<pre class="prettyprint linenums">INSERT INTO cats(name, breed, age) 
+VALUES ('Ringo', 'Tabby', 4),
+       ('Cindy', 'Maine Coon', 10),
+       ('Dumbledore', 'Maine Coon', 11),
+       ('Egg', 'Persian', 4),
+       ('Misty', 'Tabby', 13),
+       ('George Michael', 'Ragdoll', 9),
+       ('Jackson', 'Sphynx', 7);</pre>
