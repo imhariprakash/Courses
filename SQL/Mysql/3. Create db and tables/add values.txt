@@ -1,0 +1,14 @@
+CREATE DATABASE tweet;
+CREATE TABLE(
+    username varchar(15),
+    content varchar(140),
+    likes int
+);
+
+INSERT INTO tweet(username, content, likes)
+VALUES('joe', 'hello world', 0),
+      ('james', 'im james', 1),
+      ('july', 'Nice day', 2),
+      ('bob', 'Weather', 11);
+
+SELECT * FROM tweet;

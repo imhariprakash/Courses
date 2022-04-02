@@ -1,0 +1,157 @@
+<h4>Your First 5 Minute of SQL&nbsp;CODE</h4>
+
+<p>Resources:</p>
+
+
+
+
+
+
+
+<ul><li><a href="https://www.w3schools.com/sql/trysql.asp?filename=trysql_op_or"  rel="nofollow">SQL&nbsp;Try-It Editor</a></li><li><a href="http://webdev.slides.com/coltsteele/mysql-109#/"  rel="nofollow">Lecture Slides</a></li></ul>
+
+
+
+
+
+
+
+<p><strong>Step 1.</strong></p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<p><code>SELECT * FROM customers;</code>&nbsp;</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<p><strong>Step 2.</strong><br></p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<p><code>SELECT * FROM orders;</code>&nbsp;<br></p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<p><strong>Step 3.</strong><br></p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<pre class="prettyprint linenums">SELECT * 
+FROM products
+ORDER BY Price DESC;</pre>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<p><strong>Step 4.</strong><br></p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<pre class="prettyprint linenums">SELECT 
+ customerName,
+ COUNT(*) AS 'number of orders'
+FROM customers
+INNER JOIN orders
+ ON orders.customerID = customers.customerID
+GROUP BY customers.customerID;</pre>
+
+
+
+
+
+
+
+<p><strong>Note</strong>: Step 4 will give you errors if you're using firefox or any other browser other than Chrome, Safari, or Opera. This is because the SQL Try-It Editor is using WebSQL. See <a href="https://www.udemy.com/the-ultimate-mysql-bootcamp-go-from-sql-beginner-to-expert/learn/v4/questions/2371928"  rel="nofollow">here</a> for further discussion of errors that could occur when using firefox.</p>

@@ -1,0 +1,68 @@
+<h4>MySQL Warnings Code</h4>
+
+<p><code>DESC cats;</code> </p>
+
+
+
+
+
+
+
+
+
+<p>Try Inserting a cat with a super long name:</p>
+
+
+
+
+
+
+
+<pre class="prettyprint linenums">INSERT INTO cats(name, age)
+VALUES('This is some text blah blah blah blah blah text text text something about cats lalalalal meowwwwwwwwwww', 10);</pre>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<p>Then view the warning:</p>
+
+
+
+
+
+<p><code>SHOW WARNINGS;</code> </p>
+
+
+
+
+
+
+
+
+
+
+
+<p>Try inserting a cat with incorrect data types:<br></p>
+
+
+
+<p><code>INSERT INTO cats(name, age) VALUES('Lima', 'dsfasdfdas');</code> <br></p>
+
+<p>Then view the warning:<br></p>
+
+<p><code>SHOW WARNINGS;</code> </p>

@@ -1,0 +1,21 @@
+/*
+CREATE DATABASE people;
+
+USE people;
+
+CREATE TABLE list(
+    first_name varchar(10),
+    last_name varchar(10),
+    age int
+);
+
+INSERT INTO list(first_name, last_name, age)
+VALUES('Tina', 'Belcher', 13),
+      ('Bob', 'Belcher', 42),
+      ('Linda', 'Belcher', 45),
+      ('Philip', 'Frond', 38),
+      ('calvin', 'Fischoeder', 70);
+
+*/
+
+SELECT * FROM list;
