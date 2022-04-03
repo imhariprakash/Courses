@@ -1,0 +1,90 @@
+
+/*
+
+SELECT COUNT(DISTINCT author_fname) FROM book_shop.books; 
+
+
+
+SELECT author_lname, COUNT(title) 
+FROM book_shop.books
+GROUP BY author_lname;
+
+Dan Harris 2  wrong
+
+Avoid clash
+
+SELECT author_fname, author_lname, COUNT(title) 
+FROM book_shop.books
+GROUP BY author_lname, author_fname;
+
+Dan Harris 1
+David Harris 1
+
+
+SELECT CONCAT ('IN ', released_year, ' ', COUNT(*), ' book(s) are released.')
+FROM book_shop.books
+GROUP BY released_year
+ORDER BY released_year;
+
+SELECT MIN(released_year) FROM book_shop.books;
+
+SELECT title, MAX(pages) 
+FROM book_shop.books;     -wrong just gives first book title and max pages
+
+SELECT * FROM book_shop.books
+WHERE pages = (SELECT MAX(pages) FROM book_shop.books);
+
+SELECT * FROM book_shop.books
+ORDER BY pages DESC
+LIMIT 1;
+
+SELECT author_fname, author_lname, MIN(released_year) FROM book_shop.books
+GROUP BY author_lname, author_fname;
+
+SELECT CONCAT(author_fname, ' ', author_lname) AS author, MAX(pages)
+FROM book_shop.books
+GROUP BY author_lname, author_fname;
+
+SELECT SUM(pages) FROM book_shop.books;
+
+SELECT CONCAT(author_fname, ' ', author_lname) AS author, SUM(pages)
+FROM book_shop.books
+GROUP BY author_lname, author_fname
+ORDER BY SUM(pages) DESC;
+
+
+SELECT released_year, AVG(stock_quantity) FROM book_shop.books
+GROUP BY released_year
+ORDER BY released_year; 
+
+ SELECT CONCAT(author_lname, ' ', author_fname) AS author, AVG(pages) FROM book_shop.books
+ GROUP BY author_lname, author_fname
+ ORDER BY author_lname, author_fname;
+
+SELECT COUNT(title) FROM book_shop.books;
+
+SELECT released_year, COUNT(title) FROM book_shop.books
+GROUP BY released_year
+ORDER BY released_year;
+
+SELECT SUM(stock_quantity) FROM book_shop.books;
+
+
+SELECT CONCAT(author_fname, ' ', author_lname) AS author, AVG(released_year)
+FROM book_shop.books
+GROUP BY author_lname, author_fname
+ORDER BY author_lname, author_fname;
+
+SELECT CONCAT(author_fname, ' ', author_lname) AS author FROM book_shop.books
+WHERE pages = (SELECT MAX(pages) FROM book_shop.books);
+
+SELECT CONCAT(author_fname, ' ', author_lname) AS author FROM book_shop.books
+ORDER BY pages DESC LIMIT 1;
+
+SELECT released_year, COUNT(title), AVG(pages) FROM book_shop.books
+GROUP BY released_year
+ORDER BY released_year;
+
+*/
+
+
