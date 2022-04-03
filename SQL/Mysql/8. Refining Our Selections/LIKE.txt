@@ -1,0 +1,37 @@
+/*
+
+INSERT INTO books
+    (title, author_fname, author_lname, released_year, stock_quantity, pages)
+    VALUES ('10% Happier', 'Dan', 'Harris', 2014, 29, 256), 
+           ('fake_book', 'Freida', 'Harris', 2001, 287, 428),
+           ('Lincoln In The Bardo', 'George', 'Saunders', 2017, 1000, 367);
+
+SELECT title FROM books;
+
+SELECT title FROM book_shop.books
+WHERE title LIKE '%stories%';
+
+SELECT title, pages FROM book_shop.books
+ORDER BY pages DESC
+LIMIT 1;
+
+SELECT * FROM book_shop.books;
+
+SELECT title, pages FROM book_shop.books
+ORDER BY released_year DESC
+LIMIT 3;
+
+SELECT title, author_lname FROM book_shop.books
+WHERE author_lname LIKE '% %';
+
+SELECT title, released_year, stock_quantity FROM book_shop.books
+ORDER BY stock_quantity,title 
+LIMIT 3;
+
+SELECT CONCAT('MY FAVOURITE AUTHOR IS ', author_fname,' ', author_lname, '!') AS yell
+FROM book_shop.books
+ORDER BY author_lname;
+
+
+*/
+
