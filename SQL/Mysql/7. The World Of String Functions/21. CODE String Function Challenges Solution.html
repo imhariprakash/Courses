@@ -1,0 +1,212 @@
+<p><code>SELECT REVERSE(UPPER('Why does my cat look at me with such hatred?'));</code> </p>
+
+<p><br><code>SELECT UPPER(REVERSE('Why does my cat look at me with such hatred?'));</code> </p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<p><br><code>I-like-cats</code> </p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<p><br><code>SELECT REPLACE(CONCAT('I', ' ', 'like', ' ', 'cats'), ' ', '-');</code> </p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<p><br><code>SELECT REPLACE(title, ' ', '-&gt;') AS title FROM books;</code> </p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<p><br></p>
+
+
+
+
+
+
+
+
+
+<pre class="prettyprint linenums">SELECT 
+   author_lname AS forwards,
+   REVERSE(author_lname) AS backwards 
+FROM books;</pre>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<p><br></p>
+
+
+
+
+
+
+
+<pre class="prettyprint linenums">SELECT
+   UPPER
+   (
+      CONCAT(author_fname, ' ', author_lname)
+   ) AS 'full name in caps'
+FROM books;</pre>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<p><br></p>
+
+
+
+
+
+<pre class="prettyprint linenums">SELECT
+   CONCAT(title, ' was released in ', released_year) AS blurb
+FROM books;</pre>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<pre class="prettyprint linenums">SELECT
+   title,
+   CHAR_LENGTH(title) AS 'character count'
+FROM books;</pre>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<p><br></p>
+
+<pre class="prettyprint linenums">SELECT
+   CONCAT(SUBSTRING(title, 1, 10), '...') AS 'short title',
+   CONCAT(author_lname, ',', author_fname) AS author,
+   CONCAT(stock_quantity, ' in stock') AS quantity
+FROM books;</pre>

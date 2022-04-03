@@ -1,0 +1,70 @@
+<p>Hi All,</p>
+
+<p>Before you move onto the next lecture, please remember that order is important when dealing with combining/wrapping certain string functions.</p>
+
+
+
+
+
+<p>For example:</p>
+
+
+
+
+
+<p>This works:</p>
+
+
+
+
+
+<pre class="prettyprint linenums">SELECT UPPER(CONCAT(author_fname, ' ', author_lname)) AS "full name in caps"
+FROM books;</pre>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<p>While this does not:</p>
+
+
+
+
+
+
+
+<pre class="prettyprint linenums">SELECT CONCAT(UPPER(author_fname, ' ', author_lname)) AS "full name in caps" 
+FROM books;</pre>
+
+
+
+
+
+
+
+
+
+<p>UPPER only takes one argument and CONCAT takes two&nbsp;or more arguments, so they can't be switched in that way.</p>
+
+<p>You could do it this way, however:</p>
+
+<pre class="prettyprint linenums">SELECT CONCAT(UPPER(author_fname), ' ', UPPER(author_lname)) AS "full name in caps" 
+FROM books;</pre>
+
+
+
+<p>But, the first example above would be better (more DRY*)&nbsp;because you wouldn't need to call UPPER&nbsp;two times.</p><p>*Don't Repeat Yourself</p><p>--------<br>Cheers,<br>Ian</p>
