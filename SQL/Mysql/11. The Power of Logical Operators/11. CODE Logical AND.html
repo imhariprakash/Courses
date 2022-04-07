@@ -1,0 +1,30 @@
+<pre class="prettyprint linenums">SELECT title, author_lname, released_year FROM books
+WHERE author_lname='Eggers';
+
+SELECT title, author_lname, released_year FROM books
+WHERE released_year &gt; 2010;
+
+SELECT  
+    title, 
+    author_lname, 
+    released_year FROM books
+WHERE author_lname='Eggers' 
+    AND released_year &gt; 2010;
+
+SELECT 1 &lt; 5 &amp;&amp; 7 = 9;
+-- false
+
+SELECT -10 &gt; -20 &amp;&amp; 0 &lt;= 0;
+-- true
+
+SELECT -40 &lt;= 0 AND 10 &gt; 40;
+--false
+
+SELECT 54 &lt;= 54 &amp;&amp; 'a' = 'A';
+-- true
+
+SELECT * 
+FROM books
+WHERE author_lname='Eggers' 
+    AND released_year &gt; 2010 
+    AND title LIKE '%novel%';</pre>

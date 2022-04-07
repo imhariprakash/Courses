@@ -1,0 +1,42 @@
+<pre class="prettyprint linenums">SELECT title, released_year FROM books ORDER BY released_year;
+
+SELECT title, released_year FROM books 
+WHERE released_year &gt; 2000 ORDER BY released_year;
+
+SELECT title, released_year FROM books 
+WHERE released_year &gt;= 2000 ORDER BY released_year;
+
+SELECT title, stock_quantity FROM books;
+
+SELECT title, stock_quantity FROM books WHERE stock_quantity &gt;= 100;
+
+SELECT 99 &gt; 1;
+
+SELECT 99 &gt; 567;
+
+100 &gt; 5
+-- true
+
+-15 &gt; 15
+-- false
+
+9 &gt; -10
+-- true
+
+1 &gt; 1
+-- false
+
+'a' &gt; 'b'
+-- false
+
+'A' &gt; 'a'
+-- false
+
+'A' &gt;=  'a'
+-- true
+
+SELECT title, author_lname FROM books WHERE author_lname = 'Eggers';
+
+SELECT title, author_lname FROM books WHERE author_lname = 'eggers';
+
+SELECT title, author_lname FROM books WHERE author_lname = 'eGGers';</pre>
