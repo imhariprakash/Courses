@@ -5,7 +5,7 @@ class Node{
     Node next;
 }
 
-class Delete{
+public class Delete{
     public static void main(String[] args){
         Scanner sc = new Scanner(System.in);
         Node head = null;
@@ -45,7 +45,7 @@ class Delete{
         while(temp.next != null){
             if(temp.next.data == value){
                 temp.next = temp.next.next;
-                break;
+                return(head);
             }
             temp = temp.next;
         }
