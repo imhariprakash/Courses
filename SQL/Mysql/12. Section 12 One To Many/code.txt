@@ -1,0 +1,93 @@
+/*
+SELECT * FROM store.customers 
+JOIN store.orders
+ON customers.cust_id = orders.cust_id;
+
+SELECT * FROM store.customers 
+LEFT JOIN store.orders
+ON customers.cust_id = orders.cust_id;
+
+SELECT * FROM store.customers 
+RIGHT JOIN store.orders
+ON customers.cust_id = orders.cust_id;
+
+SELECT  customers.first_name, customers.last_name, IFNULL(SUM(orders.amount), 0) FROM store.customers 
+LEFT JOIN store.orders
+ON customers.cust_id = orders.cust_id
+GROUP BY customers.cust_id;
+
+SELECT  customers.first_name, customers.last_name, IFNULL(SUM(orders.amount), 0) FROM store.customers 
+LEFT JOIN store.orders
+ON customers.cust_id = orders.cust_id
+GROUP BY customers.cust_id;
+
+
+CREATE DATABASE student;
+
+CREATE TABLE student.students(
+    id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+    first_name VARCHAR(30) NOT NULL
+);
+
+CREATE TABLE student.papers(
+    title VARCHAR(50) NOT NULL,
+    grade CHAR(1) NOT NULL,
+    student_id INT(6) UNSIGNED NOT NULL PRIMARY KEY,
+    FOREIGN KEY (student_id) 
+        REFERENCES student.students(id)
+        ON DELETE CASCADE
+);
+
+INSERT INTO student.students (first_name) VALUES 
+('Caleb'), 
+('Samantha'), 
+('Raj'), 
+('Carlos'), 
+('Lisa');
+
+INSERT INTO student.papers (student_id, title, grade ) VALUES
+(1, 'My First Book Report', 'A'),
+(2, 'My Second Book Report', 'B'),
+(3, 'My Third Book Report', 'C'),
+(4, 'My Fourth Book Report', 'D'),
+(5, 'My Fifth Book Report', 'F');
+
+SELECT * FROM student.students;
+SELECT * FROM student.papers;
+
+SELECT students.first_name, papers.title, papers.grade
+FROM student.students, student.papers
+WHERE students.id = papers.student_id;
+
+SELECT students.first_name, papers.title, papers.grade
+FROM student.students
+LEFT JOIN student.papers 
+ON students.id = papers.student_id;
+
+SELECT students.first_name, papers.title, papers.grade,
+CASE 
+    WHEN papers.grade < 35 THEN 'FAIL'
+    WHEN papers.grade >= 35 THEN 'PASS'
+END AS grade_status
+FROM student.students
+LEFT JOIN student.papers 
+ON students.id = papers.student_id;
+*/
+
+
+SELECT students.first_name, papers.title, papers.grade,
+CASE 
+    WHEN papers.grade = 'F' THEN 'FAIL'
+    ELSE 'PASS'
+END AS grade_status
+FROM student.students
+LEFT JOIN student.papers 
+ON students.id = papers.student_id
+
+ORDER BY students.id;
+
+
+
+
+
+

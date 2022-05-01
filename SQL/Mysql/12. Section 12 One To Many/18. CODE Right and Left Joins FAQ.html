@@ -1,0 +1,31 @@
+<pre class="prettyprint linenums">SELECT * FROM customers
+LEFT JOIN orders
+    ON customers.id = orders.customer_id;</pre>
+
+
+
+
+
+
+
+
+
+<pre class="prettyprint linenums">SELECT * FROM orders
+RIGHT JOIN customers
+    ON customers.id = orders.customer_id;    </pre>
+
+
+
+
+
+
+
+<pre class="prettyprint linenums">SELECT * FROM orders
+LEFT JOIN customers
+    ON customers.id = orders.customer_id;    </pre>
+
+
+
+<pre class="prettyprint linenums">SELECT * FROM customers
+RIGHT JOIN orders
+    ON customers.id = orders.customer_id;</pre>

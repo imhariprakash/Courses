@@ -1,0 +1,40 @@
+<p><strong>-- Finding Orders Placed By George: 2 Step Process</strong></p>
+
+<pre class="prettyprint linenums">SELECT id FROM customers WHERE last_name='George';
+SELECT * FROM orders WHERE customer_id = 1;</pre>
+
+
+
+
+
+
+
+
+
+
+
+<p><strong>-- Finding Orders Placed By George: Using a subquery</strong></p>
+
+
+
+<pre class="prettyprint linenums">SELECT * FROM orders WHERE customer_id =
+    (
+        SELECT id FROM customers
+        WHERE last_name='George'
+    );</pre>
+
+
+
+
+
+
+
+
+
+
+
+<p><strong>-- Cross Join Craziness</strong></p>
+
+
+
+<p><code>SELECT * FROM customers, orders;</code> </p>
