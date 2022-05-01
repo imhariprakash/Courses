@@ -1,0 +1,7 @@
+<p><strong>-- CHALLENGE 4 - UNREVIEWED SERIES</strong></p>
+
+<pre class="prettyprint linenums">SELECT title AS unreviewed_series
+FROM series
+LEFT JOIN reviews
+    ON series.id = reviews.series_id
+WHERE rating IS NULL;</pre>

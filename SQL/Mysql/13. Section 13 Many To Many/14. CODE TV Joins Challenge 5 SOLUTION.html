@@ -1,0 +1,8 @@
+<p><strong>-- Challenge 5 - GENRE AVG RATINGS</strong></p>
+
+<pre class="prettyprint linenums">SELECT genre, 
+       Round(Avg(rating), 2) AS avg_rating 
+FROM   series 
+       INNER JOIN reviews 
+               ON series.id = reviews.series_id 
+GROUP  BY genre; </pre>

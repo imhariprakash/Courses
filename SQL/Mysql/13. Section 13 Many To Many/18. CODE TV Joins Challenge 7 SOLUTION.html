@@ -1,0 +1,12 @@
+<p><strong>-- CHALLENGE 7 - 3 TABLES!</strong></p>
+
+<pre class="prettyprint linenums">SELECT 
+    title,
+    rating,
+    CONCAT(first_name,' ', last_name) AS reviewer
+FROM reviewers
+INNER JOIN reviews 
+    ON reviewers.id = reviews.reviewer_id
+INNER JOIN series
+    ON series.id = reviews.series_id
+ORDER BY title;</pre>

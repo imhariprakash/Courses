@@ -1,0 +1,23 @@
+<p>-- CHALLENGE 3  - Two Solutions</p>
+
+<pre class="prettyprint linenums">SELECT
+    first_name,
+    last_name,
+    rating
+FROM reviewers
+INNER JOIN reviews
+    ON reviewers.id = reviews.reviewer_id;</pre>
+
+
+
+
+
+<p>    <br></p>
+
+<pre class="prettyprint linenums">SELECT
+    first_name,
+    last_name,
+    rating
+FROM reviews
+INNER JOIN reviewers
+    ON reviewers.id = reviews.reviewer_id;</pre>
