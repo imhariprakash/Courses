@@ -1,0 +1,7 @@
+<p><strong>-- 3. Identify Inactive Users (users with no photos)</strong></p>
+
+<pre class="prettyprint linenums">SELECT username
+FROM users
+LEFT JOIN photos
+    ON users.id = photos.user_id
+WHERE photos.id IS NULL;</pre>

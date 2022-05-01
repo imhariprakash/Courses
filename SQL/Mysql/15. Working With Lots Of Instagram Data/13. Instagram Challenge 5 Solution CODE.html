@@ -1,0 +1,5 @@
+<p><strong>-- 5. Calculate average number of photos per user</strong></p>
+
+<pre class="prettyprint linenums">SELECT (SELECT Count(*) 
+        FROM   photos) / (SELECT Count(*) 
+                          FROM   users) AS avg; </pre>

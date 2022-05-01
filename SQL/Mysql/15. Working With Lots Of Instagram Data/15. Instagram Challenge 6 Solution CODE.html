@@ -1,0 +1,3 @@
+<p><strong>-- 6. Find the five most popular hashtags</strong></p>
+
+<p>SELECT tags.tag_name, <br>       <strong>Count</strong>(*) AS total <br>FROM   photo_tags <br>       JOIN tags <br>         ON photo_tags.tag_id = tags.id <br>GROUP  BY tags.id <br>ORDER  BY total DESC <br>LIMIT  5; </p>
