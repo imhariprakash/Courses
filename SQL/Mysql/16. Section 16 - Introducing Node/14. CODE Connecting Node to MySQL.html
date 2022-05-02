@@ -1,0 +1,23 @@
+<p>Documentation for the MySQL Node Package: </p><h4>Step 1: Install the MySQL Node Package</h4><p><code>npm install mysql</code> </p><p><br></p><h4>Step 2: Connect to Database*</h4><pre class="prettyprint linenums">var mysql = require('mysql');
+
+var connection = mysql.createConnection({
+  host     : 'localhost',
+  user     : 'learnwithcolt',  //your username
+  database : 'join_us'         //the name of your db
+});</pre><p><br></p><h4>Step 3: Run Queries</h4><p><strong>Running a super simple SQL query like:</strong></p><p><code>SELECT 1 + 1;</code> <br></p><p><strong>Using the MySQL Node Package:</strong></p><pre class="prettyprint linenums">connection.query('SELECT 1 + 1 AS solution', function (error, results, fields) {
+   if (error) throw error;
+   console.log('The solution is: ', results[0].solution);
+});</pre><p><br></p><p><strong>Another sample query, this time selecting 3 things:</strong></p><pre class="prettyprint linenums">var q = 'SELECT CURTIME() as time, CURDATE() as date, NOW() as now';
+connection.query(q, function (error, results, fields) {
+  if (error) throw error;
+  console.log(results[0].time);
+  console.log(results[0].date);
+  console.log(results[0].now);
+});</pre><p>The equivalent SQL query:</p><pre class="prettyprint linenums">SELECT CURTIME() as time, CURDATE() as date, NOW() as now;</pre><p><br></p><h4><br>*<strong><em>Note: </em></strong></h4><p>We <strong>don't recommend</strong> using AWS, but if you are using the <strong><em>AWS version of Cloud9</em></strong><em> then you'll need to include a password for the user, see example below:</em></p><pre class="prettyprint linenums">var mysql = require('mysql');
+ 
+var connection = mysql.createConnection({
+  host     : 'localhost',
+  user     : 'root',  //your root username (leave as root)
+  database : 'join_us',   //the name of your db (create this if you haven't already)
+  password : process.env.MYSQL_PW   //your root user's password
+});</pre><p><strong><em>In order for this to work</em></strong> <em>you'll first need to export the root password in an environment variable.<br>Run the following command from your bash terminal:</em></p><p><code>export MYSQL_PW='your-password-here'</code> </p><p>If you want the password to persist as an environment variable then checkout the <a href="https://www.npmjs.com/package/dotenv" rel="noopener noreferrer" target="_blank">dotenv npm package</a>, otherwise you will need to export the variable every time you open a new terminal window.<br></p><p><br></p>

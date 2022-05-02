@@ -1,0 +1,30 @@
+<h4>The Code To INSERT 500 Random Users</h4>
+
+<pre class="prettyprint linenums">var mysql = require('mysql');
+var faker = require('faker');
+
+
+var connection = mysql.createConnection({
+  host     : 'localhost',
+  user     : 'learnwithcolt',
+  database : 'join_us'
+});
+
+
+var data = [];
+for(var i = 0; i &lt; 500; i++){
+    data.push([
+        faker.internet.email(),
+        faker.date.past()
+    ]);
+}
+
+
+var q = 'INSERT INTO users (email, created_at) VALUES ?';
+
+connection.query(q, [data], function(err, result) {
+  console.log(err);
+  console.log(result);
+});
+
+connection.end();</pre>

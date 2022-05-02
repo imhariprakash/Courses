@@ -1,0 +1,70 @@
+<p><strong>Insert users (from command line):</strong></p>
+
+<pre class="prettyprint linenums">INSERT INTO users (email) VALUES('Katie34@yahoo.com'), ('Tunde@gmail.com');
+</pre>
+
+
+
+
+
+
+
+
+
+<p><strong>Check that users are added:</strong></p>
+
+
+
+<pre class="prettyprint linenums">SELECT * FROM users;<br></pre>
+
+
+
+
+
+<p><strong>To SELECT&nbsp;all users from database:</strong></p>
+
+
+
+
+
+
+
+<pre class="prettyprint linenums">var q = 'SELECT * FROM users ';
+connection.query(q, function (error, results, fields) {
+  if (error) throw error;
+  console.log(results);
+});</pre>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<p><strong>To count the number of users in the database:<br></strong></p>
+
+
+
+
+
+
+
+
+
+
+
+<pre class="prettyprint linenums">var q = 'SELECT COUNT(*) AS total FROM users ';
+connection.query(q, function (error, results, fields) {
+  if (error) throw error;
+  console.log(results[0].total);
+});</pre>

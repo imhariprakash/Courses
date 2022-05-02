@@ -1,0 +1,187 @@
+<h4>Solutions To 500 Users Exercises</h4>
+
+<p><strong>-- Challenge 1</strong></p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<pre class="prettyprint linenums">SELECT 
+    DATE_FORMAT(MIN(created_at), "%M %D %Y") as earliest_date 
+FROM users;</pre>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<p><strong>-- Challenge 2</strong></p>
+
+
+
+
+
+
+
+
+
+
+
+<pre class="prettyprint linenums">SELECT * 
+FROM   users 
+WHERE  created_at = (SELECT Min(created_at) 
+                     FROM   users); </pre>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<p><strong>-- Challenge 3</strong></p>
+
+
+
+
+
+
+
+
+
+<pre class="prettyprint linenums">SELECT Monthname(created_at) AS month, 
+       Count(*)              AS count 
+FROM   users 
+GROUP  BY month 
+ORDER  BY count DESC; </pre>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<p><strong>-- Challenge 4</strong></p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<pre class="prettyprint linenums">SELECT Count(*) AS yahoo_users 
+FROM   users 
+WHERE  email LIKE '%@yahoo.com'; </pre>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<p><strong>-- Challenge 5</strong></p>
+
+
+
+
+
+<pre class="prettyprint linenums">SELECT CASE 
+         WHEN email LIKE '%@gmail.com' THEN 'gmail' 
+         WHEN email LIKE '%@yahoo.com' THEN 'yahoo' 
+         WHEN email LIKE '%@hotmail.com' THEN 'hotmail' 
+         ELSE 'other' 
+       end      AS provider, 
+       Count(*) AS total_users 
+FROM   users 
+GROUP  BY provider 
+ORDER  BY total_users DESC; </pre>

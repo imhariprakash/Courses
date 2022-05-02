@@ -1,0 +1,181 @@
+<p>Find Faker Docs Here: <a href="https://github.com/marak/Faker.js/" rel="nofollow">https://github.com/marak/Faker.js/</a><br></p>
+
+
+
+
+
+
+
+
+
+<h4>STEP 1: Install and Require Faker</h4>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<p><strong>// Install Faker via command line:</strong></p>
+
+
+
+
+
+
+
+
+
+
+
+<p><code>npm install faker</code> </p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<p><strong>// Require it inside of a JS file:</strong></p>
+
+
+
+
+
+
+
+
+
+
+
+<p><code>var faker = require('faker');</code> </p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h4>STEP 2: Use Faker!</h4>
+
+
+
+
+
+
+
+
+
+<p><strong>// Print a random email</strong></p>
+
+
+
+
+
+
+
+
+
+<p><code>console.log(faker.internet.email());</code> </p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<p><strong>// Print a random past date</strong></p>
+
+
+
+
+
+
+
+<p><code>console.log(faker.date.past());</code> </p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<p><strong>// Print a random city</strong></p>
+
+
+
+
+
+<p><code>console.log(faker.address.city());</code> </p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<p><strong>// We can define a new function</strong></p>
+
+
+
+<pre class="prettyprint linenums">function generateAddress(){
+  console.log(faker.address.streetAddress());
+  console.log(faker.address.city());
+  console.log(faker.address.state());
+}</pre>
+
+
+
+
+
+
+
+<p><strong>// And then execute that function:</strong></p>
+
+<p><code>generateAddress();</code> </p>

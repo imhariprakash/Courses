@@ -1,0 +1,42 @@
+<h4>Inserting Data Using Node</h4>
+
+<p><strong>Approach #1</strong></p>
+
+
+
+<pre class="prettyprint linenums">var q = 'INSERT INTO users (email) VALUES ("rusty_the_dog@gmail.com")';
+
+connection.query(q, function (error, results, fields) {
+  if (error) throw error;
+  console.log(results);
+});</pre>
+
+
+
+
+
+<p><strong><br></strong></p>
+
+<p><strong>An easier approach that allows for dynamic data</strong><br></p>
+
+
+
+<p><br></p>
+
+<pre class="prettyprint linenums">var person = {
+    email: faker.internet.email(),
+    created_at: faker.date.past()
+};
+
+var end_result = connection.query('INSERT INTO users SET ?', person, function(err, result) {
+  if (err) throw err;
+  console.log(result);
+});</pre>
+
+
+
+<p><br></p>
+
+
+
+<p><br></p>
