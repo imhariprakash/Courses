@@ -1,0 +1,27 @@
+<h4>CODE: Our First Simple Web App:</h4>
+
+<p>Add to your app.js file:</p>
+
+
+
+<pre class="prettyprint linenums">var express = require('express');
+
+var app = express();
+
+app.get("/", function(req, res){
+ res.send("HELLO FROM OUR WEB APP!");
+});
+
+app.listen(8080, function () {
+ console.log('App listening on port 8080!');
+});</pre>
+
+
+
+
+
+<p>Remember to start the server up:</p>
+
+
+
+<p><code>node app.js</code> </p>

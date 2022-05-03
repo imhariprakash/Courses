@@ -1,0 +1,14 @@
+<h4>CODE: Connecting the Form</h4>
+
+<p>The '/register' post route:</p>
+
+<pre class="prettyprint linenums">app.post('/register', function(req,res){
+ var person = {email: req.body.email};
+ connection.query('INSERT INTO users SET ?', person, function(err, result) {
+ console.log(err);
+ console.log(result);
+ res.redirect("/");
+ });
+});</pre>
+
+<p><br></p>
