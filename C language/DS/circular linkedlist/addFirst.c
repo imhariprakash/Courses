@@ -33,7 +33,7 @@ void printReverse(struct node *tail){
 struct node *addFirst(int data, struct node *head, struct node *tail){
     struct node *temp = (struct node *)malloc(sizeof(struct node));
     temp->data = data;
-    temp->prev = NULL;
+    temp->prev = tail;
     temp->next = head;
     head->prev = temp;
     head = temp;
