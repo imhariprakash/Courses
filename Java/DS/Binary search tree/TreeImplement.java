@@ -113,6 +113,10 @@ class TreeImplement{
         else if(node.left == null && node.right != null){
             Node temp = node;
             node = node.right;
+            if(temp == Node.root){
+                Node.root = node;
+                return;
+            }
             if(node.parent.data > node.data){
                 temp.parent.left = node;
             }
@@ -125,6 +129,10 @@ class TreeImplement{
         else if(node.left != null && node.right == null){
             Node temp = node;
             node = node.left;
+            if(node == Node.root){
+                Node.root = node;
+                return;
+            }
             if(temp.parent.data > node.data){
                 node.parent.left = node;
             }
