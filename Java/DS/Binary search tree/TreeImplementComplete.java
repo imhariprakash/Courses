@@ -8,7 +8,7 @@ class Node{
     public static Node root;
 }
  
-class TreeImplement{
+class TreeImplementComplete{
     public static Scanner sc = new Scanner(System.in);
     public static void main(String[] args){
         while(true){
@@ -74,15 +74,14 @@ class TreeImplement{
                 if(node.data < current.data){
                     current = current.left;
                 }
+                else if(node.data == current.data){
+                    System.out.println("Duplicate data");
+                    return;
+                }
                 else{
                     current = current.right;
                 }
             }
-
-            if(node.data == parent.data){
-                System.out.println("Duplicate data");
-                return;
-            } 
 
             if(node.data < parent.data){
                 parent.left = node;
@@ -114,11 +113,12 @@ class TreeImplement{
             delete(node);
         }
 
-        else if(node.left == null && node.right != null){
+        else if(node.left == null){
             Node temp = node;
             node = node.right;
-            if(temp == Node.root){
+            if(temp.parent == null){
                 Node.root = node;
+                node.parent = null;
                 return;
             }
             if(node.parent.data > node.data){
@@ -130,11 +130,12 @@ class TreeImplement{
             node.parent = temp.parent;
         }
 
-        else if(node.left != null && node.right == null){
+        else if(node.right == null){
             Node temp = node;
             node = node.left;
-            if(node == Node.root){
+            if(temp.parent == null){ // node is root
                 Node.root = node;
+                node.parent = null;
                 return;
             }
             if(temp.parent.data > node.data){
@@ -246,104 +247,3 @@ class TreeImplement{
     }
 }
 
-
-
-
-/*----------------------------------------------------------------
-
-
-1. Insert 2. Delete 3. Search 4. Inorder 5. Preorder 6. Postorder 7. Exit
-Enter your choice: 1
-Enter the data: 1
-1. Insert 2. Delete 3. Search 4. Inorder 5. Preorder 6. Postorder 7. Exit
-Enter your choice: 1
-Enter the data: 3
-1. Insert 2. Delete 3. Search 4. Inorder 5. Preorder 6. Postorder 7. Exit
-Enter your choice: 1
-Enter the data: 2
-1. Insert 2. Delete 3. Search 4. Inorder 5. Preorder 6. Postorder 7. Exit
-Enter your choice: 1
-Enter the data: 4
-1. Insert 2. Delete 3. Search 4. Inorder 5. Preorder 6. Postorder 7. Exit
-Enter your choice: 1
-Enter the data: 5
-1. Insert 2. Delete 3. Search 4. Inorder 5. Preorder 6. Postorder 7. Exit
-Enter your choice: 1
-Enter the data: 6
-1. Insert 2. Delete 3. Search 4. Inorder 5. Preorder 6. Postorder 7. Exit
-Enter your choice: 4
-1 2 3 4 5 6 
-1. Insert 2. Delete 3. Search 4. Inorder 5. Preorder 6. Postorder 7. Exit
-Enter your choice: 5
-1 3 2 4 5 6 
-1. Insert 2. Delete 3. Search 4. Inorder 5. Preorder 6. Postorder 7. Exit
-Enter your choice: 6
-2 6 5 4 3 1 
-1. Insert 2. Delete 3. Search 4. Inorder 5. Preorder 6. Postorder 7. Exit
-Enter your choice: 2
-Enter the data to be deleted: 6
-1. Insert 2. Delete 3. Search 4. Inorder 5. Preorder 6. Postorder 7. Exit
-Enter your choice: 4
-1 2 3 4 5 
-1. Insert 2. Delete 3. Search 4. Inorder 5. Preorder 6. Postorder 7. Exit
-Enter your choice: 5
-1 3 2 4 5 
-1. Insert 2. Delete 3. Search 4. Inorder 5. Preorder 6. Postorder 7. Exit
-Enter your choice: 6
-2 5 4 3 1 
-1. Insert 2. Delete 3. Search 4. Inorder 5. Preorder 6. Postorder 7. Exit
-Enter your choice: 2
-Enter the data to be deleted: 4
-1. Insert 2. Delete 3. Search 4. Inorder 5. Preorder 6. Postorder 7. Exit
-Enter your choice: 4
-1 2 3 5 
-1. Insert 2. Delete 3. Search 4. Inorder 5. Preorder 6. Postorder 7. Exit
-Enter your choice: 5
-1 3 2 5 
-1. Insert 2. Delete 3. Search 4. Inorder 5. Preorder 6. Postorder 7. Exit
-Enter your choice: 6
-2 5 3 1 
-1. Insert 2. Delete 3. Search 4. Inorder 5. Preorder 6. Postorder 7. Exit
-Enter your choice: 2
-Enter the data to be deleted: 5
-1. Insert 2. Delete 3. Search 4. Inorder 5. Preorder 6. Postorder 7. Exit
-Enter your choice: 2
-Enter the data to be deleted: 1
-1. Insert 2. Delete 3. Search 4. Inorder 5. Preorder 6. Postorder 7. Exit
-Enter your choice: 4
-2 3 
-1. Insert 2. Delete 3. Search 4. Inorder 5. Preorder 6. Postorder 7. Exit
-Enter your choice: 5
-3 2 
-1. Insert 2. Delete 3. Search 4. Inorder 5. Preorder 6. Postorder 7. Exit
-Enter your choice: 6
-2 3 
-1. Insert 2. Delete 3. Search 4. Inorder 5. Preorder 6. Postorder 7. Exit
-Enter your choice: 2
-Enter the data to be deleted: 2
-1. Insert 2. Delete 3. Search 4. Inorder 5. Preorder 6. Postorder 7. Exit
-Enter your choice: 4
-3 
-1. Insert 2. Delete 3. Search 4. Inorder 5. Preorder 6. Postorder 7. Exit
-Enter your choice: 5
-3 
-1. Insert 2. Delete 3. Search 4. Inorder 5. Preorder 6. Postorder 7. Exit
-Enter your choice: 6
-3 
-1. Insert 2. Delete 3. Search 4. Inorder 5. Preorder 6. Postorder 7. Exit
-Enter your choice: 2
-Enter the data to be deleted: 3
-1. Insert 2. Delete 3. Search 4. Inorder 5. Preorder 6. Postorder 7. Exit
-Enter your choice: 4
-3 
-1. Insert 2. Delete 3. Search 4. Inorder 5. Preorder 6. Postorder 7. Exit
-Enter your choice: 5
-3 
-1. Insert 2. Delete 3. Search 4. Inorder 5. Preorder 6. Postorder 7. Exit
-Enter your choice: 6
-3 
-1. Insert 2. Delete 3. Search 4. Inorder 5. Preorder 6. Postorder 7. Exit
-Enter your choice:
-
-
-*/
