@@ -25,6 +25,27 @@ class AdjacencyListDirected{
         System.out.println(hasEdge(adjList, 0, 1));  // problem : not error handled - if input outof index - it will crash
 
         printAdjacencyList(adjList);
+        System.out.println();
+
+        removeEdge(adjList, 0, 1);
+
+        printAdjacencyList(adjList);
+        System.out.println();
+
+        removeEdge(adjList, 0, 3);
+
+        printAdjacencyList(adjList);
+        System.out.println();
+
+        removeEdge(adjList, 1, 3);
+
+        printAdjacencyList(adjList);
+        System.out.println();
+
+        removeEdge(adjList, 2, 3);
+
+        printAdjacencyList(adjList);
+        System.out.println();
 
     }
 
@@ -81,6 +102,27 @@ class AdjacencyListDirected{
             temp = temp.next;
         }
         return false;
+    }
+
+    public static void removeEdge(Node[] adjList, int src, int dest) {
+        if(adjList[src] == null){
+            return;
+        }
+
+        Node temp = adjList[src];
+        if(temp.data == dest) {
+            adjList[src] = temp.next;
+            return;
+        }
+        else{
+            while(temp.next != null) {
+                if(temp.next.data == dest) {
+                    temp.next = temp.next.next;
+                    return;
+                }
+                temp = temp.next;
+            }
+        }
     }
 
     public static void printAdjacencyList(Node[] adjList) {
