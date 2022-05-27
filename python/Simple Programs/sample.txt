@@ -1,0 +1,11 @@
+apple
+atom
+amplifier
+ball
+bat
+cat
+mat
+rat
+sat
+jar
+zebra
