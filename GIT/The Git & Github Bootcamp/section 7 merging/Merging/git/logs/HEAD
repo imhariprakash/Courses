@@ -1,0 +1,16 @@
+0000000000000000000000000000000000000000 a8d01fedbf783cfa4ab840241151f1e03d9126e1 S Hariprakash <shariprakashece@gmail.com> 1658151643 +0530	commit (initial): add greetings.txt
+a8d01fedbf783cfa4ab840241151f1e03d9126e1 a8d01fedbf783cfa4ab840241151f1e03d9126e1 S Hariprakash <shariprakashece@gmail.com> 1658151662 +0530	checkout: moving from master to spanish
+a8d01fedbf783cfa4ab840241151f1e03d9126e1 f337e31f5c91adddd2c8065bd891cb28208bfa48 S Hariprakash <shariprakashece@gmail.com> 1658151806 +0530	commit: spanish greeting
+f337e31f5c91adddd2c8065bd891cb28208bfa48 a8d01fedbf783cfa4ab840241151f1e03d9126e1 S Hariprakash <shariprakashece@gmail.com> 1658151814 +0530	checkout: moving from spanish to master
+a8d01fedbf783cfa4ab840241151f1e03d9126e1 f337e31f5c91adddd2c8065bd891cb28208bfa48 S Hariprakash <shariprakashece@gmail.com> 1658151820 +0530	merge spanish: Fast-forward
+f337e31f5c91adddd2c8065bd891cb28208bfa48 f337e31f5c91adddd2c8065bd891cb28208bfa48 S Hariprakash <shariprakashece@gmail.com> 1658152297 +0530	checkout: moving from master to french
+f337e31f5c91adddd2c8065bd891cb28208bfa48 485a11baa1e3f7181fa94f9526bec706a7460868 S Hariprakash <shariprakashece@gmail.com> 1658152357 +0530	commit: French greeting
+485a11baa1e3f7181fa94f9526bec706a7460868 f337e31f5c91adddd2c8065bd891cb28208bfa48 S Hariprakash <shariprakashece@gmail.com> 1658152364 +0530	checkout: moving from french to master
+f337e31f5c91adddd2c8065bd891cb28208bfa48 df16cff5e9b6af14bacbd47c6dc19443960612e4 S Hariprakash <shariprakashece@gmail.com> 1658152458 +0530	commit: farewell.txt file added
+df16cff5e9b6af14bacbd47c6dc19443960612e4 a18dfacda9e0219d5e69f2c857c0d13c2aae4e93 S Hariprakash <shariprakashece@gmail.com> 1658152660 +0530	merge french: Merge made by the 'ort' strategy.
+a18dfacda9e0219d5e69f2c857c0d13c2aae4e93 64b0e0f0b5c0c9ff531ff1bfeadac91776ed8bec S Hariprakash <shariprakashece@gmail.com> 1658152713 +0530	commit: correction made
+64b0e0f0b5c0c9ff531ff1bfeadac91776ed8bec 485a11baa1e3f7181fa94f9526bec706a7460868 S Hariprakash <shariprakashece@gmail.com> 1658152794 +0530	checkout: moving from master to french
+485a11baa1e3f7181fa94f9526bec706a7460868 560c804f4cf2d48e3056c0f3d24f8fe4d746bfca S Hariprakash <shariprakashece@gmail.com> 1658152832 +0530	commit: French greet
+560c804f4cf2d48e3056c0f3d24f8fe4d746bfca 18fc380bb2c2cf483d6142e8cecab00e35fe43af S Hariprakash <shariprakashece@gmail.com> 1658152876 +0530	commit: French fries
+18fc380bb2c2cf483d6142e8cecab00e35fe43af 64b0e0f0b5c0c9ff531ff1bfeadac91776ed8bec S Hariprakash <shariprakashece@gmail.com> 1658152885 +0530	checkout: moving from french to master
+64b0e0f0b5c0c9ff531ff1bfeadac91776ed8bec 86ef21a4eb7b9c1dffbc01f063300753c8e136b0 S Hariprakash <shariprakashece@gmail.com> 1658152981 +0530	commit (merge): merge conflict resolved
