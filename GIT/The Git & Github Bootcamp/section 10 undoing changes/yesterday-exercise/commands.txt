@@ -1,0 +1,138 @@
+$ cd Desktop
+
+$ git clone https://github.com/Colt/yesterday-exercise
+Cloning into 'yesterday-exercise'...
+remote: Enumerating objects: 24, done.
+remote: Counting objects: 100% (24/24), done.
+remote: Compressing objects: 100% (9/9), done.
+remote: Total 24 (delta 7), reused 24 (delta 7), pack-reused 0
+Receiving objects: 100% (24/24), done.
+Resolving deltas: 100% (7/7), done.
+
+$ cd yesterday-exercise/
+
+
+$ ls
+lyrics.txt
+
+$ git log --oneline
+f199959 (HEAD -> master, origin/master, origin/HEAD) rework final verse
+8e3111c rework chorus
+b88b254 rework second verse
+b593444 rework first verse
+cdd927c finish original lyrics
+9518e20 add original chorus
+9858f43 add original second verse
+485a339 add original first verse
+
+$ git checkout 485a339
+Note: switching to '485a339'.
+
+You are in 'detached HEAD' state. You can look around, make experimental
+changes and commit them, and you can discard any commits you make in this
+state without impacting any branches by switching back to a branch.
+
+If you want to create a new branch to retain commits you create, you may
+do so (now or later) by using -c with the switch command. Example:
+
+  git switch -c <new-branch-name>
+
+Or undo this operation with:
+
+  git switch -
+
+Turn off this advice by setting config variable advice.detachedHead to false
+
+HEAD is now at 485a339 add original first verse
+
+$ git branch scrambling-eggs
+
+$ git switch master
+Previous HEAD position was 485a339 add original first verse
+Switched to branch 'master'
+Your branch is up to date with 'origin/master'.
+
+$ start lyrics.txt
+
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   lyrics.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+$ git add lyrics.txt
+
+
+$ git commit -m "my 404 lyrics"
+[master 7ed5d78] my 404 lyrics
+ 1 file changed, 7 insertions(+), 17 deletions(-)
+
+$ start lyrics.txt
+
+$ git status
+On branch master
+Your branch is ahead of 'origin/master' by 1 commit.
+  (use "git push" to publish your local commits)
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   lyrics.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+$ git add lyrics.txt
+
+$ git commit -m "updated mylyrics 404"
+[master 64d8801] updated mylyrics 404
+ 1 file changed, 11 insertions(+), 1 deletion(-)
+
+$ git log --oneline
+64d8801 (HEAD -> master) updated mylyrics 404
+7ed5d78 my 404 lyrics
+f199959 (origin/master, origin/HEAD) rework final verse
+8e3111c rework chorus
+b88b254 rework second verse
+b593444 rework first verse
+cdd927c finish original lyrics
+9518e20 add original chorus
+9858f43 add original second verse
+485a339 (scrambling-eggs) add original first verse
+
+$ git restore f199959
+error: pathspec 'f199959' did not match any file(s) known to git
+
+$ git reset f199959
+Unstaged changes after reset:
+M       lyrics.txt
+
+$ git switch -c 404
+Switched to a new branch '404'
+
+$ git status
+On branch 404
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   lyrics.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+$ git add lyrics.txt
+
+$ git commit -m "my 404 lyrics in updated 404 branch"
+[404 9d515a5] my 404 lyrics in updated 404 branch
+ 1 file changed, 15 insertions(+), 15 deletions(-)
+
+$ start lyrics.txt
+
+$ git switch master
+Switched to branch 'master'
+Your branch is up to date with 'origin/master'.
+
+$ start lyrics.txt
