@@ -1,0 +1,8 @@
+0000000000000000000000000000000000000000 6776bb87f909912738568c64bb41319a04dab5c1 S Hariprakash <shariprakash1805@users.noreply.github.com> 1658216342 +0530	commit (initial): favourites.txt file
+6776bb87f909912738568c64bb41319a04dab5c1 6776bb87f909912738568c64bb41319a04dab5c1 S Hariprakash <shariprakash1805@users.noreply.github.com> 1658216459 +0530	checkout: moving from main to foods
+6776bb87f909912738568c64bb41319a04dab5c1 0d1ea3bc6adb8398e1b74c4672980178b02d1a96 S Hariprakash <shariprakash1805@users.noreply.github.com> 1658216524 +0530	commit: favourite foods
+0d1ea3bc6adb8398e1b74c4672980178b02d1a96 6776bb87f909912738568c64bb41319a04dab5c1 S Hariprakash <shariprakash1805@users.noreply.github.com> 1658216533 +0530	checkout: moving from foods to movies
+6776bb87f909912738568c64bb41319a04dab5c1 937e096cfb1a49bd6fd12aaf81eb6fe3fca7973a S Hariprakash <shariprakash1805@users.noreply.github.com> 1658216595 +0530	commit: favourite movies
+937e096cfb1a49bd6fd12aaf81eb6fe3fca7973a 6776bb87f909912738568c64bb41319a04dab5c1 S Hariprakash <shariprakash1805@users.noreply.github.com> 1658216618 +0530	checkout: moving from movies to main
+6776bb87f909912738568c64bb41319a04dab5c1 0d1ea3bc6adb8398e1b74c4672980178b02d1a96 S Hariprakash <shariprakash1805@users.noreply.github.com> 1658216724 +0530	merge foods: Fast-forward
+0d1ea3bc6adb8398e1b74c4672980178b02d1a96 ec2a759f5f0ecf44fc438280fc42d7d13718338f S Hariprakash <shariprakash1805@users.noreply.github.com> 1658216786 +0530	commit (merge): resolve merge conflict movies
