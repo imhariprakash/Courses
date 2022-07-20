@@ -1,0 +1,11 @@
+import java.util.*;
+public class MyClass {
+    public static void main(String args[]) {
+        Map map = new HashMap<>();
+        map.put("A", "Apple");
+        map.put("B", "Ball");
+        map.put(1, "Cat");
+        System.out.println(map.get(1));
+    }
+
+}
