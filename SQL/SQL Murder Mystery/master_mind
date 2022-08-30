@@ -1,0 +1,65 @@
+/*
+SELECT * FROM crime_scene_report 
+WHERE type="murder" AND city="SQL City" AND date=20180115;
+
+SELECT * FROM person
+WHERE address_street_name="Northwestern Dr" 
+ORDER BY address_number DESC LIMIT 1;
+
+SELECT * FROM person
+WHERE address_street_name="Franklin Ave"
+AND name LIKE "Annabel%";
+*/
+
+/*
+SELECT * FROM facebook_event_checkin
+WHERE date=20180115 AND person_id=14887 OR person_id=16371;
+
+SELECT * FROM facebook_event_checkin
+WHERE person_id=14887 OR person_id=16371;
+
+SELECT * FROM interview WHERE person_id = 14887;
+
+SELECT * FROM interview WHERE person_id = 16371
+
+SELECT id FROM get_fit_now_member;
+
+SELECT * FROM get_fit_now_member WHERE id LIKE '48Z%' AND membership_status = 'gold';
+
+SELECT * FROM drivers_license WHERE id=423327;
+
+SELECT * FROM drivers_license WHERE id=423327;
+
+
+Congrats, you found the murderer! But wait, there's more... If you think you're up for a challenge, try querying the interview transcript of the murderer to find the real villain behind this crime. If you feel especially confident in your SQL skills, try to complete this final step with no more than 2 queries. Use this same INSERT statement with your new suspect to check your answer.
+
+
+SELECT * FROM interview WHERE person_id = 67318;
+
+I was hired by a woman with a lot of money. I don't know her name but I know she's around 5'5" (65") or 5'7" (67"). She has red hair and she drives a Tesla Model S. I know that she attended the SQL Symphony Concert 3 times in December 2017.
+
+SELECT *
+    FROM drivers_license
+    WHERE gender = 'female' AND hair_color = 'red' -- She has red hair
+      AND car_make = 'Tesla' AND car_model = 'Model S' -- and she drives a Tesla Model S
+      AND height >= 64 AND height <= 68;
+	  
+SELECT *, COUNT(*) AS num 
+FROM facebook_event_checkin
+WHERE event_name LIKE 'SQL Symphony Concert' AND date LIKE '201712%'
+GROUP BY person_id
+HAVING Num = 3
+
+Congrats, you found the brains behind the murder! Everyone in SQL City hails you as the greatest SQL detective of all time. Time to break out the champagne!
+
+*/
+
+
+SELECT name, id FROM person WHERE license_id = 202298;
+	  
+
+
+
+
+
+

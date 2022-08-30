@@ -1,0 +1,18 @@
+SQL murder solve:
+
+	                1 . Query to find first witness
+	
+SELECT * FROM crime_scene_report 
+WHERE type="murder" AND city="SQL City" AND date=20180115;
+
+// from this query get street name! - Northwestern Dr
+
+SELECT * FROM person
+WHERE address_street_name="Northwestern Dr" 
+ORDER BY address_number DESC LIMIT 1;
+
+
+ANS : 
+
+id	name	license_id	address_number	address_street_name	ssn
+14887	Morty Schapiro	118009	4919	Northwestern Dr	111564949

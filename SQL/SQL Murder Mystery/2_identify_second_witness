@@ -1,0 +1,25 @@
+2. Identify second witness
+
+/*
+
+
+SELECT * FROM crime_scene_report 
+WHERE type="murder" AND city="SQL City" AND date=20180115;
+
+SELECT * FROM person
+WHERE address_street_name="Franklin Ave"
+AND name LIKE "Annabel%";
+
+*/
+
+
+
+SELECT * FROM person 
+WHERE name like '%Annabel%'
+AND address_street_name = 'Franklin Ave';
+
+
+
+id	name	license_id	address_number	address_street_name	ssn
+16371	Annabel Miller	490173	103	Franklin Ave	318771143
+
