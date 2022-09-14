@@ -1,0 +1,70 @@
+java regex api
+
+1 interface and 3 classes
+
+1. MatchResult interface
+2. Matcher class
+3. Pattern class
+4. PatternSyntaxException class
+
+
+package : java.util.regex.*;
+
+Matcher class : https://www.javatpoint.com/java-regex
+
+
+Pattern p = Pattern.compile(".s");  . is any character(only one) and s
+Matcher m = p.matcher("as");  //as is the string to be matched
+boolean b = m.matches();  //returns true if the string matches the pattern
+
+//or
+
+boolean b = Pattern.compile(".s").matcher("as").matches();  //returns true if the string matches the pattern
+
+//or
+
+boolean b = Pattern.matches(".s", "as");  //returns true if the string matches the pattern
+
+
+regex : 
+
+.s(2 char ending with s) - as(true)
+                         - aas(false), mk(false)
+                         
+
+Character :                          
+
+[abc] -> a or b or c (only one character)
+[^abc] -> except a or b or c (only one char)
+[a-zA-Z] -> a to z or A to Z (only one char)
+[a-d[m-p]] -> a to d or m to p (only one char) -----> [a-dm-p] is same
+[a-d&&[a-z]] -> intersection (only one char)
+[a-z&&[^m-p]] -> a-z and except m to p (only one char)
+[a-z&&[^mp]] -> a-z and except m and p (only one char)
+() - sub expression
+
+
+Quantifiers :
+
+X? -> X occurs once or not at all
+X* -> X occurs zero or more times
+X+ -> X occurs one or more times
+X{n} -> X occurs n times only
+X{n,} -> X occurs n or more times
+X{n,m} -> X occurs at least n times but not more than m times
+
+
+Meta characters :
+
+.  (any character - may or may not match terminator)
+\d (any digit)[0-9]
+\D (any non digit)[^0-9]
+\s (any white space character)[\t\n\x0B\f\r]
+\S (any non white space character) [^\s]
+\w (any word character)[a-zA-Z_0-9] underscore / digit / alphabet
+\W (any non word character) [^\w]
+\b (a word boundary)
+\B (a non word boundary)
+
+
+
