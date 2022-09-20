@@ -1,0 +1,112 @@
+* after seven year need to be replaced (say) value = 0
+* building, machinery, equipment, vehicle, computer, furniture, land improvements
+
+
+calculate depreciation  :
+	1. asset value
+	2. estimated - end of life value
+	3. life of use
+	
+(asset cost - estimates end of life value) / year of useful
+
+
+record depreciaton : 
+	1. depreciation expense - adjusting entry - debit
+	2. accumulated depreciation - credit
+	
+depriciation expense - inc stat account
+accumulated depriciation : bal sheet acc(contra asset acc)
+
+
+Methods of calculating depreciation : 
+	1. straight line method(same amount of depreciation)
+	2. units of activiity/ population(more exp in the year - used more)
+	3. double declining balance(initial - large depreciation years in useful period)
+	4. sum of the years digits method(initial - large depreciation years in useful period)
+	
+	
+	
+straight line depriciation : 	
+	1. same amount depreciated every year until end
+	
+change in salvage value / useful life : 
+	say 4 year depreciated 2000 per year
+	at the end - found only used 2 more years
+	cost = 14k, 8k depreciated - book value = 6k
+	2yrs = 6k / 2 = 3k
+	year 5 = 3k, year 6 = 3k
+	book value = 0
+	
+	
+	
+Units of activity : 
+	1. 20k - 5000 valuable items - no salvage value
+	20k / 5k = 4 (depreciation per item)
+	
+say 10500, 500 salvage value, useful life = 5000 images
+
+july 1 to dec 31 2020 : 
+	* 400 images - 800 depreciation
+2021 : 900 images 
+	* total depreciation = 800 + 1800 = 2600
+	
+
+Double declining balance : 
+	* accelerated method - early years more depreciation
+	* 200 % declining balance method - two times straight line rate
+	* say straight line 10%, double declining will be 200%
+	
+eg : 100k, 10yrs - double declined method = 2 * 1/10 %
+	20%
+	
+	1 year = 20k (20 % of 100k)
+	2 year = 16k (20 % of 80k)
+	3 year = 12.8k (20 % of 64k)
+	
+often use 0 salvage value
+
+
+sum of years digits depreciation : 
+	say 10 yrs
+		1 + 2 + ... + 10 = 55
+		
+	year 1 : 10 / 55 - asset's total depreciation cost
+	year 2 : 9  / 55
+	
+asset total depreciation cost = 100k - 10k = 90k
+where 10k is the salvage value
+	
+	
+
+
+Selling a depreciable asset : 
+	book value - gain / loss
+	
+profit : book value = 8k, sold = 10k 
+loss : 100k --> depreciated 92k -> sold = 6k
+2k loss
+
+cash 6k
+accumulated depreciation - 92k
+loss on sale of truck - 2k
+
+
+retailer, distributor, service provider --> doesn't manufacture goods - so depreciation recorded as depreciation expense on income statement
+
+depreciation on manufacturing -> depreciation part of inventory (cost of goods)
+
+
+repairs and maintenance vs capital expenditure : 
+	repairs and maintenance expense - broken
+	updating asset's capabilities - not an expense - should also be depreciated
+	
+
+depreciation is an allocation not valuation : 
+	* allocate asset's cost to expense
+	* not reports market value
+	
+	
+	
+	
+	
+

@@ -1,0 +1,126 @@
+why adjusting ? 
+
+* borrow - dec 1 2021 - accounting period ends 31 dec 2021
+  first interest due : march 1
+  
+* when to report ? - report liability(borrowed) + liability interest ( include december's interest in dec report)
+
+* say amount as advance (dec 1 to may 31 - 2400)
+
+by dec 31 - one month used up(400 used up -expense)
+2000 - asset - prepaid insurance
+
+dec 1 - prepaid insurance - 2400
+dec 31 - prepaid insurance - 2000
+
+so adjusting needed
+
+
+
+Adjusting entries almost always involve a
+
+* balance sheet account (Interest Payable, Prepaid Insurance, Accounts Receivable, etc.) and an
+* income statement account (Interest Expense, Insurance Expense, Service Revenues, etc.)
+
+
+
+adjusting assure - up to date accural basis accounting
+
+* we need to record earned - not only billed - adjusting needed
+
+
+3000 - receivable (adjust)
+
+
+				Accounts receivable(balance sheet)
+---------------------------------------------------------------
+debit                       |  credit
+							|
+preliminary balance 4.6k    |
+adjusting entry 3k          |
+correct balance 7.6k        |
+
+
+			Service revenue (income statement)
+-----------------------------------------------------------
+debit                       |  credit
+							|  60234 preliminary bal
+							|  adjusting entry 3k
+							|  63234 - correct bal
+							|
+
+ledger : 
+
+dec 31 2021 accounts receivable debit 3k
+			service revenue credit 3k
+			
+allowance for doubtful accounts : 
+	* doesn't appear on preliminary bal sheet
+	* dishonesty, unforeseen hardships
+	
+without reducing receivable by means of credit amount - do in allowance for doubtful accounts
+
+
+1. say : 600 won't be collected
+
+doubtful accounts : credit 600
+bad debts expense : 600 debit
+
+note : doubtful accounts - balance account
+       bad debt expense - income statement(fresh year)
+       
+
+2. supplies - 1100, but found on hand - 725 ( too high 375)
+
+supplies - (credit) - 375 --> now : 725
+supplies expense - (debit) - 375 ---> now : 1975
+
+
+3. insurance - > 1 month expired
+
+prepaid insurance - credit - 900
+insurance expiry - debit 900
+
+4. accumulated depreciation = 7500 
+
+equipment depreciation - credit 7500
+depreciation expense equipment = debit 7.5k
+
+5. 5000 dec 1 borrowed - first interest 6% - 300 per year / 25 per month
+
+(march 1 - 75 interest)
+
+dec 31 - interest 25 must be reported
+
+
+interest payable - 25 credit
+interest expense - 25 debit
+
+
+6. 1000 pulmbing repairs done in late dec, not received invoice
+
+accounts payable - 1000 credit
+repairs and maintenance expense - 1000 debit
+
+7. wages payable, wages expense
+
+
+
+accural : 
+
+	1. nothing entered in records - but exp/revenue - occured and must includes in current perioff's income statement and balance sheet
+	2. adjusting entry needed(earned but not received)
+	
+deferral : 
+	* 1 month used up -> defer remaining into prepaid account
+	* advance but not earned  or paid but not used up
+	
+(liability - advance payment)
+
+
+avoid adjusting : ask bank for monthly interest pay monthly, monthly insurance
+
+
+
+
+

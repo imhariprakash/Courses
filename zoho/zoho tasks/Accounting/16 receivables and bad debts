@@ -1,0 +1,228 @@
+* purchase on credit - pay later
+* accounts receivable - asset
+* if don't pay : 	
+		* bad debt / credit loss - inc statement
+		* reduction of acc receivables
+		
+* for it purposes - reported at a later date 
+
+
+4000 - pay later
+
+acc receivable - debit 4k
+service revenues - credit 4k
+
+reported in bal sheet, inc stat and change - equity 
+
+1. FOB shipping point - buyer pay to get goods delivered
+	* no delivery exp to seller
+	* at shipping point buyer is the owner - sold reported to buyer's inventory
+	
+2. FOB delivery - seller incur delivery expense (delivers at destination)
+	* while transit - still seller's inventory until delivered - not sold
+	
+
+
+FOB shipping point : 
+	1000 - cost of goods(80% of sales value)
+	
+acc receivable - 1k (debit)
+sales		   - 1k (credit)
+
+
+cost of goods sold - 800 debit (lead)
+inventory          - 800 credit (girls)
+
+
+FOB destination : 
+
+	sales value : 1050, cost of good - 800
+	
+	
+acc receivable - 1050 debit
+sales          - 1050 credit
+
+
+cost of goods - 800 debit
+inventory     - 800 credit
+
+
+
+seller - assumes risks of transporting
+
+so indeed it has operating expense say(50 to deliver)
+
+
+
+
+credit terms with discount : 
+
+	say 1000 worth sold - 100 returned
+	net purchase = 900
+	
+net 30 - but paid in 45 days - speed up discounts
+2/10 - 2% discount - net 10
+now 900 - 0.02 * 900 = 882 
+
+
+june 1 - acc receivable - 1k debit
+		 services       - 1k credit
+		 
+june 1 - cost of goods sold - 800 debit
+		 inventory          - 800 credit
+		 
+june 6 - sales returns, allowance - 100 debit
+		 accounts receivable - 100 credit
+		 
+june 6 - inventory - 80 debit
+		 cost of goods - 80 credit
+		 
+june 11 - cash 882 debit
+		  sales disc 18 debit
+		  acc receibale - 900 credit
+		  
+say july 1 paid : cash 900 debit
+				  acc receivable - 900 credit
+				  
+
+
+credit risk : 
+	* no hold of buyer's assets - seller(insecured)
+	* cash / credit card
+	
+allowance methods for reporing credit losses : 
+
+	* current receivable - current asset
+	* current asset - expected with in 1 year - chance of overstating acc receivable(not collectible)
+	* estimate - doubtful accounts - contra asset account
+	* any increase in doubtful account also recorded in income statement's bad debts expense(uncollectible acc exp)
+	* this is allowance method
+	
+june 30 - 100k appr 2000 - can't be recovered
+
+june 30 -bad exp 2k debit
+		 allowance for doubtful acc(contra ..) - 2k
+		 
+net realizable value = 100k - 2k = 98k
+
+
+* just an assumption : doesn't need to know which customer won't pay nor exact amount
+* accepted by accountants - better than assuming every penny collectable
+
+https://www.accountingcoach.com/accounts-receivable-and-bad-debts-expense/explanation/3
+
+
+above : we can't say which one pays how much what's why allowance method is for (above - we assumed for 100k, 2k is at stake)
+
+
+Allowance method : 
+	1. specific account - uncollectable - reduce receivable
+	2. reflects only balance sheet - not income stats - since written off as covered
+	
+	
+eg : 1400 (bankrupt), we decided 10k allowance for doubt..
+
+aug 24 allowance for doubtful acc - 1400 debit(credit account so 8600 remaining)
+	   acc receivable             - 1400 credit
+	   
+	   
+now : 
+
+accounts receivable : 
+
+june 1 bal = 0
+june sales = 100k debit
+
+july sales = 225k debit
+			 95k credit(received)
+			 
+bal : 230k
+
+aug sales : 204k debit
+		    194k credit - received
+		    
+aug 24 : 1.4k (not receivable - confirmed)
+
+bal : 238600
+	
+	
+Doubtful accounts
+
+june 30 - 2k (dountful) credit
+july 31 - 8k (doubtful) ---> total 10k credit
+aug 24  - 1.4k confirmed - debit - can't return
+
+
+say customer paid(will pay) written off amount : 
+
+adjustment : 
+
+oct 10 - acc rec -1.4k debit
+		 allowance for doubtful acc - 1.4k(restore allowance)
+		 
+
+say paid amount : 
+
+oct 10 cash 1.4k debit
+	   acc rec - 1.4k credit
+	   
+	   
+
+
+Bad debts expense as a percent of sales : 
+
+	say 0.3 % of each week's credit sales 
+	
+500k means - 1.5k won't return
+
+
+bad debt exp - 1.5k debit
+allowance for doubtful acc - 1.5k credit(restore as won't return)
+
+
+
+
+
+
+
+Expense vs Allowance : 
+
+	bad debts : credit losses - during income statement
+(temp account) 
+	Allowance for doubtful acc - balance sheet acc - uncollectible (not included in acc receivable)
+	
+	expense acc - closed each year
+	
+but allowance - not closed so there will be a mismatch
+
+say : end of year - 14k both bad debt exp and doubtful acc
+
+
+second year : 14k allowance, 0 - bad debt exp
+3k adjust
+
+now : 3k bad debt exp, 17k doubtful acc
+
+
+mailing statements - thankyou for continued business - reminding is the goal but not looks like one
+
+
+
+
+note : use of allowance method - not permitted in us income tax -IRS 
+
+
+direct wireoff method : 
+
+say june 5 - 1238 - known definitely uncollectable 
+
+oct 21 bad debt exp - 1238 debit
+	   acc receivable - 1238 credit
+	   
+
+
+
+
+ 
+		 
+

@@ -1,0 +1,257 @@
+			asset = liabilities + owner's equity
+			
+cash, accounts receivable, equipment, notes payable, accounts payable, j. ott capital, j. ott drawings, service revenue, ad expense, temp service exp
+
+
+1. 10k invest
+
+asset = liability + equity
+10k                  10k
+
+
+record : 
+
+dec1 cash     10k(debit)
+	 j. ott capital 10k (credit)
+	 
+	 
+
+j. ott withdraws 100 cash from business for personal use
+
+asset = liability + equity
+-100                 -100
+
+dec 2 2021  cash credit(100)
+		    j. ott drawing 100(debit)
+		    
+owner's equity = 10k - 100 = 9.9k
+
+asset = 9900
+liability = 0
+owner's equity = 9900
+
+
+
+5000 - computer - business use
+
+
+asset = liability + owner's equity
+-5000                  
++ 5000
+
+dec 3 equipment 5000(debit)
+	  cash(credit) 5000
+	  
+asset = 9900
+owner's equity = 9900
+
+
+
+
+4. company borrow loan 7000
+
+asset = liability + owner's equity
+
+7000  = 7000
+
+dec 4  - cash(debit) - 7k
+		 notes payable - 7k(credit)
+		 
+
+
+5. 600 for ads
+
+asset = liability + owner's equity
+-600                   600(ad exp) - debit
+cash - credit
+
+
+6. 900 - receivable - 30days
+
+asset = liability + owner's equity
+900					(service revenue - credit - 900)
+account receivable(900) - debit
+
+
+7. temp help - 20 per hour - 6hr -> 120 - 10days due
+
+asset = liability + owner's equity
+		120               -120
+
+accounts payable - credit(120)
+temp service exp - debit(120)
+
+
+
+8. 500 received from customer - transcation 6 (900)
+
+asset = liability + owner's equity
+500 - 500
+
+account receivable - 500 (credit)
+cash - debit 500
+
+
+
+finally, 
+
+asset = liability + owner's equity
+
+10k                    10k
+-100				   -100
+5k-5k
+7000      7000
+-600					-600
+			120			-120
+500 - 500
+
+----------------------------------
+17200		7120		10080
+-----------------------------------
+
+
+
+
+Owner's equity  :
+
+	1. 10k + 900 - 600 - 120 (net income) - 100(drawn by owner)
+	            = 10080
+	            
+	            
+	            
+
+Missing amount calculation  :
+
+	net income - unknown
+	know : num of draws from beginning and ending balances of owner's equity
+	
+	asset 2020 dec 31 = 100k
+	liability = 40k
+	asset 2021 dec 31 = 128k
+	liabilkity = 34k
+	owner investment = 10k
+	owner draws = 40k
+	
+asset = liability + owner's equity
+
+2020 : 100k = 40k + equ  => equity = 60k
+2021 : 128k =  34k + equ => equity = 94k
+
+owners equity at 2021 = 60k + 10k - 40k + net income = 94k
+
+net income = 64k ( found )
+
+
+
+
+
+
+Corporation  :
+
+assets = liabilities + stockholde's equity
+
+          
+cash, accounts receivable, equipment, notes payable, accounts payable, common stock, retained earnings, treasury stock, service revenue, ad expense, temp service exp
+
+
+
+1. 10k - 1000 shares
+
+asset = liability + owner's equity
+10k	                  10k
+
+dec1  cash debit - 10k
+	  common stock credit - 10k
+	  
+	  
+2. dec 2 - 100 buy back share - treasury stock
+
+asset = liability + stockholder's equity
+-100  =                 -100  
+
+treasury stock - 100 debit
+cash - credit 100
+
+(company now sold - 9900 worth of shares as bought back 100 worth
+
+
+3. 5000 cash - computer
+
+asset = liability + stockholder's equity
+5000 - 5000
+
+equipment - debit 5k
+cash - credit 5k
+
+
+4. 7000 borrow
+
+asset = liability + stockholder's equity
+7000     7000
+
+
+cash debit - 7k
+notes payable - credit - 7k
+
+
+5. 600 for ads
+
+asset = liability + stockholder's equity
+-600                    -600
+
+note : as expense (not asset / prepaid insurance)
+
+
+ad exp - 600 debit
+cash - 600 credit
+
+
+6. 900 - 30days from client
+
+
+asset = liability + stockholder's equity
+900                   900 (service revenue - credit)
+(receivable - debit)
+
+
+7. temp help - 120 pay by 10 days
+
+asset = liability + stockholder's equity
+         120          -120
+         
+liability payable accounts = 120 (credit)
+temp service expense = 120 (debit)
+
+
+8. 500 from transaction 6 client
+
+already added service revenue = 900
+reduce accounts receivable
+increase cash
+
+asset = liability + stockholder's equity
+500 - 500
+
+cash - debit 500
+accounts receivable - credit 500
+
+
+
+
+
+expanded equation  :
+
+individual : 
+
+asset = liability + owner's capital - owner's withdraw + revenue - expense
+
+
+corporation  :
+
+asset = liability + paid in capital + revenue - expense -expense - dividends - treasury stock
+
+
+
+
+
+

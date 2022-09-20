@@ -1,0 +1,329 @@
+book keeping : record transactions in journal - post in ledger
+			   accounts - sales, rent exp, wages exp, loan payable
+			   
+trial balance ( no error - proceed to accounting) - adjust entries
+
+1. add revenue - not recorded
+2. add exp - not recorded
+3. prepayment - no longer paid
+4. depreciation - compute and record
+
+
+each year - temp accounts ( make zero - transfer to quity capital)
+
+
+modern software  :
+
+	1. fast and accurate - unable to detect - omitted, entered twice, incorrect accounts used - internal controls must
+	
+	
+accrual - complete reporting, realistoc - earned/incurred
+
+
+a dependable accounting software - enforce debit = credit
+
+
+softwares can't avoid : 
+
+	1. incorrect value
+	2. entered twice
+	3. incorrect account
+	
+
+
+general ledger accounts  :
+
+	sort and store transactions - asset, liability, equity, op rev, op exp, non op rev and gain, non op exp and losses
+	
+first 3 - balance sheet accounts
+last 4 - income statement accounts
+
+
+
+https://www.accountingcoach.com/bookkeeping/explanation/5
+
+
+When cash is received, debit Cash.
+When cash is paid out, credit Cash.
+When revenues are earned, credit a revenue account.
+When expenses are incurred, debit an expense account.
+
+
+
+asset : cash, short-term investments, accounts receivable, allowance for doubtful accounts, accured revenues, prepaid exp, inventory, supplies, long term investments, land, buildings, equipment, vehicles, furnitues, accumulated depreciation
+
+
+
+cash : currency, coins, account balance, petty cash funds, checks - not deposited
+
+short term investments : certificate of deposit, bonds, notes < 1year - sold on stock exchange
+
+accounts receivable  :	customer owe
+
+allowance for doubtful accounts : contra asset account
+combined with account receivable = net receivable
+
+accrued revenues : delivered - sales invoice yet to generate
+
+prepaid : insurance, expires every month
+
+
+
+
+
+Liability - short term loans, current portion of a long term debt, accounts payable, accured expenses(invoice yet to gen), unearned revenue, installment loans payable, mortage loans payable, stockholder's equity accounts, paid in capital (amount for stock)
+
+common stock - par value account(stated value), paid in capital account
+
+
+
+
+
+
+
+Income statement accounts : 
+
+	1. operating revenue - main activities of company - sales, service, fee, particular product line(credit)
+	2. operating expense - cost of good, service, salary exp, fringe benefit exp, rent exp, utility exp, utility exp for a particular store, depreciation exp - buildings, equipment, repairs exp
+	3. other revenue and gain - sell asset(credit)
+	4. other exp and losses - (interest exp, loss, law suit)
+	
+
+
+organize by department, sales reign, warehouse
+
+
+bank reconcilation : 
+
+
+1. balance in statement = 300k
+   cheque deposited not cleared = 20k
+   cheques issued but not present(not yet party deposited cheque - not cleared = 50k (less as bank holds that money)
+   
+   -----------------------------------------------------------
+                     270 k 
+   -----------------------------------------------------------
+   
+2. ledger = 2,60,900
+   credited but not recorded = 9800
+   interest received = 20
+   other charges not recorded in book = 720 (less)
+   
+ -------------------------------------------------------
+				270k
+ -------------------------------------------------------
+ 
+ 
+ common reason for differenceb bank balance and ledger  :
+ 	1. outstanding cheque
+ 	2. not presented cheque but issued
+ 	3. service charge and fee
+ 	4. printing charge
+ 	5. error in ledger
+ 	
+
+
+
+
+Adjust entries  :
+    1. bill received late - but dec bill arrived jan 10
+    2. prepaid - insurance only that month alone appears - exp
+    3. depreciation
+   
+note : always affects two or more accounts
+
+types of adjusting entries : 
+
+	1. accrued revenue - earned invoice not yet(debit - accrued receivables, credit - service revenues)
+	2. accrued expense - incurred but no invoice (temp help exp - debit and accured liability - credit)
+	3. deferred revenue - advance(service revenue- debit, deffered revenue - credit)
+	4. deferred expense - paid in future(debit - insurance expense, credit - prepaid exp)
+	5. depriciation
+	
+	
+Reverse entries  :
+
+	* accrual type - late(but update previous accounting period)
+	* not twice - can't be processed(adjusting entry, routinely processed entry) - remove accrual type adjusting entry
+	* dated - 1 st day of next accounting period
+	
+dec 31 - 6000 repairs
+
+repair expenses  (debit) - 6000
+accured liability (credit) - 6000
+
+jan 2  :
+
+accured liability (debit) - 6000
+repairs expense (credit) - 6k
+
+-----------------------------------------
+now adjusted : correctly
+-----------------------------------------
+
+note : cash account also get involved
+
+
+
+* revesing entry removes liability on dec 31
+* puts credit balance in repairs expense - jan 2
+* after processing invoice we can credit cash and debit repairs expense
+
+
+
+
+four main fin statements : 
+	1. balance sheet
+	2. income sheet
+	3. cash flow statement
+	4. stockholder's equity
+	
+balance sheet : 
+	* asset, liability, equity
+	* statement of financial position
+	* capital = asset - liability
+	
+classified balance sheet : 
+	* asset - current asset, long term investment, property, plant, equipment, intangible assets(software, license,copyrights, trademark), other assets
+	* liability - current, non current
+	* stockholder's equity
+	
+
+* current asset - cash, short term investments, receivable, inventory, prepaid expense
+* investments - long term - real estate, cash reserved for construction, bonds
+* current liabilities - with in one year - use of current asset - loan, income tax, accounts payable, current portion of long term debt
+* non current liabilities - no due with in a year - mortage, bonds
+* stockholder's equity - paid in capital, retained earnings, treasury
+
+
+
+
+Income statements : 
+
+	1. state of operations
+
+multistep income statement  :
+	1. gross profit = sales - cost of sales
+	2. operating income = gross profit - sell, general, admin exp
+	3. net income = operating income - other(interest exp)
+	
+single step income statement : 
+	1. all income - all exp
+	2. revenue = sales + investment revenue
+	3. total exp = cost of sales + admin.., interest exp
+	4. net income = total income - total exp
+	
+
+both balance sheet and income statement are linked
+
+
++ ve net income increases stock holder's equity
+income statement - temporary accounts
+
+
+
+Cash flow statement : 
+
+	1. income statement - earned but not received(30days), exp 
+	2. cash is king - cash statement must for same period
+	
+inflow = +ve
+outflow = -ve
+
+net total of +ve and -ve amounts = currect cash of company
+
+main sections : 
+	1. operating activities
+	2. investing
+	3. financing
+additionally
+	1. interest paid
+	2. income tax paid
+	3. exchange assets other than cash
+	
+note : net income involves all exp removed from all income
+
+so cash flow depreciation - we are adding
+receivable - subtracting as already added
+	
+
+operating activities - direct, indirect
+
+indirect : mostly used
+	1. depriciation - decreases net income - not involves cash
+	2. debit to depreiciation expense
+	3. credit to accumulated dep
+	4. amount of depriciation - added back to net income
+	
+net income = 19kk
+add back : depriciation exp = 9k
+
+cash flow from operating activities = 28k
+
+
+receivable increased by 300 means : 
+
+28k - 300 = 27700
+
+(receivables, service revenue tackles) that's why only taking increased amount alone
+
+payable increased by 250
+
+(payable, service expense got tackled) that's why taking increased amount alone
+
+27700 + 250 = 27950
+
+note : receive - debit, pay - credit
+note : net income = net income(cash + receivables + ...) - net expense
+
+so cash flow = cash currently have(minus receivales + payables)
+
+
+1. depriciation : not actually money got reduced but in net income we reduce it
+cash remains same so we add depreciation
+
+2. receivable : added as receivable but cash not received
+so subtracted from net income
+
+3. payable - reduced from net income but not yet paid cash remains same - so add net income
+
+
+
+
+investing : 
+
+	1. sell - +ve flow
+	2. purchase - (-ve) flow
+
+financing activities : 
+
+	1. positive - (received from)
+	 	* issue bond, borrow, issue shares, loans
+	 2. negative flow
+	 	* pay debt, purchase shares, dividend pay
+	 	
+	 	
+Stock holder's equity statement : 
+
+	1. closing cut-off -> accrual method
+	2. jan 10 paid(dec 31 - dec expense report liability) then do reverse entry then after paying do credit
+	3. changes to stock holder's equity
+
+software : 
+	1. seperate handling cash from receivables
+	2. reconcile from receipt of record - in ledger
+	3. owner approve review purchase order, checks, credit memo
+	
+
+
+	
+	
+	
+	
+	
+
+
+
+
+
+

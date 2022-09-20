@@ -1,0 +1,235 @@
+fin statements : 
+	1. inc statement
+	2. statement of comprehensive income
+	3. balance sheet
+	4. statement of stockholder's equity
+	5. statement of cash flows
+	
+also includes notes
+
+
+general ledger - corporation's book
+general ledger - has transactions and adjustment entries
+
+
+why adjustment ? 
+	1. say 1000 used up monthly
+	2. late expenses but belong to that period
+	3. uncollectable, marketable securities
+	
+
+accounting periods : 
+	1. annual, month,4 weeks, 3 months, 13 weeks, 8 months, 11 months
+	2. fiscal years
+	
+users of financial statements : 
+
+	1. current stockholders
+	2. current lenders
+	3. fin analysts
+	4. potential future investors
+	5. potential future lenders
+	6. current and future goods and service suppliers
+	7. certain customers
+	8. govt agencies
+	9. labor unions
+	10. competitors and others
+	
+
+
+Income statement : 
+
+	1. income/earning/operations/profit-loss/ p&L stateme
+	
+revenue : product / service
+expense : cost of goods, sales commision, ads, store rent, others
+
+rules : 
+	1. same time period - income and expense
+	2. expired / used - update(depriciation)
+	3. no future value - ads
+	4. cost too small to justify allocating to future periods
+	
+
+gross profit = net sales - cost of goods sold
+
+net income = amount remaining after all exp,gain.loss
+
++ve net income - increase equity and vice versa
+
+earnings per share : publicly traded - each share dividend
+
+history - value remains cost price / decrease
+
+
+
+
+
+
+Statement of comprehensive income : 
+
+	1. corp net income, few add items
+	
+tems make up comprehensive income : 
+	1. unrealized gains / losses - used in hedging(limit risks in fin assets) eg: avail insurance - car accident
+	2. unrealized gains / losses in pension / postrretirement liabilities
+	3. foreign currency translation adjustments
+	(currency may drop / rise -> adjust in your parental currency)
+	
+	
+net income +/- foreign trans, pension.., other income = comprehensive income statement
+
+
+
+
+balance sheet : 
+
+	1. double entry system - balanced!
+	https://www.accountingcoach.com/financial-statements/explanation/5
+	
+	
+stock holder's equity : 
+	1. claim on corp asset
+	2. source of corp asset
+	
+main components : 
+	1. paid in capital
+	2. retained earnings
+	3. accumulated / comprehensive income
+	4. treasury stock
+	
+	
+
+working capital = current asset - current liability
+
+current ratio = current assets / current liabilities
+
+indicators of ability to pay obligations when they come due
+
+statement of stockholder's equity : 
+
+	1. paid in capital - common stock
+	2. retained earnings(loss)
+	3. other income(loss)
+	4. treasury stock
+	
+
+
+statement of cash flows : 
+
+	1. inflow vs outflow
+	2. cash is king(investor mindset) - as accural methods is followed (this statement - cash method)
+	3. op act, invest, financing + others : interest, it..
+	
+https://www.accountingcoach.com/bookkeeping/explanation/12
+
+	
+net income = 19kk
+add back : depriciation exp = 9k
+
+cash flow from operating activities = 28k
+
+
+receivable increased by 300 means : 
+
+28k - 300 = 27700
+
+(receivables, service revenue tackles) that's why only taking increased amount alone
+
+payable increased by 250
+
+(payable, service expense got tackled) that's why taking increased amount alone
+
+27700 + 250 = 27950
+
+note : receive - debit, pay - credit
+note : net income = net income(cash + receivables + ...) - net expense
+
+so cash flow = cash currently have(minus receivales + payables)
+
+
+1. depriciation : not actually money got reduced but in net income we reduce it
+cash remains same so we add depreciation
+
+2. receivable : added as receivable but cash not received
+so subtracted from net income
+
+3. payable - reduced from net income but not yet paid cash remains same - so add net income
+
+
+
+
+1. operating activity : 
+
+	net cash = 100k
+	depriciation = 30k(exp didn't use cash)
+	decrease in accounts payable = 9k
+	decrease in accounts receivale = 5k
+	
+receivable decreased - but net income already considered took sum - even decreased -> took minus(cash remains same)
+
+	net cash = 100 + 30 + 5(sub to get net income -> but cash remains same, so add)
+	
+	decrease in payable - added 9k to get net income(as liability decreased asset increased) - no cash incolved so sub 9k
+	
+	100 + 30 + 5 - 9 = 126k
+	
+	
+2. investing activities : 
+
+	* bought(outflow), sold(inflow)
+	* capital expenditure = (95k) -> bracket means negative
+	* proceeds from sale of property = 15k
+	* sale of investments = 30k
+	--------------------------------------------
+	-95k(outflow) + 15k + 30k = (50k) -> negative
+	--------------------------------------------
+	
+	
+3. Financing activities : 
+
+	* borrowed / issued money
+	* dividends - (10k)
+	* repayment of short term debt - (20k)
+	* long term borrowing - 60k (inflow)
+	* purchase of treasury stock  (2k)
+	------------------------------------------
+	-10k -20k + 60k - 2k = 28k
+	------------------------------------------
+	
+
+free cash flow : amount of cash from op activities required for  capital expenditures. (some people also include dividends -> cash from op - cap exp - div)
+	
+
+notes  :
+
+	1. accompany statements
+	2. policies, nature of business, inv,...
+	
+	
+common - large business - consist of several corp(subsidiaries)
+
+* shares of parent corp : major stock exchange
+* stockholders interested in fin statement and reports of subsidiaries too
+* consolidated fin statements : transactions bw subsidiaries and its cust, supp and others
+* sales - b/w subsidiaries itself and parent corp - not included
+
+
+consolidated inc statement, cons.. comp inc sta, cons bal statement...
+
+
+
+comparitive fin statements : 
+	current year, previous 2 years
+	
+audited fin statements : 
+	independent public accountants - fairly audit -stock trading corps(must)
+	
+
+	
+publicly traded corp : 
+
+	* comply with reporting req
+	* issues consolidated statements (publicly held corps)
+	* consolidated statement -audited
+

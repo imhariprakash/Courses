@@ -1,0 +1,147 @@
+* internal controls - seperate acocunting duties
+		* check ledger -complete and accurate
+		* check amount on bank statement == ledger cash account
+		* deposit on bank statement == receipts recorded in cash acc
+		* any difference - make adjustments
+		
+		
+compare bank statement and general ledger ( difference - insufficient funds, fee by bank...) ----> adjustments
+
+
+
+
+abc bank, checking account #001 bank reconcilation of 1.1.22
+
+balance per bank : 
+	unadjusted bal from bank statement : xxxx.xx
+	+/- adjustments to bank            :   xx.xx
+	                                  -------------
+	adjustment bal per bank              xxxx.xx
+	
+balance per books : 
+	unadjusted bal in company's general ledger cash acc 
+										xxxx.xx
+	adjustments to books 				  xx.xx
+									---------------
+										xxxx.xx
+										
+										
+mainly adjustments : in general ledger - not recorded yet : 
+					 outstanding check, deposit in transit
+					 
+
+adjusted balance per bank = adjsuted balance per books
+
+
+note : for reflected in ledger cash account and bal sheet : record adjustments in general ledger accounts
+
+
+
+Accounting for cash  :
+
+	1. seperate general ledger cash account - for each of its checking account
+	2. one cash account for main checking account
+	3. second cash account for payroll checking account
+	
+	
+eg : 
+
+1. receives 900 on june 29 - accrual(even deposited in july 2 - date will be june 29)
+
+writes check - amount is credited from cash account and debited to another account
+
+unadjusted balance - not true balance of the bank
+
+
+
+
+Accounting at bank : 
+
+	1. asset - cash, investment securities, loans rec
+	2. liability : customer deposits
+	3. customer deposits  : checking accounts, savings, certificate of deposit
+	4. customer accounts (liabilites)
+	
+900 deposit - asset = +900 (debit)
+			  liability (credit)
+			  
+
+eg : 
+	1. open checking account - 10k
+	asset - 10k debit
+	liab  - 10k credit
+	
+    2. pay rent 1k - aug 1 check - 3d later - cash
+    1k debit in liability
+    1k credit in cash account
+    
+terms : 
+
+checking account : pay/ return balances - safeguard
+
+voided checks : written in error
+
+stop payment order : stop payment - don't pay
+
+bank overdraft : not enough balance - bounce
+
+uncollected : not drawn yet - payee bant won't freeze - won't allow payee to use that amount
+
+adjustments : 
+
+outstanding checks : written, recorded in cash acc, not cleared (paid) - outstanding (true bal = sub this amount)
+
+deposit in transit : checks received, general ledger - entered, but not processed to record cash - outstanding deposits
+
+bank errors : bank erros - find and corrected
+
+
+bank credit memos : 
+	* bank increased balance - say loan - deposit using a credit memo
+	* recorded in general ledger - debit in account loan receivable
+	
+debit memos : 
+ 	* liability to pay say (deposits)
+ 	
+ ach, eft, zelle, wire transfers : 
+ 	* transfer to other account(same / diff banks)
+ 	
+ nsf check : 
+ 	* not sufficient funds / bounced / rubber check
+ 	* not honoured by the bank
+ 	
+ 
+ 
+ 
+ company's process for preparing its bank reconcilation : 
+ 	* check bank statement and every account in company's cash account
+
+
+steps : 
+
+	1. check bank statement with ledger cash account - check, deposit(tranit, errors - shown on reconcilation)
+	2. balance per bank side : 
+		* unadj bal (from statement)
+		* deposit in transit 
+		* outstanding check (deduct)
+		* errors (deduct)
+		unadj bal + dep in transit - outstanding check +/- bank errors
+		
+	3. general ledager side(right)
+		* unadj bal - ledger
+		* add interest earned
+		* auto/e deposit
+		* ded charges, print, returned
+		* add / sub company errors
+	4. reconcilation bank side = ledger side (adj)
+	5. record - adjustments in ledger (to make equal)
+	
+say : some checks missing - we can find that from bank reconciliation.
+
+
+eg : 
+
+	1. record in bank statement - missing in ledger (adjustment to books under bank reconciliation)
+	2. 		 
+
+

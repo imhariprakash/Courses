@@ -1,0 +1,430 @@
+Accounting : 
+
+story : joe - delivery service - viability(business plan)
+
+business plan : 
+	
+	1. objective and how to achieve it - roadmap
+	2. investors, bank and vc
+	3. how different from competitors
+	4. budget, financial planning
+	5. stick with plan
+	
+types of organizations : 
+
+	1. individual
+	2. partnership
+	3. corporation
+	4. llc - limited liability company
+	
+individual : 
+	
+	1.self liable to debt
+	
+partnership : 
+
+	1. shared resources
+	
+corp: 
+
+	1. profit of company - taxed as personal income of company
+	2. dividend, profit to owners - taxed as personal income of owners
+	3. personal assets won't be seized in debt recovery
+	4. costly, setup, maintain, paperwork, taxed twice
+	
+llc : 
+
+	1. combination of partnership and corp
+	2. forming - costly
+	
+	
+___________________________________________________________________
+
+				JOE - Direct delivery inc(incorporated)
+				
+*legally established
+
+
+Accounting software : 
+
+	1. e - recording, invoice
+	2. store and retrieve
+	3. statements, reports
+	
+transactions : 
+
+	1. joe buys own company shares from common stock
+	2. vehicle buy
+	3. fee for delivery - income 
+	4. operating exp
+	
+say : jan(10k) - dec(40k) ----> profit = 30 k (wrong choice)
+
+
+financial statements : 
+
+	1. income statements
+	2. balance sheet
+	3. cash flow
+	
+income statement :
+
+ 	* How profitable a company - particular period
+ 	* week/month/one year
+
+	recording : 
+		1. cash
+		2. accural
+		
+cash : 
+	1. when cash leaves / received
+	2. simple, intuitive, widely accepted
+	3. cash flow view
+	4. small companies, littele / no inventory
+	
+accural : 
+	1. when transaction incurred
+	2. once per week - payment received (eg)
+	
+dec(order placed)
+paid(jan)
+---------------------
+accural : recorded for income statement dec
+--------------------------------------------
+
+both cash and accural - same over period of time just different times of recording payments
+
+	3. payments expected - earned(dispatched / invoiced)
+	4. record - in relational time of expected payment)
+	
+cash - no full picture, info missing
+accural - full flow, info
+
+
+
+Revenue : 
+
+	1. delivery fee
+	2. revenue recognition principle - record when invoiced
+
+expense : 
+
+	1. record when incurred - matching principle
+	2. profit = revenue - expense
+	3. say : 20k loan - 1200 per year interest means
+per year : 100 interest
+	4. each month : 100 - cost necessary to meet ends(cover exp)
+	
+	
+revenue - product, service
+expense - revenue cost(product,service), R&D, sales and marketing, administrative
+
+
+
+
+Balance sheet : 
+
+	1. Asset
+	2. Liability
+	3. share holders equity
+	
+	note : specific point in time rather than period
+	
+Assets : 
+
+	1. vehicle, cash, supplies, equipments
+	2. Amount receivable
+	3. prepaid
+	4. cost principle and conservation
+	5. depreciation
+	
+prepaid : 
+
+	jan 1 - bought 1200 insurance for 6 min
+	feb 1 - 1 month worth insurance expired
+	
+	expense : 200 
+	asset : 1000 un expired insurance
+	
+	as expired  asset decreases
+	
+	
+cost principle and conservatism : 
+
+	1. original cost price recorded - even market value increased
+	2. actual cost rather than current cost
+	3. acountants can show less amount than cost - conservatism
+	4. must not show more amount than actual
+	
+eg : usually don't increase value of an asset 
+	 100 boxes each 1 rupee -> 0.60 (reduced)
+	 net realizable value low - report lower 
+	
+	
+	
+Depreciation : 
+
+	* equipments, vehicles, buildings - value depriciation
+	* wear off, old - obsolete(computers)
+	* say after 5 years : 0
+	* assets - not reported fair market value - at balance sheet
+	* long term asset(building) -> cost - amount already sent to income statement(depreciation expense)
+	* due to this - even building's value increased - asset value decreased(depriciation expense)	
+	
+note : land - not depreciated(even 100 times increased still remains same value in asset sheet)
+
+
+balance sheet reports only the assets acquired and only at the cost reported in the transaction.
+
+
+
+
+liabilities : 
+
+	1. amount owed - loan, interest, wages payable
+	2. money received in advance - also liability
+	3. dec 1 receipt : 600 but only earned only by delivering
+	4. by dec 1 ---> asset cash = 600, liability = 600
+	
+
+
+Share holder's equity  :
+	1. sole proprietorship - owner's equity
+	2. stockholder's equity = asset - liability
+	3. "Book of value"
+	
+corporate asset - cost price / get reduced - never increased
+so state holders equity and corp networth are not same
+
+
+stockholders equity : 
+
+	1. common stock - shares for money
+	2. retained earnings - profit(increase)
+	
+	
+	
+Cash flow : 
+
+	1. cash amount changed during interval - cash gen, used - investing, financial activities 
+	2. from fin statement and balance sheet
+	
+
+Double entry system  : 
+
+	1. modern and old system - based on this
+	2. each and every transactions - recorded in atleast 2 system
+	
+chart of accounts  :
+    1. list of all accounts
+    2. balance sheet accounts - assets, liabilities, stockholder's equity
+    3. income statement accounts - revenue, expense, gain, loss
+    
+    
+Balance Sheet accounts:
+
+Asset accounts (Examples: Cash, Accounts Receivable, Supplies, Equipment)
+Liability accounts (Examples: Notes Payable, Accounts Payable, Wages Payable)
+Stockholders' Equity accounts (Examples: Common Stock, Retained Earnings)
+Income Statement accounts:
+
+Revenue accounts (Examples: Service Revenues, Investment Revenues)
+Expense accounts (Examples: Wages Expense, Rent Expense, Depreciation Expense)
+
+
+
+
+
+eg : starts business with 50000 - shop(say)
+
+asset = cash = 50000
+
+now buys 3 trucks each - 15k
+
+
+asset : 
+
+	cash - 50k
+	3 trucks - 45k
+	
+liability : 
+	loan : 45k
+	
+equity : 50k(common share)
+
+
+asset = equity + liability = 45k + 50k
+
+
+
+* 1 st transaction affects - both common share and asset cash(investment)
+
+
+
+Credit and debit : (neither good / nor bad)
+
+	1. left - debit
+	2. right - credit
+	
+* to increase asset balance - put more on left of asset account
+* to balance - increase liability / stockholder equity - put more on right
+
+asset = liability + share holders equity
+
+receive cash -> increase cash account(left - debit)
+pays cash -> cash account is credited
+
+* debits and credits are not adding / subtracting
+* just words - to reflect duality of fin transactions
+
+
+
+credit - source (liability, revenue, owner's equity)
+debit - destination (asset, expenses, dividend)
+
+
+eg : bought 20k worth of shares
+
+              debit  credit
+cash	       20k	
+common stock           20k
+
+
+eg : purchase - delivery van 15k - cash, vehicles
+
+
+			debit	credit
+vehicles	14k
+cash				 14k
+
+
+now only 4k remaining in cash asset
+
+
+asset : 
+
+1. cash - 6k
+2. vehicle - 14k
+
+liabilities : 
+
+1. stockholder's equity : 20k
+
+
+
+eg : insurance - 1200 - next six months
+
+cash, prepaid insurance, insurance expense
+
+after 1 month : 200 expired, 1000 remaining
+
+
+						debit    credit
+prepaid insurance		1.2k
+cash							  1.2k
+
+asset : 
+
+1. cash - 4.8k
+2. prepaid insurance - 1.2k
+vehicles - 14k
+
+liabilities : 
+
+1. stockholder's equity : 20k
+
+
+
+
+
+eg : delivery order : 10 - (service revenue, account cash)
+
+account cash - debit 10
+service revenue - credit 10
+
+
+
+eg : 50 parcels delivered immediatelt - 250(within 7 days) - dec 3
+
+dec 3 itself earned - 250 dollars(invoiced)
+note : not yet received
+
+amount yet receivable - 250 (debit)
+service revenue - 250 (credit)
+
+
+
+eg: expense : temporary help - 80(due by dec 12) - dec 3(now)
+
+liability to pay
+
+temp help expense - debit - 80
+amounts payable : credit - 80
+
+
+
+
+note : expense are almost always debited
+       but here : no expense right away - company owes someone(liability) - accounts payable (make it as credit then)
+
+
+
+
+net income = 10 + 150 = 160
+
+https://www.accountingcoach.com/accounting-basics/explanation/7
+
+
+
+
+whole picture : 
+
+1. own stock 20k bought by joe
+2. delivery van - 14k
+3. insurance for van - 1200k(6months)
+4. 10 paid for delivery - delivered
+5. 250 - receivable by dec 7
+6. help for 80 yet to pay
+
+
+asset : 
+
+	1. cash = 20k - 14k - 1.2k + 10 (since 250 not received and 80 not paid) = 4810
+	2. receivable = 250
+	3. vehicle = 14k
+	4. prepaid insurance = 1.2k
+	
+liabilities and equities  :
+
+	1. owner's equity : 20k
+	2. payable - 80
+	3. retained revenue(after dividend...) - net gain = 250 + 10  - 80 = 180
+	
+	
+	asset = 20180 = liability + stock equity
+	
+	
+each new year : revenue and expense accounts zeroed - start new
+
+https://www.accountingcoach.com/accounting-basics/explanation/7
+
+
+
+
+      
+       
+
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+

@@ -1,0 +1,16 @@
+pv,fv,n,i
+
+
+FV = PV [1 + i]^n
+
+i interest rate
+n no of years
+
+
+semiannual compounding  - n  = 2n
+
+
+fv factor : [1 + i]^n
+
+
+how many days to double ? 

@@ -1,0 +1,101 @@
+* inventory : key asset (raw, work in progress, finished)
+* sold - remove item cost from inventory
+* selling price > inventory price ( profit)
+
+FIFO - remove olders inventory cost, report as sold
+LIFO - remove recent cost
+weighted average - calc average per unit cost - apply it to both units in inventory and units sold
+
+
+Inventory systems : 
+
+	1. periodic system : update inventory acc periodically - last day of acc year - upto that record in temporary ledger acc - purchases (end year - process)
+	2. perpetual - update regularly 
+	
+note : sometimes destroy items (fire / stolen) - reported
+
+* inventory is reported at cost
+
+
+periodic : 
+	1. end of year - update, adjust, temp purchase ledger, purchase acc closed and inventory acc adjusted, no cost of goods sold (account) when merchandise occurs
+	2. no way to tell cost of inventory and cost of goods sold
+	
+perpetual method : 
+	1. update continuously, reduced by cost of merchandise, no purchase acc (temp), general ledger - cost of merchandise sold
+	2. sale of goods - journal entry - record sale / cash or acc receivable
+	
+	
+identical items at increasing cost : 
+
+	1. how remove physically
+	2. how costs are removed
+	
+same book - 1 @ 87, 1 @ 85, 2 @ 89, 1 @ 90 = 440
+
+1. fifo, lifo, average
+
+
+periodic lifo : 
+	1. temp general ledger purchase account
+	2. oldest first - so 85 first (price : 100) 
+	3. profit = 25
+	
+periodic lifo : 
+	1. 440 - 90 = 20 profit
+	2. last in first out
+	
+periodic average : 
+	1. weighted average = 88 (85 + 87 + 89 + 90 + 88) / 5
+	2. profit = 22
+	
+
+perpetual
+	1. constant changing of inventory account - no temp general ledger purchase accounts
+	
+	
+expense to the cost of goods sold : 
+	gold dealer - identification number - each has unique price - sell id having bar at that price
+	
+
+LIFO : less profit - less income tax paid but has tracking cost
+
+
+periodic methods : estimate inventory 
+loss (report and claim insurance after independent checking)
+
+
+
+Estimating inventory  :
+	1. Gross profit method
+	2. Retail method
+	
+gross profit method : 
+	say 20k
+	
+income statement : beg inventory : 25k
+				   purchase net - 46k
+				   ending inventory : 80%
+				   
+				   gross profit : 20%
+				   
+step 1: 
+	1. cost of goods available : beg inventory + net purchase = 25k + 46k = 71k
+	2. gross profit =11 % of 75k = 11200
+	3. cost of goods sold = sales - gross profit = 56000 - 11200 = 44800 (or 11% of sales = 11% of 56k = 44800)
+	
+	ending inventory = cost of goods available - cost of goods sold
+					 = 71k(25k + 46k) - 44800(80% of sold 56k)
+					 = 26200
+					 
+					 
+Retail method : 
+
+	sepeate column
+	
+						cost          retail
+						
+beg inv					11k				15k
+purchase net			69k		        85k
+goods avail				80k				100k
+

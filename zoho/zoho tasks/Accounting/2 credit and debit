@@ -1,0 +1,210 @@
+debit and credits : book keeping - record transactions
+
+left - debit
+right - credit
+
+double entry system 
+
+
+account : 
+
+	1. organize transactions - some kind of record - accounts
+	2. chart of accounts
+	3. first balance sheet accounts then income statement acc
+	
+asset, liability, stock owner's equity - balance sheets
+revenue / income, expenses, gains, losses - income statement
+
+
+double entry accounting : 
+
+	1. every transactions - affects atleast two accounts
+	
+eg : borrow 1000 from bank - cash account receives - debit
+                             notes payable - credit
+                             
+     supply for cash - supplies(asset) - debit, cash(paid)
+     				   yet to pay(payable)
+     				   
+     rent for current month - cash, rent expense
+     customer pay after 30d - receivable, service revenue
+     company's loan at 5% - cash, notes payable, interest exp
+     
+
+debit - deal(dividend, expense, asset, losses)
+credit - girls(gains, income, revenue, liability, stock holder eq)
+
+
+
+T - account : 
+
+
+--------------------------------------------------------
+
+		debit				|     credit
+(inc - received)			|  (decrease - paid)
+decrease - repaid loan		|  increase - liability - borrowed 
+							|
+							
+							
+							
+borrow 5000 : (cash account - debit, payable - credit)
+
+cash account : 
+
+--------------------------------------------------------
+
+		debit				|     credit
+(inc - received)			|  (decrease - paid)
+june1, 2022     5000		|  
+							|							
+							
+Payable : 
+
+credit : 5000 june 1
+
+
+2. repay - 2000 to bank loan
+
+cash : june 2, balance - 3000 - debit
+	   june 2, 2000 - credit (bank loan)
+	   
+notes payable : debit - june 2   2000
+
+
+Journal entries : 
+
+	1. another way to visualize business transactions
+	
+eg : 
+
+june 1,2021   cash  - debit(5000) 
+			  notes payable - credit(5000)
+			  
+june 2 2021 cash - credit(2000)
+			payable notes - debit (2000)
+			
+			
+memorize - cash received - debit
+		   cash paid - credit
+		   
+journal entry : 
+	1. like log - account credited, account debited, date
+	
+	
+say : merchandise received - may 1
+      paid - may 31 
+      
+journal entry for may 1
+
+may 1 2021  payable - credit(300)
+	        purchase - debit(300)
+      
+journal entry for may 31 
+
+may 31 2021 	cash - credit(300)
+			    payable - debit(300)
+							
+							
+
+usually : 
+
+debit - asset, contra liability, dividend account, owner's drawing, expense, lossess(deal)							
+credit - girls - gain, income/revenue, contra asset, owner's equity, liability ,stock holder's equity
+
+
+contra account : 
+
+	* An offset that reduces the value of related account
+	* say reduced an asset value due to depreciation - record history(know how its value price surged)
+	* balance sheet - original(historical cost price / depreciated)
+	* in contra account - depreciation value sub from particular account to give net book value
+	* low net book value = need to replace(tools, furniture...)
+	* returns and allowances - offsets sales (another contra acc
+	
+usually, in general ledger - sales account - credit
+returns and allowance - debit
+(know what % returned)
+
+
+other doubtful account - another conta account
+
+credit balance offset debit balance on receivables of balance sheet
+
+(amount - uncollectable receivables company expects)
+
+
+1. revenues and gains are usually vredited
+2. expense and losses are usually debited
+
+
+permanent accounts : asset, liability, owner/stock holder equity  - won't be closed at the end of year(balance sheet account)
+
+temporary accounts : revenue, expense, owner's drawing, income summary acocunts - closed (income statement account)
+
+note : balance transferred to owner's capital account / retained earnings account
+
+
+
+
+Bank's point of view - consistent to credit and debit
+
+
+eg : 100 for future site clean-up
+
+cash - debit (100)
+unearned revenues - credit(100)
+
+bank : say 100 deposit (bank - liability (not earned))
+
+cash - debit (100)
+customer account - 100 credit
+
+
+say - bank charge 13 per month
+
+customer checking account - debit(13)
+revenue account of bank - credit(13)
+
+
+bank : cash, investment securities, loans receivable -> assets
+	   cust accounts, balances in customers - liabilities
+	   
+our account - one of millions account - bank owes to its depositors
+
+
+deep dive : 
+
+	1. credit - cr
+	2. debit - dr
+	
+asset = liability + sole / stockholder's equity
+
+
+even though - we don't record revenues, expenses, gain/loss directly into an equity account - still equity increases / decreases
+
+
+
+asset accounts normally debit balances - increased with debit entry
+liability accounts for credit entry - increased with credit entry
+
+
+capital account / stock holders account - have credit balances - credit entry (retained earnings)
+
+
+https://www.accountingcoach.com/debits-and-credits-additional-explanations/explanation/2
+
+
+
+1500 for ad
+
+asset = liability + stock equity
+-1500 =              -1500
+
+
+
+	
+
+
+							
+							
