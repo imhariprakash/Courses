@@ -1,0 +1,280 @@
+* word invoice
+* invoice number / id
+* date - sold / service rendered (date range)
+* contact info, logo, company name, address, phone
+* tax and company reg no
+* buyer - name, contact details - goods / service
+* unit price
+* shipping method + charge (if)
+* tax, vat, other fee
+* discount
+* total amount
+* due date ( x days from receipt of invoice)
+
+
+1. credit note
+2. debit note
+3. pro forma
+4. commercial invoice
+5. timesheet
+6. standard invoice
+7. commercial invoice
+
+
+standard invoice : 
+	invoice, name, logo, address of seller
+	buyer name, address(b2b)
+	invoice ref no
+	date, due date
+	name of goods, desc, quantity, amount
+	charge tax
+	invoice amount
+	adv paid
+	payment method, bank account details
+	esign
+	
+pro forma : 
+	ahead of shipment/ delivery - precise sale price
+	bill of sale
+	exp cost, fee and date of delivery - good faith
+	
+
+commercial invoice : 
+	imp doc in overseas trade
+	contract - proof of sale
+	custom clearance
+	
+credit invoice : 
+	refund to an invoice - instead of erasing a invoice
+	
+timesheet invoice : 
+	working hours - charge - billable hours
+	freelancers - time entry check in and out
+	
+retainer invoice : 
+	doc - advance/guarantee --> prepayment
+	
+recurring : 
+	no change - repeat 
+	subscription, rental, membership
+
+expense report : 
+	date, vendor, client, project, account, author(who purchased)
+	notes, amount
+	
+interim invoice : 
+	progress invoice - large project
+	steady flow, lower risk of non payment, flexible
+	
+final invoice : 
+	formal acceptance - contract completion
+	15 days to notify dispute
+	payment for a completed project - what they're paying for
+	
+past due invoice : 
+	due date exceeded - risk to business
+	remainder
+	
+debit note :
+	update/ correct errorneous values - gst invoices can't be changed once done.
+	
+	
+e-invoice : 
+	tax scheme, supplier type
+	doc detail - type, number, date
+	legal name, gstn number, addreess, location, state, pin
+	buyer info - legal name, gstn, ...
+	dispatch from address
+	shipping details
+	item details - name, amount, hsn code, gst rate, total value
+	batch number(any)
+	
+	
+zoho invoice :
+
+net 60 - after 60 days - overdue(due end of month..)
+	
+sales order : vendor generates to confirm - they can provide req
+invoice : requesting payment
+
+fiscal year : govt use - fin report and budgeting - jan to dec 31
+			  indian govt - april 1 to march 31
+			  
+accural - revenue earned / expense incurred - impacting net income
+
+cash : business transactions when cas flows in or out
+accural : recognized revenue - when it's earned and expenses when incurred - regardless of money actually changes hand
+
+cash - straight forward, accural - generally accepted accounting principles
+
+
+TDS : 
+	* direct taxation - from the source of income
+	* Tax deducted at source
+	* deductor - liable to remit the amount to central govt
+	* (tds deducted - payment gets due / actual amount made)
+	* delay : 1% per month interest until tax is deducted
+	* credit to govt by 7th day of following month
+	* april --> on or before 7 th may
+
+TDS returns :
+	* summary of all transaction made in that quarter(tds collected)
+
+
+
+
+sales order : 
+	buyer asks quote
+	seller sends quote
+	customer provides purchase order
+	seller generates sales order
+	prepare and deliver goods using sales order then creates invoice order
+	
+sales order : vendor confirms they can provide the goods / services requested - keep track of delivery (shipped, delivered, draft, returned)
+
+delivery challan : customer acknowledged the receipt of goods - transporatation
+invoice : created after delivery
+
+
+
+
+
+
+
+
+
+
+
+settings : 
+
+preferences : 
+
+1. bill of supply : 
+	* doc - issued by reg person supplying gst exempted pro/services
+	
+	who 
+		1. composition scheme dealers(<1.5 crore turnover) - composition scheme (can't collect tax from customers) - issue bill of supply(lieu of tax invoice) - need to pay govt quarterly(5lakhs / turn over - 5% which is higher)
+	
+	    2. export - non taxable - bill of supply - accompany transport of goods
+	    
+	when
+		1. no tax applicable, exempted goods, composition scheme, exporter(no gst on invoice)
+		2. tax invoice : cgst, igst shown
+		
+		
+2. estimate : 
+		non-binding doc, informal, negotiate(proforma/bids/estimate) - non mandatory
+		
+	why 
+		1. info - predict price, compare offers, prepayment, approval
+	who
+		construction, design,contract - popular
+	what
+		accept / reject - buyer(purchase order given - give tax invoice) / std invoice)
+		
+	invoice vs estimate : not formal(estimate), before beginning of transaction unlike invoice - anytime after supply commence / end of sale transaction
+	rough calc
+	
+	quotation : non binding - after entering supply contract(estimate - before entering), more important, common, fixed price- can't be changed
+	
+
+
+3. sales order : 
+	* doc - specifics of transaction, period (delivery)
+	* seller - terms ok - requirements - confirmed
+	
+	why 
+		keep track of inventory, proof
+	
+sends - sales order - proceeds to get delivery ready - generates invoice (purchase order - from cust - legally binding)
+
+	sales order - will be supplied, beginning of trans
+	invoice - ensure sale taken place, req pay, end of tra
+	
+	
+	
+4. delivery challans : 
+		* details of product - issued at time of delivery
+		
+		when 
+			* sale / return basis(pay for only sold - return others)
+			* track inventory (when transport involved
+			* not result in sale - hence no tax invoice(delivery challan/ delivery invoice)
+			no ownership details
+			acknowleges receipt ? 
+			
+delivery note : 
+	doc - list items(dispatch note - no values / prices)
+	confirm everything as planned - all received
+	checklist(to customer)
+	sign delivery note to confirm it 
+	any missing/ damaged - shipping person note in delivery note
+	
+delivery challan vs note : challan affects inventory stock and accounts
+
+
+5. purchase order : 
+	* req, avoid mis comm
+	* buyer gives to seller
+	
+6. timesheet invoice : charge clients - billable hours
+
+7. retainer invoice : 
+	* prior payment - pre payment(liability)
+	
+8. recurring invoice : 
+	consistent basis - send same invoice over and over
+	
+	
+SAC(GST) : 
+	6 digit code(initial 2 digit : 99)
+	next 2 -> 63 - catering, 65 - caterin gin flight..
+	
+	
+hsn - identify goods
+sac - services
+
+
+einvoice : 
+	all b2b invoices are electronically upload and authenticate by the designated portal
+	after successful authentication - unique invoice reference number - generated by irp(invoice ref portal)
+	
+* diff softwares can't read others - even though same
+* interoperability - standardize
+* real time transfer - between irp and gst portal - remove manual data entry
+* one time upload - avoids 
+* avoid tax evasion - eliminates fake invoice
+* before any transaction - invoice gets generated - chances of editing low
+* cancel invoice fully - within 24hrs(irp) else gst portal - that irn can't be used again
+* avoids reconcilation errors - tax credit made easy
+
+
+e-way bill :
+	* e - way bill - used to track goods in transit(goods and service tax)
+	* taxable person - transport > 50k (reg under gst) - must possess an e-way bill generated on the gst portal
+	* unreg person service to reg person - receiver ensure compliance
+	
+when : 
+	1. for payment - course of business
+	2. for pay - not for business
+	3. no payment
+	
+	sale, transfer, exchange(goods for goods (not money))
+	
+who : 
+	1. reg person > 50k
+	2. unreg - reciever - make sure compliances met
+	3. transporter
+	https://cleartax.in/s/eway-bill-gst-rules-compliance
+	
+	
+skd / ckd : (e way bill)
+	* one vehicle not enough - move in parts(semi knocked down / completely knocked down)
+	* often known as screw driver tech
+	* raise single invoice - all vehicles
+	
+	
+
+
+
+	

@@ -1,0 +1,447 @@
+direct tax - govt collects
+indirect tax - collects tax from tax player(vat)
+
+vat : (effect : jan 1 2018)
+	* manufacturer sells wholesaler - 5% vat
+	* wholesaler sells to retailer - 5% vat, he gets refund from govt for the 5% vat he paid to manu.
+	* retailer sells consumer - 5%vat, gets 5% refund paid to wholesaler
+	
+1000 -> man(1050) -> s.p(2000 + 100) --> (3000 + 150)
+
+
+why vat : 
+	increase income of govt
+	health service, transport....
+	
+register for vat : 
+	mandatory : > 375k - taxable sales + import within UAE - 12 months previous/ upcoming 30 days
+	voluntary : >187500 - startup
+	non resident : taxable business in UAE - must vat reg
+
+vat rates : 
+	0% - edu, health care product, goods and service exported outside gcc, international transport, investment in precious metals(gold silver 99%), newly constructed residential prop - sold within 3yrs
+	
+	vat exempt : residential prop, public transport, undev land, life insurance, certain fin services
+	
+	
+why book keep : 
+	tax - liability
+	
+invoice : 
+	valid doc to support purchaser's vat - claim
+	id,date, supplier,buyer name, address, trn, desc,item quantity,total vat, item indiv vat, price and quantity of each item, rate of discount
+	
+	
+credit note : 
+	refund - invoice can't be edited
+	
+debit note  :
+	say seller increases rate
+	
+	
+	
+Register vat  :
+	photo, emirates id, trade license, authorizing doc, desc, turnover, fig expected import export
+	
+	
+
+vat group : 
+	set of entities - reg once - single trn - file vat return
+	
+	
+deregister  :
+	< 187500 last 12 months (volunteer)
+	< 375000 last 12 months (mandatory)
+	
+
+
+supply : 
+	transfer of goods b/w two people in UAE
+	place,value,date
+	
+types : 
+	1. standard - 5% vat
+	2. zero rate - must mention 0% in invoice
+	3. vat exempt - no tax (any prev paid - claimed)
+	4. out of scope : 
+		1. goods imported from an overseas supplier and sold to overseas buyer - without being brought into UAE - Merchant trading
+		2. vat reg person in UAE - sells another gcc state person
+		
+	5. deemed supply : paid vat - later changed for personal / non business use - can claim vat back - that items will be deemed items (de register - remaining items vat claimed)
+	6. composite supply : 
+		set of items - can't be sold individually
+		
+		
+
+goods  :
+	supply < 2018, paid 2018 - no vat
+	supply > 2018, paid 2018 - vat applicable
+	
+services : 
+	supply < 2018, paid 2018 - no vat
+	supply 2018, paid 2018 - vat yes
+	supply 2017,18 - paid 2018 - vat only for 2018 items
+	
+contract  :	
+	exclusive of vat - paid by buyer vat
+	inclusive of vat - seller pays vat
+	
+	
+
+Reverse charge: 
+	* Under reverse charge buyer / end cust - pays directly to government
+	* supplier no need to pay vat - recipient records and return it
+	
+why ? 
+
+	* no business in UAE - ensure vat compliance hard
+	* residents of UAE -made pay VAT
+	* cross border transactions
+	
+when ?
+
+	* import of goods from other gcc / non gcc countries
+	* supply of gold / diamonds prod / manufacture
+	* supply of hydrocarbons for resale by a reg supplier to a reg recipient in UAE, crude oil, processed/unprocessed natural gas, energy
+	
+reverse charge : not applicable to gold,diamond export
+
+
+working : 
+	abu (reg UAE) buys from sam services
+	sam - no need to worry about VAT
+	abu need to record and reverse charge
+	
+need : maintain 5 year atleast invoices
+
+requirements of vat : 
+	* receiver - registered for vat
+	* records to incur reverse charge
+	
+	
+	
+Excise tax : 
+	* indirect tax - commodity sale
+	* import into / stockpile in UAE - harmful to people / environment
+	* to reduce consumption
+eg : tobacco, carbonated, energy drinks
+
+
+scope : 
+	* must reg for excise tax if involved in
+		* import excise products
+		* produce / manufacture them
+		* transfer / stockpile / sell
+		
+note : person who don't import excise goods regularly - won't have to register excise tax (more than once in six month / four times in 20 months)
+
+
+no longer selling : de register
+req : role, details of goods, reg, trn(if any)
+
+
+
+
+Transitional provisions : 
+	
+case 1 : supply of goods and service on / after jan 1 2018
+
+* supply - after jan 1 2018 / on, payment - before 
+					vat applicable
+					
+		* transfer of goods under supplier's supervision
+		* delivery / installation
+		* issuing customs declaration
+		* recipient receiving goods
+		
+
+case 2 : supply of goods in installation on / after jan 1
+
+supply on / after - jan 1 taxable
+
+
+case 3 : issuing invoice for supply of goods and services
+
+invoice on / after jan 1 - vat collectable
+
+
+contract : 
+	contract before - jan 1 2018
+	supply on / after jan 1 2018
+	
+	vat inclusive
+	
+	
+maintain record - vat reg, liable to collect vat
+
+
+trading : vat must for goods made ready for supply / delivered on / after jan 1 2018 (ready not delivered)
+
+call off stock : until buyer claims the stock - seller is the owner - call off stock. vat must for goods taken from stockpile after jan 1 2018
+
+insurance policies renewed / made on / after 2018
+
+
+
+tax return : 
+	* summary of all import export sales purchases - tax period (invoice)
+	* taxable person details, vat return period
+	* amount collected, vat collected, adjustments
+	
+https://www.zoho.com/ae/books/vat/guides/vat-returns-uae.html
+
+
+
+
+place of supply : 
+	* where transaction occurred for vat purpose
+	* special rules to cross border, water, energy, electronic services
+	
+domestic supply : with in UAE
+
+export to outside gcc : from uae to a non gcc member
+
+intra gcc supply : another gcc member from uae
+	cust (vat reg) - place of supply : member state
+	not vat reg - 
+		1. below threshold - uae is the supply place
+		2. above threshold - member state is the supply..
+		
+imports : 
+
+	1. import to uae : 	
+		from uk to use in abudhabi - place of supply:abud.
+		reverse charge
+		
+	2. import to uae to reexport another gcc: 
+		importer intend to export another gcc state
+			1. importer - pay vat without reverse charge- can't recover vat
+			2. import vat - only recovered in gcc state (where goods are transferred)
+			
+	3. goods imported into uae later transferred to another gcc
+		* initially intended to use in uae later changed 
+		* repay import vat
+		
+		
+supply of services : 
+	
+	basic rule : where supplier has place of residence
+	
+	exceptions : 	
+		1. import from outside gcc : non uae resident - service to a vat reg uae resident - place of service : uae
+		2. installation - where installation is done
+		3. real estate - where it is located
+		4. hotel - where service performed
+		5. telecom - where received
+		6. cultural - where performed
+		7. transport - where begins
+		
+		
+
+date of supply : 	
+	* date on which taxes are leived on goods/ serv
+	
+output vat : 
+	* transport involved - when goods are removed (date)
+	* no transport - when made vailable
+	* assembly / installation - when assembled..
+	* service - when performed / completed
+	
+date of supply, invoice, full/partial payment (earliest of possible dates : vat applied)
+
+
+
+
+value of supply : (under vat)
+	seller collects - supply + exp + charges
+	
+	value of supply + vat = consideration
+	
+	
+discounts, deductions, subsidies granted by other gcc states - reduces value of supply
+
+
+
+
+Penalties : UAE
+
+	1. procedure
+	2. related to vat
+	3. excise tax
+	
+procedure  :
+	1. keep records - 10k first time 50k each
+	2. failure to submit req records - 20k
+	3. submit reg application - 20k
+	4. dereg app - 20k
+	5. inform, update - legal rep appointed
+	6. tax return, pay tax stated, incorrect, errors, faciliate tax auditor, due
+	
+violation : 
+	1. display price inclusive of tax
+	2. comply with condt
+	3. tax credit name
+	4. issuance of e invoice
+	
+excise tax : 
+	* display inc of tax
+	* comply with condt
+	* update details on what they sell
+	
+
+
+input credit deductions and refunds : 
+
+	input vat : for conducting import 
+				eg : purchase from wholesalers
+	output vat : for businesses on taxable supplies of goods and services
+	
+	net vat : deduct ip vat from op vat ( + ve - pay fta)
+			  (-ve_ -> claim)
+			  
+eg : 30k 5% vat import (input vat = 1500)
+	 50k 5% vat sold   (output vat = 2500)
+	 --------------------------------------
+	 net 1k - to pay
+	 --------------------------------------
+	 
+
+
+claim : 
+	* if ip vat > output vat - get return
+	* approval and claim
+	
+recoverable input tax : 
+	* recover tax incurred - must reg vat (else can't recovered)
+	
+		In general, a taxable person can recover input tax 		in the first tax period if:
+
+	the taxable person has a tax invoice or other documentation of the supply or import, and
+
+	the amount of VAT is paid in whole or in part
+	
+	
+residual / overhead input tax : 
+	* partly recoverable and partly non recoverable
+	
+blocked input tax : 
+	* can't be recovered (entertainment, vehicle - personal use, employee related exp, supplies used to make exempt supply)
+	
+	
+
+* registered user - recover tax incurred before reg
+
+exceptions : 
+	1. 5yrs before reg
+	2. moved to another gcc state before tax reg
+	3. supply of goods and services - not making taxable
+	4. capital asset / depreciated - before tax reg
+	
+
+
+designated zone : 
+	* free zones - outside of UAE territory for vat purposes
+	* free zone - fenced area, own security, customs control, regulation for storing, retrieve, process
+	* service imported (place of supply - uae) standard vat
+	* service exported - outside gcc - 0 rated supplies
+	
+	* goods : private use - standard uae tax
+			  manufacture / resell - out of scope
+	note : direct connection - (not like computer to design building arch - not direct) - part of final product
+	
+	(with in designated zone)
+eg : chinaware to resale - out of scope
+     tools to manufacture goods - out of scope
+     private purpose - with in uae vat scope
+     office supply - with in uae
+	
+	
+outside uae to designated zone : no vat(manu / resell)
+from mainland uae to "  : local movement - subject to vat
+
+
+Between designated zone : (out of scope only if)
+	* not used/ tampered/modified	
+	* transfer process - comply with gcc common customs law
+	
+	
+import of goods from desigated zones : 
+	* uae import from desig zones - considered as import - subject to import vat
+	* recover import vat
+	
+	
+	
+eg : 
+
+1. good imp from design. zone into uae -> leive vat
+   sold in uae - charge vat and reclaim input vat
+2. sold within dz - import to mainland -> outside scope 
+   when imported to uae - input vat
+3. consumed by buyer in dz - std uae vat
+
+
+supply of water ,energy in dz : 
+	* supply of goods - personal use (subj to vat)
+					    trade / manu - outside scope
+					    
+	* business in a dz form tax groups
+	
+	
+	
+	
+scenarios : 
+	1. import taxable good in to uae - input vat
+	2. import goods - to export another country - input vat
+	3. goods 3000 AED - imported by traveller - threshold (no vat)
+	4. import returned goods / reimport exported goods into uae - no vat
+	5. uae national lives abroad - comes to uae import - personal household items - no vat
+	6. internal security and military import - no vat
+	7. import goods in to designated zone - reexport / man purpose - no vat (out of scope)
+	8. transfer bw two design zones - no vat
+	
+https://www.zoho.com/ae/books/vat/guides/vat-import-declaration.html
+
+
+non registered person for importing requires - eservices account
+
+
+
+pay vat :
+	* e-dirham card(fee : AED 3) / credit card(2-3%)
+	* eDebit
+	* local bank transfer
+	* international bank transfer
+	
+	
+financial doc : 
+	* general ledger, ...
+	* invoices, credit, debit,delivery challans, bill of entry
+	* disposal of goods and service documents
+	* purchase invoices - not paid any input tax
+	
+	
+normal tax invoice : issue within 14 days (date of supply)
+simplified(b to c) - non vat registered - <10000
+self invoice : themselves on behalf of seller
+credit note : charged high, discount, returns
+tax credit note : accepted by FTA - ref numbr, words(tax credit note, name, add,trn, date, value of supply,..)
+
+
+debit note : vendor expense - not added in invoice / price error
+
+bill of entry : 	
+	used to capture vat paid to the customs office while importing goods into uae, as invoice issued by non gcc vendor
+	mention - add charges....
+	custom clear procedure - doc - filed by importer
+	
+
+
+landed cost = transport dee + customs duty + tarriff + insurance + currency conversion + handling
+
+vendor -----> buyer
+
+
+
+
+
+	
