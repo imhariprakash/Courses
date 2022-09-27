@@ -1,0 +1,42 @@
+Serialization : object to bytestream - writeObject()
+Deserialization : byte stream to obj - readObject()
+
+
+* Serializable, clonable, remote - marker interfaces
+* get certain capability
+* String and all wrapper class implements Serializable - by default
+
+* If parent class is serializable then all its sub classes are too!
+
+inheritance : is - a (eg : student is a people)
+			  has - a (eg : student has an address)
+			  
+note : Static member's can't be serialized, as they belong to class
+
+
+note : incase of array / collection - all objects of array/collection must be serializable too else serialization will fail
+
+
+Externalizable : 
+
+	* facility of writing state of an object into a byte stream in compressed format - not a marker interface
+	* writeExternal(ObjectOutput out)
+	* readExternal(ObjectInput in)
+	
+	
+	
+Transient keyword : 
+	* don't want to serialize any member
+	* don't store password in a file
+	* ignores actual value - stores default value(int = 0, float = 0.0)
+	
+SerialVersionUID : 
+	* serialization at runtime associates with an id
+	* verify sender and receiver - of serialized object
+	* sender and receiver must be the same
+	* don't match - InvalidClassException
+	* eg :  private static final long serialVersionUID=1L;  
+	
+	
+	
+
