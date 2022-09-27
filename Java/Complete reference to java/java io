@@ -1,0 +1,186 @@
+Streams : 
+	1. System.out - std output stream
+	2. System.in
+	3. System.err
+	
+System.err.println("error");
+
+
+op stream vs ip stream : 
+	
+	file, console, socket (involved)
+	
+	
+OutputStream : 
+	methods : write(int),...,flush(),close()
+	
+	class : 
+		1. FileOutputStream
+		2. ByteArray'
+		3. FileOutput - DataOutputStream, BufferedOutputStream,PrintStream
+		4. PipedOutput
+		5. ObjectOutput
+		
+		
+InputStream 
+	methods : read(), available(), close()
+	
+	class : 
+		1. FileInputStream
+		2. ByteArray
+		3. FileInput - Data,Buffered,PushBack
+		4. PipedInput
+		5. ObjectInput
+		
+		
+		
+File Output Stream  :
+	1. finalize() -> cleanup connection
+	2. write(byte[]), write(byte[],int off, int len)
+	3. write(int), getChannel(), getFD(), close()
+	
+File input stream : 
+	1. available()
+	2. read()
+	3. read(byte[] b)
+	4. read(byte[] b, off, len)
+	5. skip(long x)
+	6. getChannel()
+	7. getFD()
+	8. finalize() - ensure no more reference to ip stream
+	9. close()
+	
+
+read single character : 
+	*  FileInputStream fin=new FileInputStream("D:\\testout.txt");    
+       int i=fin.read();  
+       
+
+BufferedOutputStream : 
+	* buffer op stream
+	* efficiency - directly writing data one by one
+	* internal storage space - fast performance
+	* OutputStream os= new BufferedOutputStream(new FileOutputStream("D:\\IO Package\\testout.txt"));  
+	
+	same as OutputStream - but with buffer
+	
+
+BufferedInputStream :
+	* read from stream using buffer - fast performance
+	* auto refill of internal buffer(read / skipped)
+	
+
+SequenceInputStream :
+	* read data from multiple streams
+	
+	   FileInputStream input1=new FileInputStream("D:\\testin.txt");    
+   FileInputStream input2=new FileInputStream("D:\\testout.txt");    
+   SequenceInputStream inst=new SequenceInputStream(input1, input2);    
+   
+   
+  
+  
+read data from more than 2 files : 
+	* enumeration
+	* Vector v = new Vector();
+	* v.add(file1); ....
+	* Enumeration e = v.elements();
+	* SequenceInputStream bin = new SequenceInputStream(e)
+	
+
+
+ByteArrayOutputStream : 
+	* write common date - multiple files
+	* byte array holds copy - write to multiple streams
+	
+	FileOutputStream fout1=new FileOutputStream("D:\\f1.txt");    
+      FileOutputStream fout2=new FileOutputStream("D:\\f2.txt");    
+        
+      ByteArrayOutputStream bout=new ByteArrayOutputStream();    
+      bout.write(65);    
+      bout.writeTo(fout1);    
+      bout.writeTo(fout2);  
+      
+      
+      
+ByteArrayInputStream : 
+	* read byte array as a stream
+	* buffer of bytearray grows according to data
+
+
+DataOutputStream : 
+	* write primitive data - maxhine independent way
+	* later read by data input stream
+	
+
+DataInputStream : 
+	* read primitive data from input stream (machine inde)
+	
+
+FilterOutputStream : 
+	* subclasses : BufferedOutputStream, DataOutputStream
+	* less used individually
+	
+FilterInputStream : 
+	* Subclasses : BufferedInputStream, DataInputStream
+	* less used individually
+	
+	
+Console : 
+	* System.console().readLine() [from console]
+	* read password / texts (password - not visible to user)
+	* System.console()
+	* System.console().readPassword();
+	
+	
+
+
+File permissions : 
+	* D:\\IO\\-     permission associated with all sub directories and files recursively
+	* D:\\IO\\*     permission is associated with all directory and files within this directory excluding sub directories.
+	
+	
+Writer, Reader, FileWriter, FileReader
+
+note : use bufferredWriter - performance (array, string, char)
+
+
+CharArrayReader - read character array
+CharArrayWriter - write characters in a file
+PrintStream - write data to other stream - auto flush
+PrintWriter - formatted representation of object to op text stream (purpose)
+
+OutputStreamWriter - write into byte stream using encoding
+InputStreamReader  - read bytes abd decodes
+
+
+PushbackInputStream - unread a byte which is already read and push back one byte
+
+StringWriter - construct a string (network sockets and files are not used) - construct string situations
+
+StringReader : string source as character stream read
+
+PipedWriter : The PipedWriter class is used to write java pipe as a stream of characters. This class is used generally for writing text. Generally PipedWriter is connected to a PipedReader and used by different threads.
+
+
+PipedReader : The PipedReader class is used to read the contents of a pipe as a stream of characters. This class is used generally to read text.
+
+PipedReader class must be connected to the same PipedWriter and are used by different threads.
+
+
+
+FileDescriptor : 
+	* handle to the machine specific structure - open file, socket, sorce of bytes
+	
+
+RandomAccessFile : access random access file.
+
+
+Scanner : read ip from keyboard(breaks input - whitespace - default)
+
+	can manually change delimiter
+	
+	
+
+
+
