@@ -1,0 +1,13 @@
+* internationalization : i18n
+* info - differ from reign to reign - currency, time
+* Locale class : 
+	Locale(lang)
+	Locale(lang,country)
+	Locale(lang,country,variant)
+	
+* ResourceBundle - for messages
+* DateFormat supports - international dates
+* DateFormat - i18n time
+* NumberFormat - 118n format numbers
+* NumberFormat - gives currency
+
