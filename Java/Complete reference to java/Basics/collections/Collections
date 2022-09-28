@@ -1,0 +1,133 @@
+1. ArrayList : 
+		* dynamic array(list) - slow - better for store and access data
+		* add - O(1) - at end, worst case : O(n) - in between(move all), not enough space - create new then copy
+		* get - O(1)
+		* remove - O(n) - move others
+		* indexOf - O(n) - iteration
+		* contains - O(n) - iteration
+		
+		
+2. linkedlist : 
+		* doubly linked list - better for manipulation - list and queue
+		* add - at end - O(1)[doubly linked list] - have tail
+		* add in between - O(n) - search
+		* remove - search - O(n)
+		* contains - search - O(n)
+		* get - O(n) - traverse
+		
+		
+3. List - implemented by arraylist and linkedlist
+
+4. HashSet - hash table for storage - unique key, non synchronized
+5. LinkedHashSet - ordered version of hashset - order maintained(inserted order) - using linkedlist
+
+
+6. TreeSet - uses tree for storage - (ascending order) - unique elements only, access and retrieval time fast - implemented using binary search tree(self balancing tree like red black tree)
+
+
+
+note : * store and retrieving - O(1) in hashmap,linked hashmap (jdk - uses balanced tree node structure - collision - lookup - O(log n) instead of O(n)
+	   * tree structure : TreeMap, ConcurrentSkipListMap - put(),remove(), containsKey() --> O(log n)
+	   * HashSet, LinkedHashSet, EnumSet - add(), remove(), containes() - takes O(1) - internal hashMap implementations
+	   
+	   
+	   
+7. Queue interface : 
+		* FIFO - not thread safe
+		* PriorityBlockingQueue - thread safe
+		* supports all methods of collection interface
+		* priorityQueue, ArrayBlockingQueue - most used implementations of Queue interface
+		
+
+8. PriorityQueue Class : 
+	 	* way of processing based on priority
+	 	* must be comparable, no null
+	 	* not thread safe
+	 	* retrieve in sorted order
+	 	
+	 	
+9. Dequeue : (array list and linkedlist implementation)
+		* add / sub from both ends 
+		* double ended queue
+		
+10. ArrayDequeue : 
+		* grows and shrinks - both sides add / remove
+		* null elements not allowed
+		* faster than linkedList and stack
+		
+11. Map interface : 
+		* key - value (unique keys)
+		* implementations - hashmap, linkedHashMap, TreeMap
+		
+12. HashMap : 
+		* no order maintained
+		* internally used in an array and linkedlist data structure for storing key and value
+		* fields in hashmap : hash, key, value, node(next)
+		
+equals() [object class method]: compare two objects - compares key. 
+
+hashcode() - memory reference of the object in integer form --> value receiverd is bucket number
+
+buckets : array of node - each node(like linkedlist), more than one node can share same bucket
+
+
+13. LinkedHashMap - linked list implementation of Map interface
+
+14. TreeMap - red black tree implementation - store in sorted order
+			* can have null values
+			* ascending order
+			
+15. Hashtable : 
+			* array of list(ach list - bucket)
+			* each bucket identified by hashcode()
+			* no null values alllowed
+			
+hashmap vs hashtable : 
+	1. hashmap - not synchronized, not thread safe but hashtable is threadsafe
+	2. hashmap - one null key, any no of null values
+nut hashtable - nil null key / value
+	
+	
+16. EnumSet - enum type implementation of set
+			
+17. EnumMap - map implementation of enum keys
+
+
+
+18. Collection class : 
+		* supports polymorphic algorithms
+		* Collections.sort(obj)
+	
+19. Comparable interface : 
+		* sort elements - using only one data member
+		* +ve (current > specified)
+		* -ve (current < specified)
+		*   0 (current = specified)
+	note : implement comparable - override toCompare()
+	
+20. Comparator interface
+		* compare one object to another - using compare() override
+		* use : give this in sort(manual comparing)
+		
+21. Properties class : 
+		* key value pair
+		* subclass of hashtable
+		* provides class methods to get data from properties file
+		* no recompilation required - anything changes in properties file
+		* property object : used for storing information changed frequently
+		* System.getProperties() - get all info of system(jvm)
+		
+
+22. Vector : 
+		* arraylist - not synchronized but vector is synchronized
+		* 100 % increment in space
+		* legacy class, slow, multi thread suitable, use iterator / enumeration
+		* dynamic array - grow / shrink its size
+		
+23. Stack
+
+24. ConcurrentHashMap - full concurrency of retrievals and update, thread safe, no locking support, 
+
+		
+	   
+
