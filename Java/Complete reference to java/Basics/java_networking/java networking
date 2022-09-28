@@ -1,0 +1,46 @@
+networking : 
+	* java.net - supports two protocol (tcp, udp)
+	* tcp : reliable (eg : internet protocol : tcp/ip)
+	* ip address : unique address assigned to a node on a network(octets : 0-255 : 192.168.0.1)
+	* protocol : set of rules - tcp, ftp, telnet, smtp, pop
+	* port number : uniquely identify different app - comm endpoint (where application hears)
+	* mac : unique identifier - nic(network interface controller)
+	* a node may have multiple macs - each unique
+	* connection oriented : acknowledgement sent(reliable but slow) - tcp
+	* connectionless : udp fast - not reliable
+	* socket : endpoint bw two way comm
+	
+low level api : deals with abstraction of networking identifiers, sockets, interfaces, bi direction comm mechanism
+
+high level api : abstraction of uris
+
+
+
+java socket programming : 
+	* comm b/w app running on different JRE
+	* req info : ip of server, port number
+	
+	
+URL class : 
+	* if port number not mentioned - returns -1
+	
+URLConnection : 
+	* get connection, add header, body, send request
+	
+HttpURLConnection : 
+	* http protocol only
+
+
+InetAddress class : 
+	* methods to get ip of any host name
+	* connectionless protocol - ipv4
+	
+two main protocols in comm model : 
+	* IP : address to nodes, uses gateway computer to check ip is correct, forward to that address correctly
+	* tcp - way to create comm channel, transmission of packets
+	
+	
+DatagramSocket and DatagramPacket : 
+	* connectionless socket prog
+	* udp used - no assurance of safe delivery
+	* 
