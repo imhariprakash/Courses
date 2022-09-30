@@ -1,0 +1,335 @@
+multithreading : 
+	thread : light weight, context switching fast, shared memory, (games, animation)
+	threads independent - multiple operations - time man - one exception doesn't affect another
+	
+multitasking : 
+	process - sep memory, heavy, cost of comm high, switching takes time
+	thread - share memory, light weight, cost of comm - low
+	
+thread (java) : 
+	Thread class
+	
+lifecycle :
+	1. new(not executed)
+	2. active(invoked by start()) : states - runnable, running
+	3. blocked / waiting
+	4. timed waiting
+	5. terminated
+	
+
+active :
+	runnable :
+		ready to run - moved to runnable state - running / ready to run at any instant(sheduler - gives access), after execution - volunteerly gives up cpu
+		willing to run, waiting to run (runnable state) - queue
+	
+	running : 
+		gets cpu - moves from runnable to running state, back to runnable (giving up cpu)
+		
+
+blocked / waiting : 
+	inactive(temp), waiting state
+	a is running b - blocked from doing work
+	
+timed waiting : 
+	span of time, sleep() : eg
+	avoid starvation
+	
+terminated : 
+	done job,exits/terminated normally
+	abnormal : unhandled exception / segmentation fault
+	thread is no more
+	
+	
+join() --> make one thread to wait until another threas completes its execution
+
+
+" Thread can't be started twice"
+
+
+directly calling run() 
+
+1 2 3 4 1 2 3 4 will be the op - no multithreading
+1 1 2 2 3 3 4 4 will be the op with sleep
+
+reason : running at current stack
+
+
+t1.join(1500) -> t1 executes for 1500ms then starts other thread
+
+
+
+1. th1.getName()
+2. th1.setName() / in extending class - provide constructor - super() inside it
+3. th1.currentThread()
+
+
+priority : 
+	* 1 to 10 (preemptive scheduling)
+	* getPriority()
+	* setPriority(int )
+	
+MIN_PRIORITY - 1
+NORM_PRIORITY - 5
+MAX_PRIORITY - 10
+
+
+
+Daemon thread : 
+
+	1. service provider - to user threads
+	2. when all user threads - dies - jvm terminates daemon thread also
+	3. garbage collector, final thread
+	
+note : service provider for background supporting tasks, low priority thread
+
+
+setDaemon(boolean status) - make a thread as boolean thread
+boolean isDemon() - check current thread is daemon thread
+
+
+note : Daemon thread must not be started - else illegalThreadException
+
+
+
+Java thread pool : 
+	* group of worker threads - waiting for the job and reused mny times
+	* initially - a pool of fixed size threads created
+	* needed for job - thread is pulled out and assigned
+	* after work done - thread returns to pool
+	
+create pool : newFixedThreadPool(int s)
+cached pool : newCachedThreadPool() - creates new thread only whenever needed - reuses old ones until no need for new ones
+
+create thread : newSingleThreadExecutor() - creates a new thread
+
+
+use : useful in servlet and jsp - where container createsa thread pool to process the request.
+
+adv : already created - no time waste in creating threads!
+
+
+we have 50 tasks - i don't want to create 50 threads - create a pool of 10. Assign 10 tasks to 10 threads, others put in a queue - when thread done - reassign with the queue tasks.
+
+
+risks : 
+	* deadlock : 
+		* threadpool introduces deadlock - threads waiting for result from the threads that are blocked, so the queue threads nerver get a chance to run.
+		
+	* thread leakage : 
+		* thread assigned from the pool not returned
+		* reason : not able to catch exception - thread exits pool - pool size reduces by 1
+	
+	* resource thrashing : time wasted in switching threads - when thread size is very large(starvation - resource thrashing)
+	
+	
+1. don't queue the tasks waiting for result from other tasks - deadlock situation
+2. design carefully - thread leakage
+3. shutdown() -> to explicitly end pool
+4. control number of threads - avoid jvm run out of threads
+5. reuse - threads
+
+
+
+ThreadGroup : 
+	* import java.lang.ThreadGroup
+	* include threads or other threadgroups
+	* constructs tree - every thread group except initial thread group has a parent
+	* a thread - access own thread group info not its thread group's parent info / anyother thread groups
+	
+	
+	ThreadGroup(name)
+	ThreadGroup(parent, name)
+	
+note : suspend(), resume(), stop() - deprecated
+	
+	
+add a thread to a threadgroup  :
+	* ThreadGroup tg1 = new ThreadGroup("Group A")
+	* Thread t1 = new Thread(tg1, new MyRunnable(), "one")
+	
+interrupt all threads : 
+	* Thread.currentThread().getThreadGroup().interrupt()
+	
+tg1.list() : 
+	* gives parent threadgroup and other info
+	
+activeCount() -> active number of threads in a group
+activeGroupCount() -> number of active groups inside that group
+
+destroy() -> destroy a threadGroup
+
+enumerate() -> copies all the active threadgroups and subthread groups to an array and returns count
+
+
+	int enumerate(Thread[] tarray)
+	
+	say : 5 threadgroups and sub threadgroups active
+	
+	tarray[0],tarray[1] -> access them
+	
+	
+	
+int tg.getMaxPriority()
+tg.getParent().getName()
+tg.interrupt() --> exception(catch at run())
+isDaemon() - not threadGroup's method - check current group is Daemon group.
+isDestoryed() - group shutdown ?
+
+
+
+Java shutdown hook : 
+	1. faciliates developers to add code to run when JVM shuts down
+	2. eg : clean up resource(clear logs,alert), save state - when jvm shuts down abruptly
+	
+why ? : invoking special method before JVM terminates - won't work using general construct due to external factors
+
+eg : kill request(by OS) / resoruce not allocated(lack of memory) -> can't invoke methods from general way
+
+
+
+invoke : java.lang.Thread class -> derive
+		 provide code inside run()
+		 invoke Runtime.getRuntime().addShutdownHook(Thread)
+		 
+remove : removeShutdownHook(Thread)
+
+
+when JVM shuts down ? :
+	1. ctrl + c -> user
+	2. System.exit(int) method
+	3. user logoff
+	4. user shutdown
+	
+	
+https://www.javatpoint.com/ShutdownHook-thread
+
+
+program : when jvm ends - message : goodbye from JVM(git)
+
+
+add shutdown hook - Runtime.getRuntime().addShutdownHook(myThread);
+
+remove : Runtime.getRuntime().removeShutdownHook();
+
+
+
+note : 
+	1. no 100% guarantee - execution of shutdownhook
+	2. case : jvm crashes, internal error, os - SYSKILL signal - shutdown hooks won't come into picture
+	3. only called during normal termination of JVM
+	4. if shutdownhook takes more time - os forcefully terminates
+	5. more than 1 shutdown hooks possible - order of execution not guaranteed - one hook can't add / remove another(IllegalStateException)
+	6. Runtime.halt() -> stop shutdown sequence - forcefully terminates JVM
+	7. need permissions - else SecurityException
+	
+	
+
+garbage collector : 
+	* memory management
+	* garbage collector - daemon thread
+	* delete unused objects - automatic
+	
+1. nullify (assign null)
+2. reassign with other object
+3. object created inside method
+4. island of isolation
+
+t1.i = t2
+t2.i = t1
+
+reference each other - both assigned null - isalnd of isolation
+
+t1 = null, t2 = null
+
+
+manual : 
+	1. System.gc()
+	2. Runtime.getRuntime().gc()
+	
+request jvm to run gc
+ 
+note : before destorying an object gc(not JVM) calls finalize() - to perform cleanup activities(Object class)
+
+	* finalize() only called once for an object
+	
+https://www.geeksforgeeks.org/garbage-collection-java/#:~:text=Garbage%20collection%20in%20Java%20is,memory%20dedicated%20to%20the%20program.
+
+
+
+Runtime class : 
+	* Runtime.getRuntime()
+    * interact with java runtime env - gives methods to invoke garbage collector, execute process, ree memory...
+    * only one instance
+	
+
+
+Synchronization  :
+	* control access of multiple threads - to any shared resource
+	* prevent thread interference, consistency problem
+	* process, thread synchronization
+	* thread - (mutual exclusive) : method, block, static
+			   (cooperation) : inter thread comm
+			   
+		
+Lock / monitor : 
+	* synchronization - built around internal entity known as lock
+	* acquire lock before accessing resources
+	
+	block : synchronized(instance) -> eg : synchronized(this), synchronized(var)
+	
+	
+
+Deadlock : 
+	* thread waiting for object lock, acquired by another thread(2nd one waiting for 1st one to release lock)
+	
+avoid deadlock : 
+	1. avoid nested locks
+	2. avoid unnecessary locks
+	3. use thread join with max time limit
+	
+	
+
+Inter thread communication : 
+	* synchronized thread communicate with each other
+	* cooperation - one thread pause at critical section and allows another to get hold of lock mechanism
+	* wait(), notify(), notifyAll()
+	
+wait() : 
+	* current thread - wait until either another thread invokes the notify() / notifyAll() method / specific time has elapsed
+	* wait(), wait(long timeout)
+	
+notify() : 
+	* wakes up a single thread - on this object's monitor, choose one thread to awake
+	
+notifyAll() : 
+	* wakes all threads - waiting for this object's monitor
+	
+
+1. enter to acquire lock
+2. lock acquired 
+3. goes to wait state until get notified
+4. call notify / notifyall() from othe robjetc
+5. thread available to acquire lock
+6. job done, execution finished
+
+
+wait() - releases lock but sleep doesn't, sleep - static method
+
+
+Interrupt a thread : 
+
+	* thread(sleep / waiting state) - calling interrupt() breaks out of sleep / wait - throw InterruptedException
+	* not in sleep / wait - just interrupt flag is set - nothing happens no exception thrown
+	
+	* isInterrupted() -> interrupted flag set / not set
+	
+	
+Reentrant monitor : 
+	
+	* Java monitors are reentrant - use same monitor for different synchronized method.
+	* eliminate possibility of single thread deadlocking
+	
+	
+
+
+	
