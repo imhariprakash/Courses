@@ -67,4 +67,8 @@ Meta characters :
 \B (a non word boundary)
 
 
+^  start
+$  end 
+
+^\d.{4}\.$(start with digit and end with dot)
 
