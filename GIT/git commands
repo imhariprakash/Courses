@@ -1,0 +1,827 @@
+vim : 
+	1. i (insert mode)
+	2. esc (escape mode)
+	3. :wq (save and exit)
+	
+gitlab : 
+	1. push a branch -> create merge request -> verify -> merge (Flow)
+	
+github : 
+	1. new branch -> commit -> pull request -> review -> deploy -> merge
+	
+cache password(avoid typing again) : 
+	* git config --global credential.helper cache
+	
+git :
+ 
+ 	1. git open  -> open remote repo in browsers
+ 	2. git gui -> git gui
+ 	3. gitk -> log gui
+ 	4. git log (show log)
+ 	5. git fetch --all (fetch all remote branches)
+ 	
+ 	
+git config : 
+ 	1. git config --global user.name ""
+ 	2. git config --global user.email ""
+ 	3. git config --global core.editor Vim
+ 	4. git config -list (show all config)
+ 	
+git folder : 
+	1. git init(initializes head)
+	2. git add index.html
+	3. git add --all / git add -A
+	4. git add .  (all)
+	5. git rm --cached <file> (unstage a file)
+	6. git commit -m "message"
+	7. git commit -a (commit staged + unstaged files)
+	8. git status
+	9. git push origin master
+	10. git pull
+	
+git add : 
+	1. git add --ignore-removal (add all new and updated files only)
+	2. git add -u (add all modified and deleted file) - not newly created - not edited files
+	3. git add *.java (wildcard)
+	4. git reset <filename> (undo add)
+	
+undo add / unstage : 
+	1. git restore --staged <file>
+	
+	
+remove from history tree completely : 
+	* https://www.baeldung.com/git-remove-file-commit-history
+	* use git-filter-repo(reco) / BRG repo-cleaner
+	
+git commit : 
+	1. git commit - a (snapshot all changes) - only already added files - edited - not staged
+	2. git commit -m "message"
+	3. git commit -am "message" (already staged files edited)
+	4. git commit -amend (edit last commit - say wrong commit message)
+	5. git commit -a -m "direct commit without add"
+	6. git commit -m "short message" -m "description"
+	
+undo things : 
+	1. git commit --amend (immediately after a commit (no change to working directory - change commit message alone, (or) after commit - remember (I forgot to add files - add changes then amend -> previous commit changes + this new change -> new commit (old commit won't there)
+	
+note : --amend (replacing the previous commit with entirely new commit)
+
+	2. git reset HEAD README.md (unstage readme.md) / git restore --staged <file>(restore - local changes preserved)
+	
+	3. git checkout --<file-name> (dangerous : unmodify a modified file - discard changes in working directory) : dangerous - not able to recover (if want changes - use stashing)
+	
+	note : even --amend can be recoverable in git
+	
+	4. 
+	
+branch : 
+	1. git branch (show all branches)
+	2. git branch name (create) / git checkout -b branch_name (create and jump to that branch)
+	3. git checkout name (jump to that branch)
+	4. git branch -d <branch-name) [delete a branch locally] / git branch -D <branch name>
+	5. git push origin --delete <branch-name> (delete a branch from remote)
+	6. git branch -m <old branch name> <new branch name>
+	7. git merge <branch name> (merges into current branch)
+	8. git branch -a (all - remote and local) then git checkout <remote-branch> (created in local)
+	9. git branch -v (shows last commit on each branch)
+	10. git branch --merged / --no-merged (list branches merged / not merged to the current branch)
+	11. git branch -d testing (deleting conflict merge branch - not resolved - error (force it))
+	12. git branch --no-merged master
+	
+switch branch : 
+	1. git checkout <name>
+	2. git switch <name>
+	3. git switch -c <name> (create and switch)
+	
+show remote branches : 
+	
+	1. git remote show <remote(origin)> / git ls-remote <remote>
+	
+note : origin is not special(origin/master : default remote branch)
+	
+change branch name : 
+	1. git branch --move bad-branch-name corrected-name (local)
+	2. git push --set-upstream origin corrected-branch-name (remote) -> verify using git branch --all
+	
+note : renaming in remote -> only possible -> create new name branch then delete old one(changing name of branch - discuss with collaborators)
+
+	3. git push origin --delete bad-branch-name
+	
+	4. git branch -vv (show all branches with tracking)
+	
+
+get remote branch : 
+	1. git checkout -b <remote> <name>
+	2. git merge <branch>
+	
+track branches : 
+	1. git checkout --track <branch-name>
+	2. git branch -u <name> (explicitly every time)
+	
+
+	
+merge : 
+
+	1. git merge <commit> (specified commit to current branch)
+	2. git merge <branch>
+	
+	
+merge : 
+	1. git merge branch_name
+	
+help : 
+	1. git command -help (git add -h)
+	2. git help --all
+	
+git clone : 
+	1. git clone <repo url>
+	2. git clone <repo url> <folder name>
+	3. git clone -b master <repo-url> (clone a particular branch alone) <folder-name>
+	
+
+git stash : 
+	1. git stash (stash staging area of current branch)
+	2. git stash save (stash with message)
+	3. git stash list (list all stashes)
+	4. git stash apply (pop - removes stashed one but apply enables - pop most recent stash at multiple branches - won't be removed)
+	5. git stash apply <stash-id> 
+	6. git stash show (shows chnages - staging area of that stash)
+	7. git stash show -p (partial stash - show only edited files and content(what changed in that stashed file)
+	8. git stash pop (unstash most recent stash)
+	9. git stash drop ( delete most recent stash from queue)
+	10. git stash drop <stash-id> (say : stash@{1})
+	11. git stash clear - delete all stashes
+	12. git stash branch <name> (work on seperate branch - avoid merge conflicts) [same as branching]
+	
+note : git stash branch <name> -> create a new branch with stashed changes and the stashed changes pop ed in previous branch as well as new branch(not different from branch)
+
+
+
+git ignore : 
+	
+	1. touch .gitignore
+	2. git config --global core.excludesfile ~/.gitignore_global  (universal gitignore) - git allows multiple gitignore for a project
+	3. git check-ignore -v **/* (show all ignored files)
+	4. *.[oa] -> ending with o or a (files) 
+	
+	
+git fork : 
+	
+	1. propose bug fix, forward pull request
+	
+HEAD : 
+	
+	1. git show HEAD ( current head changes)
+	
+git remote : 
+	
+	1. git remote (shows connection bw local and remote
+	2. git remote -v (verbose) / git remote --verbose
+(show push and fetch repo)
+	3. git remote add <shortname> <url>
+	4. git remote show origin (inspect a remote repo)
+	5. git remote rename pb paul (rename remotes)
+	6. git remote remove paul (origin)
+	
+note : multiple users(repo remote) - set remote default
+	
+push and pull : 
+	1. git fetch <remote(origin)>
+	2. git clone <remote>
+	3. git pull <remote>
+	4. git push <remote> <branch> (particular branch)
+	5. git branch -d <branch-name> (delete a branch locally)
+	6. git remote rm <destination> / git remote remove <destination> (remove remote connection)
+	7. git remote rename <old name> <new name> (change origin to birth (name change))
+	8. git remote show <remote> (info about remote)
+	9. git remote set-url <remote name> <url> (change remote url)
+	10. git push origin --delete <branch name> (delete a remote branch)
+	
+	
+git tags : 
+	
+	1. git tag <tag-name> (default : light weight tag)
+	2. git tag / git show / git tag -l ".*" (list all tags)
+	3. git push origin v1.5 (push tag to remote)
+	4. git tag -a <name> -m <message> (annotated tag)
+	5. git tag <tag name> (light weight tag)
+	5. git tag -l "v1.8.5*" (v1.8.5 starting tags)
+	6. git show <tag>
+	7. git tag -a <tag-name> <commit-id> (tag previous commits - annotated)
+	8. git push origin --tags (push all tags)
+	9. git tag -d v1.4 (delete a tag)
+	10. git push origin :refs/tags/v1.4 (delete a tag in remote repo) / git push origin --delete <tagname>
+	11. git checkout <tagname> (detatched head)
+	12. git checkout -b version2 v2.0.0 (creates a branch named version2 (snapshot of v2.0.0 and switched to it)
+	
+	
+push tags : 
+	1. git push origin <tag name>
+	2. git push origin -tags / git push origin --tags
+	3. git tag --d <name> / git tag --delete <name> (delete tag) - local
+	4. git push origin -d <name> / git push origin --delete <name> (repo level delete)
+	5. git tag -d <tag1> <tag2> (delete multiple tags - local)
+	6. git checkout -b <new branch> <tag name> (checkout tag by creating new branch to work)
+	7. git checkout <tag-name> (check out that tag)
+	8. git tag <name> <reference of commit> (create tag for an older commit)
+	
+	
+	
+set upstream : 
+
+	1. git push --set-upstream origin master / git branch --set-upstream-to origin master (set master as default remote branch)
+	2. git branch -vv (display default remote branches)
+	
+	
+git checkout : 
+	
+	1. git checkout <branch-name>
+	2. git checkout -b <branch-name> (create and switch branch)
+	3. git fetch --all 
+	4. git checkout <remote branch>
+	
+	
+git revert : 
+	
+	1. git revert <commit-ish> (commit ref id needed)
+	2. git revert -e <commit-ish> (edit commit meesage before reverting the commit - default option) [--edit]
+	3. git revert -n <commit-ish> (-n / --no-commit : won't open an editor - directly revert)
+	
+	-m parent-number / --mainline parent-number (revert merging : can't revert a merge since don't know which side merge should be considered as the mainline) - revert to reverse the change relative to the specified parent
+	
+	--cleanup=<mode>  cleanup option strip space and comments from messages
+	
+	
+revert to previous commit : 
+	1. git revert <commit-sha>
+	2. merge (atleast two parents) - using git log take merge commit sha
+	
+	git revert <commit ref> -m 1 ( 1st parent as mainline) [since merge commit has multiple parents] - which parent to refer
+	
+	
+
+git reset : (dangerous especially with --hard)
+	
+	* undo changes - reset the changes (3 forms : soft, mixed, hard)
+	* git reset --hard(reset changes (HEAD - last change / commit), remove changes from staging area and working directory
+	* git reset --mixed (staging area lost, working directory safe)
+	* git reset --soft
+	
+	
+	
+git rm : 
+	
+	1. git rm <file-name> (deletes the file from repo and staging area) [status : deleted]
+	2. git rm --cached <file-name> (remove from git but keep in local repo - remove from staging area only)
+	3. git reset HEAD (undo rm command - all changes after previous commit got lost)
+	4. git reset --hard (undo rm command using reset)
+	5. git checkout (uncommitted changes lost)
+	6. git rm <file-name> -f (if staged git rm <name> will give error -> need to force)
+	7. git rm log/\*.log (\ is must - since git does its own filename expansion to shell's expansion - log/ folder all files with .log remove)
+	8. git rm \*~ (remove all files name ends with ~)
+	
+	
+git mv : 
+	1. git mv file_from file_to (equivalent to mv command)
+	
+	
+	
+git cherry pick : 
+	1. git cherry-pick <commit-id>
+	https://www.atlassian.com/git/tutorials/cherry-pick
+	2. -edit (promt for commit message)
+	3. --no-commit (take target's commit to working d)
+	4. --signoff (add signoff signature to commit message)
+	
+	
+git log : (apply filters, prettier format)
+	1. git log
+	2. git log --oneline (7dig sha, oneline log)
+	3. git log --stat (display modified files, no of lines added / removed, summary of changes)
+	4. git log --patch / git log -p (modifies files, location of add / rem, changes made)
+	5. git log --graph / git log --graph --oneline 
+	6. git log -3 (last 3 commits)
+	7. git log --after="yy-mm-dd" 
+	8. git log --after="21 days ago"
+	9. git log --after="2019-11-01" --before="2019-11-08"
+	10. git log --author="Author-name"
+	11. git log --author="@gmail.com"
+	12. git log --grep="commit message"
+	
+	--pretty=oneline, --pretty, refer : --pretty=format."%h - %an, %ar : %s" (pg : 49)
+	
+	
+git diff : 
+	1. git diff (track changes - not staged)
+	2. git diff --staged (--cached are same)
+	3. git diff HEAD (what changed in this commit)
+	4. git log -p --follow --filename.txt (track all changes made in a file from earlier commit)
+	5. git diff <sha> <sha> (track changes bw two commits)
+	6. git diff <branch1> <branch2>
+	
+git status : 
+	1. git status (state of repo and staging area - tracked, untracked)
+	2. git status -s (short status)
+	
+
+git rebase : 
+	1. git rebase <branch-name> (like which branch want to merge with current branch)
+	2. git rebase --continue (continue changes made)
+	3. git rebase --skip (skip changes need)
+	4. git rebase -i (interactive)
+	
+pick(-p), reword(-r), edit(-e), squash(-s), fixup(-f), exec(-x), break(-b), drop(-d), label(-l), reset(-t)
+
+
+rebase : 
+	1. git rebase --onto master server client (rebase only commits that are not in server to master branch : reason - client ready to merge but server not yet)
+	
+	2. git rebase master server (rebase server to master : no need to checkout to master)
+	
+
+squashing : 
+	1. git rebase -i HEAD~3 (squash last 3 commits) - replace the word 'pick' with the 'squash'
+	
+	
+fetch : 
+	1. git fetch <repo-url>
+	2. git fetch <branch-url> <branch-name>
+	3. git fetch -all (all branches)
+	4. git fetch origin (sync local repo)
+	
+	git pull = git fetch + git merge (add to working directory)
+	
+	
+pull and pull request : 
+	1. git pull <option> [<repo url> <ref spec>]
+* option : -q, -v, -e
+ 	2. git pull (pull from remote repo)
+ 	3. git pull <remote branch url>
+ 	4. git fetch all, git reset -hard <remote>/<branch> (git reset-hard master - pull from remote and get into working directory)
+ 	5. git pull <options><remote>/<brnach name>
+ 	6. git remote -v (display)
+ 	
+ 	
+ 	
+git push : 
+	1. git push <option> <remote-url>/<branch-name>
+	https://www.javatpoint.com/git-push
+	2. git push origin(my global repo) master(branch)
+	3. git push <remote> <branch> -f (force) / -force
+	4. git push <remote> <branch> -force-with-lease (safe force push)
+	5. git push -v / --verbose (detailed explanation)
+	6. git push origin -delete <branch-name> (delete branch remote repo>  
+	
+	
+git aliases : 	
+	
+	1. git config --global alias.co checkout
+	2. git config --global alias.br branch
+	3. git config --global alias.ci commit
+	4. git config --global alias.st status
+	5. git config --global alias.unstage 'reset HEAD --'
+	6. git config --global alias.last 'log -1 HEAD
+	
+git ci (for commit), git unstage fileA (for unstage) same as git reset HEAD --<filename> 	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+			        Theory
+--------------------------------------------------------
+
+
+rcs : (folder copy - error prone) - db for versions
+cvs : single server - admin - single point of fail., backup must
+distributed vcs : git, mercurial.. - many computers  (copy and work)
+
+
+git : 
+	* goal - speed, simple, parallel branches, fully distributed, handle large projects
+	* version control tool - linus torvis - 2005
+	* track code change, who?, collaborate
+	* clone,fork,manage,branch,merge,pull,push
+	* open source, scalable, secure(sha1), speed
+	
+snapshots : 
+	* (file based changed - other vcs) - git thinks as picture of what it looked in that time (efficiency - doesn't store all files - only changed files, not changed - reference)
+	* git - stream of snapshots
+	* almost local - every history cloned
+	* integrity : SHA-1 checksums (impossible to change files witout git knowing it) - won't lose info in transit(40 char string)
+	* checkout - files compressed - pulled out - placed on disc
+	* .git -> where meta and objects are stored
+	
+github : 
+	* hosting service
+
+version control system (VCS) : 
+	* recall specific versions
+	* special kind of db to track all changes
+	* backup for uncertainity
+	* history, tracing
+	
+clone -> change -> stage -> commit -> push (revert if)
+
+tracked : git knows about change and added
+untracked : not added to repo
+
+git config level : local, global, system
+
+
+branch : diverge working project from main
+checkout : switch bw branches
+cherrypicking : apply commit from one branch to other, revert the change mde in branch 1 and cherry pick in branch 2
+
+
+branch : 
+	
+	* git uses snapshot(commit has pointer to snapshot)
+	* each commit has author, mail, parent(1-normal, many - merging)
+	* initial commit - root (checksum - used to create directory - tree object), commit object for meta - so recreate commit whenever needed
+	* step : 1 (README.md, LICENSE - initial commit)
+	* now : one commit object(meta), one tree object having tree size, 2 blobs (2 blobs - 2 files) (pg : 69)
+	* no changes - same blob used ! in upcoming commits
+	
+relating to branch : 
+	* master branch with initial commit (default)
+	* master is not a special branch
+	(ref pg : 71 for diagram explanation)
+	
+note : branches are just movable tags - cheap to create and destory just a file having 40 char sha1 reference
+	   HEAD - pointer to know which branch currently on
+
+
+fetch : fetch from remote repo
+
+head : last commit ref having tag - current branch
+
+index : staging area
+
+master / main : holy branch - no working in this branch
+
+origin : remote repo
+
+pull request : changes to origin(merged by team mem)
+
+push - upload to origin
+
+rebase : sequencing - commits to new base commit
+
+stashing : commit must done before switch else changes will be lost. incase not to lose - stash(like temp storage) jump to other repo then comeback undone stash complete then commit
+
+tag : specific point in git history(light weighted, annotated tag)
+
+upstream : origin
+downstream : any project that integrates works with other
+
+git revert : undo 
+
+git reset : reset changes - soft, mixed, hard
+
+git ignore : intentionally untrack files / folders
+
+git diff : utility - compare branches, files, commits
+
+git squash : group specific changes commits in to one (using rebase)
+
+
+
+standard branches : master, develop(final source code for release - integration branch), hotfixes(supportive branch - fix bug), release branches(support a new version), feature branches
+
+
+
+
+git init : 
+	* initializes git project(.git,meta,HEAD(
+	
+git add : 
+	* once staged - file edited means - restage to take effect
+	* remove file from staging area : git rm --cached <file>
+	* add only updated, deleted file : git add -u
+	
+note : good commit message - meaningful <50 letters
+	
+	
+git commit : (record changes in repo)
+	* record changes in local repo
+	* every commit - has index data and the commit message
+	* every commit has parent, child relationship
+	* git commit -> fetch updates from staging area and update in repo
+	* commits - snapshot of project
+	* we can recall commits / revert back to it 
+	* each commit has id (cryptographic sha algorithm)
+
+
+git stash : 
+	* switch branches - don't want commit half done
+	* uncommited changes - lost while switching branches
+	* stash - enables chnage branch without commiting
+	* stash - store something safely in a hidden place
+	* stash - staging area(later pop and edit then commit)
+	* create new branch and transfer stashed work in that branch - git stash branch <name>
+	
+	
+git ignore : 
+	* intentional untracked files
+	* eg : dependency caches, compiled op, build op (/bin, /out, /target), run time file generated (.log / .lock / .tmp), hidden system file(thumbs.db, .DS_Store)
+	
+	* .gitignore(under root repo
+	
+manual : *.txt(ignore all txt files)
+		 /newfolder/* (all files under newfolder)
+		 
+	* git ignores blank lines and starting with #
+	* start with / (avoid recursive - entire working tree)
+	* end with / (specify a directory)
+	* negate patterns (start with !)
+
+
+
+git repository : 
+	* data structure (like) to vcs (store meta, files, directories + history)
+	
+git index : 
+	* Staging area - b/w working directry and repo
+	* then commit to repo
+	
+	
+git HEAD : 
+	* last commit of current branch
+	
+detached head : 
+	* head referring to specific revision - not associated with branch name (head doesn't point to current commit)
+	
+	
+git origin master : 
+	* default branch of git (or main)
+	* don't mess with master
+	* changes affect everyone else - merge conflicts
+	
+git origin : 
+	* remote repo where we want to publish commits
+	* git push origin master
+	* git pull origin master
+	
+git remote : 
+	* hosted (.git data)
+	
+pull vs fetch : 
+	* pull - remote repo changes to working directory
+	* fetch - only to local repo - won't reflect in working copy(area)
+	
+git merge : 
+	* connect two / more development history together
+	* unified history
+	
+merge conflicts : 
+	* both edited at a time - which one to take
+	
+	
+git tags : 
+	
+	* specific point in history - for future reference
+	* eg : v1.1
+	* types : annotated, light weight
+	
+when? : 
+	1. create release point for a stable version
+	2. history point - future use
+	
+	
+annotated tags : 
+	* extra metadata : dev name, mail, email, date and more 
+	* pointing and saving a final version : recommended
+	* for temp mark / do't want to share info - not recommended
+	* annotated tag - essential for public release
+	
+light weight tags : 
+	* no unnecessary details
+	* no options supplied (-m, -s, -a)
+	
+note : manually push tags (tags won't be pushed by default)
+
+
+upstream and downstream : 
+	upstream : where cloned the repo
+	downstream : any project integrating your work with other works(downsream repo will be pulled from upstream)
+	
+* set upstream : set default remote branch(default master)
+
+* git checkout : switch bw versions of target entity
+
+
+git revert : 	
+	* revert some changes
+	* doesn't delete any data - create new change (commit) by undoing the changes
+	* revert is also a commit
+	
+	edit test.txt
+	
+eg : commit 1 -> hello1
+	 commit 2 -> hello2
+	 '''''
+	 commit 8 -> hello8
+	 
+git revert commit-id-5 (undo commit 5 means take commit 4)
+
+incoming : hello 4 (current : hello 8)
+
+conflict : go with hello 4 / leave with hello 8 / accept both / edit then revert!
+
+
+
+note : revert means undoing a commit = not common quiet
+
+
+
+
+git reset : 
+	* undo changes - soft, mixed, hard
+	* soft - commit history
+	* mixed - staging area and commit history
+	* hard - working directory, staging, commit his
+	
+hard reset : 
+	* direct, unsafe, frequently used(changes commit history, ref pointers.
+	* staging area and working directory - reset to match commit tree
+	* awaiting work - will be lost
+	
+	
+eg : git add <name>, git log, 
+
+     git reset --hard (remove available changes from staging area, so recently added file(not commited - lost)
+     
+     
+safe way :  git stash
+
+* move HEAD pointer
+* update staging area with HEAD is pointing content
+* update working directory to match staging area
+
+
+git hard reset : 
+	* create sample.txt
+	* git add .
+	* git reset --hard (now returned to previous commit - no file as sample.txt)
+	
+	
+git mixed reset : 
+	* default - (--mixed)
+	* staging area reset to specified commit and working directory restored (not lost) - only staging area got lost
+	
+	1. move pointer HEAD
+	2. update staging area with content of HEAD 
+	3. doesn't update working directory(not lost)
+	
+	
+git soft reset : 
+	* pointer updated(HEAD) but staging area and working directory saved.
+	* more like amend
+	* not authoritative - don't use
+	
+	
+checkout vs revert vs reset : 
+	* checkout : just move HEAD(file level / commit level)
+	* revert : takes commit and creates new commit - no file level scope
+	* reset : reset commits and match staging and working directory
+	* revert : creates new commit - not override his
+	
+note : 
+	1. checkout, reset - making local / private 'undos'
+	2. revert - public undo (team may relay on the commits - revert doesn't overrides history)
+	
+	
+	
+git rm : 
+	
+	* remove file(s) - remove tracked file from staging area
+	* also used : remove from working area
+	
+	
+	
+git cherrypick : (not a best practice) 	  duplication(traditional merge - preferred)
+
+	* apply commit from one branch into another (say committed in a wrong branch) - don't want to merge the whole branch
+	* one way : revert the commit and apply it on another branch
+	* complicated : when cherrypick a commit or cherrypick another branch
+
+Use : 
+	* problem : can cause duplicate commit
+	* contrast with merge and rebase
+	
+use : some changes liked in branch - apply them in main
+      don't want to merge - complex task (not yet ready)
+      only pick one / two specific commits and apply in main branch
+      
+      
+scenario 1 : 
+	* accident commit in wrong branch
+	* git cherry-pick <commit-id>
+
+scenario 2 : 
+	* make changes proposed by another team - cherrypick after review
+	https://www.atlassian.com/git/tutorials/cherry-pick
+	* that commit in the wrong branch remains (not deleted)
+	
+	
+git log : 
+	1. commit hash, meta(author), date, commit message
+	
+	
+git diff : 
+	1. command-line utility - git data source(files/branches,commits)
+	
+	
+rebasing : (good rebase your branch before merging)
+	1. reapply commits - on top of another base trip
+	2. apply sequence of commits from distinct branches into a final commit
+	3. alternative to git merge command
+	4. linear process of merging - better visualization
+	5. rewrites history - merges commit one by one
+	
+how to rebase : (don't rebase public branches)	
+	
+branch : test2
+	1. add newfile1.txt, commit
+	
+master : 
+	1. add newfile.txt, commit
+	
+note : merge / rebase (own branch : good to rebase)
+	   rebase own branch : 
+	   		git checkout test2
+	   		git rebase master
+	   		
+	   		
+https://www.javatpoint.com/git-rebase
+
+
+
+git's solution to rebasing problems : 
+	1. someone rebased - challenge (what's mine what they rewritten
+	2. git also has patch-id along with sha1 - so git can figure out what's mine and apply them on top of new branch
+	3. pg : 103
+
+
+squash : (options available at rebase interactive)
+	* combine previous commits into one
+	* group - before forwarding to others(easy to read)
+	* interactive rebase command
+	* rewrite history
+	
+	drawbacks : 
+		* updates history - but its ok
+		* try to do minimum squashes
+		
+pull request : 	
+	* pr(notify team - completed a feature) - review and merge into master
+	
+
+workflows : 
+	
+	1. long running : master(stable) - released, others testing(merge - clear of bugs)[say : develop branch - work on continuously]
+	2. Topic branches : short lived (single feature)
+	
+	
+	
+bare repo : can't able to commit (as .git is absent) 
+	        normal repo with out .git
+	        
+protocols : 
+	
+	1. file:/// (read / write local subsystem)
+	2. http - smart (new version similar to ssh but uses https), dump http (older version)
+	3. ssh : self hosting 
+	4. git protocol	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+error faced : 
+	1. public access : ssh link used to clone / remote - need to provide ssh key or change to https url link
+	
+
+	
