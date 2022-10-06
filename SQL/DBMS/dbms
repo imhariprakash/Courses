@@ -1,0 +1,464 @@
+steps to follow : 
+	One to one : 
+		* pk of parent -> fk pf child(using reference)
+		* relationship attribute - placed in FK table
+		* 1:1, pk of either entity can be made as FK of other entity
+	one to many : 
+		* FK and relationship attributes must be in many entity table
+	many to many : 
+		* M : N - relationship is rep using new table - composite primary key
+		* relationship attribute in new table
+		
+Normalization : 
+	1. split multi valued attributes
+	2. remove partial dep
+	3. remove transitive dependency
+	
+Order of query execution : 
+	FROM
+	JOIN
+	WHERE
+	GROUP BY
+	HAVING
+	SELECT
+	DISTINCT
+	ORDER BY
+	
+* group by must be always after WHERE
+* Aggregate functions can't be used inside WHERE (even if group by is used)
+* Nested aggregate functions can't be used without GROUP BY
+* ORDER BY can't be used on columns which grouping is not being done
+* GROUP BY doesn't contain aggregate columns
+* ALIAS name can't be used in group by
+
+
+Steps to design tables : 
+	1. atomic - no multivalues, composite attri
+	2. no functional dependency - split
+	3. no partial dependency
+	4. BCNF - every func dep - super key
+(emp id, country, dept, type, no) : 
+	       * dept -> type, no
+	       * emp id -> country
+	       * emp id -> dept
+	5. 4NF : a has multiple b, multiple c
+	           a, b table a,c table
+	6. joining should be lossless - no join dep
+	
+decompose table : lossless, satisfy dependency
+
+multivalued dep : two attribute indep of eachother but both dependent on same attribute
+
+
+DO's and Dont's
+
+
+Do’s for Group by and Having clauses:
+
+	GROUP BY clause should contain all non-aggregate columns that are present in SELECT clause
+
+	GROUP BY clause should be mandatory when there is a list of aggregate and non-aggregate columns in SELECT statement
+
+	Whenever nested aggregate columns appear in the SELECT clause, GROUP BY clause should be mandatorily used
+
+	HAVING cannot be written without the GROUP BY clause in the query
+
+	Aggregate column condition(s) should always be written along with the HAVING clause and not with the WHERE clause
+
+Don’ts for Group by and Having clauses:
+
+	Columns from the list of the SELECT clause should not be skipped in the GROUP BY clause. However, you can add an extra non-aggregate column which is not present in the SELECT to the GROUP BY clause
+
+	GROUP BY clause should not contain any aggregate columns
+
+	Aliased name given for the column should not be used in GROUP BY clause
+
+	HAVING clause should not contain non-aggregate columns which are not present in the GROUP BY clause
+
+	If the query does not adhere to these points, either it gives syntax error or it may result in a wrong output.
+
+
+
+entity : attribute of a table(eg : person (objects for short))
+
+ACID : (A - transaction manager, C - app, I - concurrency, D - recovery) 
+	1. atomic - happen completely or won't
+	2. consistency - before and after transactions - consistent
+	3. Isolation - all transactions are independent - no interference
+	4. Durability - changes of a successful transactions occurs even if system fail
+
+data : 
+	* data - unprocessed info - crude ( data -> info -> knowledge(decision making))
+	* accurate, availability, security, independent of app, concurrent 
+	* file based db : dependency, complex, loss, security no, redundancy
+	* database : shared collection of logically related data
+	* dbms : software enables - define, CRUD - high cost, hardware
+	* dbms : import, export, backup, logging, audit, performance analysis (utilities), secure, integrity, transaction support - success / not done at all, CRUD, recovery
+	
+types : hierarchical(tree like), network(graph), nosql, rdbms(tables - row, column)
+
+
+data integrity : 
+	* maintain and assure accuracy and consistency (lifecycle)
+	* entity integrity : uniquely identify a row - primary key
+	* domain integrity : finite set of values(limit) - data types, constraints
+	* referential integrity : foreign key : exist as other table's value(value tab1)
+	
+Schema : 
+	skeleton structure - logical view(table, pk, fk,views, columns, data types, stored procedure)
+	
+candidate key : 
+	* minimal set of columns used to uniquely identify a row
+	* eg : employeeNo, AadharNo
+	
+	
+primary key : 
+	* canditate key chosen - not change with time, no null
+
+
+Foreign key : 
+	* one / more columns in the child table whose values are rquired to match with parent table (establishes relationship between two tables)
+	* Foreign key columns in child tables refers to primary key of parent table
+	
+	
+Entity : real world objects - independent existence / data (person, Employee, computer)
+attribute : property describes an entity (name, salary, age)
+
+
+Employee - entity, primary key attribute : id, age, salary : non primary key attri.
+
+
+Relationships : 
+	* Computer is allocated to an employee
+	* Employee works in an department (an employee manages department)
+	* Employee reports to manager who is also an employee (same entity)
+	
+	
+Cardinality of relationships : 
+	1. 1 : 1 (employee allocates 1, 1+, 0 computers) 
+	2. 1 : N 
+	3. M : N
+	
+
+redundancy : repitation unnecessary means
+
+Normalization : recognize data in db - ensure no redundancy, dependancies are logicla(related data items - stored together)
+
+
+functional dependency : 
+	1. fully functional dependency
+	2. partial
+	3. transitive
+	
+
+dependency in a relation : 
+	* attribute of a relation can be known by knowing one / more attr of same rel
+	* attribute which determines the value of other attributes - Determinant
+	
+eg : R, A, B - attributes
+
+* B is functionally dependant on A : if each value of A determines Excatly one value of B,   A -> B (A can be composite in nature)
+* A is determinant and B is determinant
+
+functional dependencies : 
+
+		|  {retailid, itemcode} -> qty available  |
+		|  {retailid, itemcode} -> price          |
+		|  retailid             -> location       |
+		|  price                -> itemclass      |
+		|  itemcode             -> description    |
+			
+		    determinants              dependencies
+		
+note : 
+	* particular retailoutlet id's particular item has quantity and price	
+	* retailoutletid has location
+	* retailunitprice has itemclass
+	* itemcode has description
+	
+	
+retailoutletstock (retailoutletid, itemcode, retailoutletlocation, qtyavailable, description, retailunitprice, itemclass)
+
+candidate key : retailoutletid, itemcode
+
+
+full functional dependency : 
+	* itemcode, retailoutletid - must to identify a unique row
+	
+partial functional dependency : 
+	* itemcode has description (10001 : sunday cooky)
+	* itemcode is dependent on retailoutletid
+	* so description is partially dependent on retailoutletid
+	
+description can be uniquely identified using anyone of these two
+
+
+transitive functional dependency : (partial)
+	* itemclass is dependent on retailunit price
+	* retailunit price dependent on itemcode and retailoutletid
+	* so itemclass is transitive dependency among retailoutletid, itemcode
+	
+	
+if functional dependencies not properly defined : 
+	1. create update / modification anomolies
+	2. deletion anomalies
+	3. insert anomalies
+	
+	
+normalization : process of removing anomalies
+
+
+
+remove anomalies : 
+	* NULL - not allowed in retailoutlet id or itemcode
+	* primary keys not allowed to delete - make these two as PK
+	* update using one key instead of two - changes many (itemcode - many location)
+	* also repeating redundant columns - location, description (all itemcodes of a particular outlet shares common description)
+	
+
+Functional dependency : 
+	* if we know id - we know name
+	* name is func dep on id	
+	* if two entities - determined by same primary key - split it into new table
+
+
+Normalization forms : 
+	1. 1NF, 2NF, 3NF, BCNF, 4NF, 5NF, 6NF (4-6NF : multivalues, complex table scenarios)
+	
+
+1NF : 
+	* all attributes are atomic in nature
+	* no multi valued attribute
+	* adv : multivalued - creates issues in updating, extracting from db removed
+	* limit : location (only dep on itemcode) - seperate table - remove redundancy
+	
+	
+2NF : 
+	* already 1NF
+	* no partial dependency (between key and nonkey attributes)
+	* adv : removes redundancy - placing in new table - create relationship
+	* limit : itemclass comp dependent on retailUnit price - repeated whenever two items has same retailunit price (when itemclass changed - change in all records)
+	
+3NF : 
+	* already 2NF
+	* no transitive dependency bw non key and key attribute through another non key
+	* decompose transitive relation into be new tables
+	* adv : ensures data integrity, reduces duplication
+	
+Depending on the business requirements, the tables can be normalized up to 2nd normal form or 3rd normal form
+
+Tables in 3 NF are preferred in applications with extensive data modifications
+
+Tables in 2 NF are preferred in applications with extensive data retrieval
+
+Reason: retrieving data from multiple tables is a costly operation
+
+Converting the tables from higher normal form to lower normal form is called “Denormalization”
+
+
+
+SQL : 	
+	* ISO maintained
+	* data defintion lan(CRUD - db objects), control(grant, revoke), manipulation(table CRUD), transaction control(commit, rollback)
+	
+SQL datatypes : 
+	* char, int, non-int, misc
+	* operator : arith, compare, logical
+	
+CHARACTER : 
+	1. CHAR(n) - fixed length - less length (trailing spaces applied)
+	2. VARCHAR(n) - variable length - no trail spaces
+	
+INT : (store whole number)
+	1. SMALLINT
+	2. INTEGER
+	3. INT
+	
+NON-INTEGER : (number, numeric, decimal)
+	1. NUMBER(precision, scale)
+precision : total dig (including - decimal)
+scale : no of decimal positions
+
+max value that can be stored - determined by precision and scale
+
+
+NUMBER(5,2) -> 3 dig + 2 decimals (1111.2 - error (only 3 allowed))
+
+
+Store date and large objects : 
+	1. DATE
+	2. TIMESTAMP
+	3. CLOB (char large obj)
+	4. BLOB (binary large object)
+	
+
+Constraints : 
+	* NOT NULL
+	* PRIMARY KEY
+	* CHECK (eg : Gender CHAR(1) CONSTRAINT Stud_gender_ck1 CHECK(Gender IN('M', 'F'))); )
+	* UNIQUE
+	* FOREIGN KEY
+	
+
+SQL functions : 
+	* SELECT, WHERE, ORDER BY, HAVING
+	* number, character, date, aggregate, misc
+	
+	
+Sorting : 
+	* ORDER BY must be the last statement - used only with SELECT
+	
+	
+	
+Combining data : 
+	1. Union
+	2. JOINS
+	
+	
+Unions : 
+	SELECT * FROM Emp WHERE desig = 'PM'
+	UNION
+	SELECT * FROM Emp WHERE desig = 'ICP'
+	
+
+
+1 - tier : server, client, db same machine
+2 - tier : client sep, db stored on server
+
+3 - tier architecture : 
+	* presentation layer (pc,mobile)
+	* application layer (server)[relation,entity]
+	* Database server(internal - schema level)
+	
+adv : seperate db and user app
+
+
+
+Transactions : 
+	* group of tasks - related op
+	* do completely / not at all do (ACID)
+	
+Shedule : 
+	* preserve order in individual transac
+	* serial : t1, t2
+	* non-serial : interleaving allowed then continue
+	* serializable shedule : when serial op and non serial op same - then serializable transac
+	
+	
+Failure : 
+	* Transaction failure : logical / syntax error
+	* System crash - power, hardware / software - os error
+	* disc fail - bad sector, unreachable
+	
+	
+log based recovery : recover from log files
+	1. deferred db modification : until committed don't change db
+	2. immediate db mod : change db while trans still active
+	
+
+Checkpoint : 
+	* remove previous logs - store in disk
+	* bookmark - recover using these bookmarks
+	* undo, redo
+	
+deadlock prevention : 
+	* allocate resources in a way - deadlock never occurs(if do - never allow that transacti)
+	
+	
+concurrency control : 
+	* maintain consistency - w-w problem, w-r
+	
+multiple granularity : 
+	* split data into blocks(hierarchial)
+		* db
+		* area
+		* file
+		* record
+shared lock : only read
+exclusive : read and write - no two modification allowed at a time
+	
+
+RAID : 
+	* Redundancy array of the indep disc
+	* tech used to connect multiple sec storage - data red dec, inc performance 
+	* 7 levels - RAID 0 - 6
+	* set of phy devices - single logical device
+	
+RAID 0 : 
+	* data stripping - place data in multiple discs (1 disc fails - all lost)
+	* no fault tolerance
+	
+RAID 1 : 
+	* Mirror data - in multiple drives
+	
+RAID 2 : 
+	* Bit level stripping - hamming codes - each word seperate disc
+	* costly - not used commercially
+	
+RAID 3 : 
+	* byte level stripping - parity written in seperate parity drive
+	
+RAID 4 : 
+	* block level stripping - parity based aproach
+	
+RAID 5 : 
+	* difference b/w raid 4 is parity rotates among drives
+	
+RAID 6 : 
+	* block level stripping with 2 parity bits
+	* recover data - two concurrent discs
+	
+	* raid 0 : data safety and security - high performance application
+	* raid 1 : rebuild data - failed disc
+	* raid 3, 5 : powerful - raid 5 tackles bit stripping problem of raid 3.
+	* raid - 6 : reliable than raid 5, but many doesn't suport raid 6
+	
+	
+mostly used : raid 1 and raid 5
+
+	
+
+
+Storage in dbms : 	
+	* primary : main, cache
+	* secondary - flash, magnetic discs
+	* ternary : optical, tape (outdated)
+
+
+query cost : 
+	* no of disc access
+	* execution time of CPU
+	* comm cost bw parallel systems
+	
+
+query processing in dbms : 
+	* parse and translate
+	* optimize(gen efficient evaluation plan) : min cost
+	* evaluation
+	
+External sort merge algo : 
+	* perform joins etc..
+	* small memory, relations have large size
+	* final run returns sorted op without writing to disc
+	
+	
+Hash join algo : 
+	* equi / natural join
+	* partition each tuple into sets - hash
+	* hashing reduces comparision req
+	
+merge join : 
+	* perform merge join 
+	* also known as sort merge join algo
+	
+nested loop join : 
+	* perform nested join loop
+	* outer and inner join
+	
+Double - pipelined join algo : 
+	* creates pipeline to implement multiple operations
+	
+stored procedure : 
+	https://www.tutorialspoint.com/jdbc/jdbc-stored-procedure.htm
+	
+
