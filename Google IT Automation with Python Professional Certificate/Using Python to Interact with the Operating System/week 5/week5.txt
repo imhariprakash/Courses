@@ -1,0 +1,95 @@
+cat list.txt | grep 'jane*'
+cat list.txt | grep 'jane '
+cat list.txt | grep 'jane ' | cut -d ' ' -f1 (first column alone)
+cat list.txt | grep 'jane ' | cut -d ' ' -f 1-3 (first 3 columns)
+test (file found / not)
+> test.txt (create a file using redirection also using touch)
+for i in 1 2 3; do echo $i; done
+echo "I am appending text to this test file" >> test.txt (append)
+
+
+findJane.sh
+
+#!/bin/bash
+
+
+> oldFiles.txt
+
+for file in $(ls ~/data | grep 'jane')
+do
+    for jane in $(cat ~/data/list.txt | grep 'jane ' | cut -d ' ' -f3- | cut -d '/' -f3-)
+    do
+	if [ $file = $jane ]
+	then
+	    echo "/home/student-02-ca1e384b4223/data/"$file >> oldFiles.txt
+	fi
+    done
+done
+
+
+#!/usr/bin/env python3
+
+import sys
+import subprocess
+
+with open(sys.argv[1]) as file:
+    for line in file:
+        print(line.strip().replace('jane', 'jdoe'))
+        
+       
+       
+#!/usr/bin/env python3
+
+import sys
+import subprocess
+
+with open(sys.argv[1]) as file:
+        for line in file:
+                for files in subprocess.run(["ls ~/data", "-l"]):
+                        print(files)
+
+
+
+#!/usr/bin/env python3
+
+import sys
+import subprocess
+
+with open(sys.argv[1]) as file:
+    for line in file:
+        for files in subprocess.run(["ls", "/home/student-02-ca1e384b4223/data", "-l"], stdout=subprocess.PIPE).stdout.decode("utf-8").split("\n")[1:]:
+            if(line == files.split(" ")[-1].replace("\n", "")):
+                print(line)
+                
+                
+                
+#!/usr/bin/env python3
+
+import sys
+import subprocess
+
+with open(sys.argv[1]) as file:
+    for line in file:
+        for files in subprocess.run(["ls", "/home/student-02-ca1e384b4223/data", "-l"], stdout=subprocess.PIPE).stdout.decode("utf-8").split("\n")[1:]:
+            if(line.split("/")[-1].strip() ==  files.split(" ")[-1]):
+                old = files.split(" ")[-1] 
+                new = files.split(" ")[-1].replace("jane", "jdoe")
+                subprocess.run(["mv", "/home/student-02-ca1e384b4223/data/" + old, "/home/student-02-ca1e384b4223/data/" + new])
+                
+                
+                
+#!/usr/bin/env python3
+
+import sys
+import subprocess
+
+with open(sys.argv[1]) as file:
+    for line in file:
+        for files in subprocess.run(["ls", "/home/student-02-ca1e384b4223/data", "-l"], stdout=subprocess.PIPE).stdout.decode("utf-8").split("\n")[1:]:
+            if (line.split("/")[-1].strip() == files.split(" ")[-1]):
+                old = files.split(" ")[-1]
+                new = files.split(" ")[-1].replace("jane", "jdoe")
+                subprocess.run(["mv", "/home/student-02-ca1e384b4223/data/" +
+                               old, "/home/student-02-ca1e384b4223/data/" + new])
+
+ 
