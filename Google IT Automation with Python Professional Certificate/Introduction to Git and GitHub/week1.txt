@@ -1,0 +1,4 @@
+git init
+git status
+git add README
+git commit -m "message"
