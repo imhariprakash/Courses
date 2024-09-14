@@ -2,120 +2,100 @@
 #include<stdlib.h>
 
 struct node{
-    struct node *prev;
     int data;
+    struct node *prev;
     struct node *next;
 };
 
-void printList(struct node *head){
+void printStraight(struct node *head){
     struct node *temp = head;
-    while(temp != NULL){
-        printf("%d ", temp -> data);
-        temp = temp -> next;
-    }
+
+    do{
+        printf("%d ", temp->data);
+        temp = temp->next;
+    }while(temp != head);
+
     printf("\n");
 }
 
-void revPrintList(struct node *tail){
-    struct node *temp = tail;
-    while(temp != NULL){
-        printf("%d ", temp -> data);
-        temp = temp -> prev;
-    }
-    printf("\n");
-}
-
-void Deallocate(struct node *head){
+int search(struct node *head, int num){
     struct node *temp = head;
-    struct node *hold;
-    while(temp != NULL){
-        hold = temp -> next;
-        free(temp);
-        temp = hold;
-    }
-}
 
-struct node * getFirst(struct node *head, int value){
-    struct node *temp = malloc(sizeof(struct node));
-    temp -> data = value;
-    temp -> prev = NULL;
-
-    if(head == NULL){
-        temp -> next = NULL;
-    }
-    else{
-        temp -> next = head;
-        head -> prev = temp;
-    }
-
-    return temp;
-}
-
-struct node * addLast(struct node *tail, int value){
-    struct node *temp = malloc(sizeof(struct node));
-    temp -> data = value;
-    temp -> next = NULL;
-
-    if(tail == NULL){
-        temp -> prev = NULL;
-    }
-    else{
-        tail -> next = temp;
-        temp -> prev = tail;
-    }
-
-    return temp;
-}
-
-void search(struct node *head, int key){
-    struct node *temp = head;
-    while(temp != NULL){
-        if(temp -> data == key){
-            printf("Found\n");
-            return;
+    do{
+        if(temp->data == num){
+            return 1;
         }
-        temp = temp -> next;
-    }
-    printf("Not found\n");
+        temp = temp->next;
+    }while(temp != head);
+
+    return -1;
 }
+
+void printReverse(struct node *tail){
+    struct node *temp = tail;
+
+    do{
+        printf("%d ", temp->data);
+        temp = temp->prev;                      // reverse print
+    }while(temp != tail);
+
+    printf("\n");
+
+}
+
+struct node *addFirst(int data, struct node *head, struct node *tail){
+    struct node *temp = (struct node *)malloc(sizeof(struct node));
+    temp->data = data;
+    temp->prev = NULL;
+    temp->next = head;
+    head->prev = temp;
+    head = temp;
+    tail->next = head;
+
+    return head;
+}
+
+struct node *addLast(int data, struct node *head, struct node *tail){
+    struct node *temp = (struct node *)malloc(sizeof(struct node));
+    temp->data = data;
+    temp->prev = tail;
+    temp->next = head;
+
+    tail->next = temp;
+    head->prev = temp;
+
+    return temp;
+}
+
+
+
+
 
 int main(){
-    int choice, value, key;
-    struct node *head = NULL, *tail = NULL;
+    struct node *elem1, *elem2, *elem3, *head, *tail;
+    elem1 = malloc(sizeof(struct node));
+    elem2 = malloc(sizeof(struct node));
+    elem3 = malloc(sizeof(struct node));
 
-    printf("1. add 2. display 3. exit\n");
+    head = elem1;
+    tail = elem3;
 
-    do{
-        printf("Enter choice : ");
-        scanf("%d",&choice);
-        if(choice == 1){
-            printf("Enter the value : ");
-            scanf("%d",&value);
-            if(head == NULL){
-                tail = addLast(tail, value);
-                head = tail;
-            }
-            else{
-                tail = addLast(tail, value);
-            }
-        }
-        else if(choice == 2){
-            printList(head);
-            revPrintList(tail);
-        }
-        else if(choice == 3){
-            break;
-        }
-    }while(1);
+    elem1->data = 1;
+    elem1->prev = elem3;
+    elem1->next = elem2;
 
-    do{
-        printf("Enter the key : ");
-        scanf("%d",&key);
-        if(key == -1){
-            break;
-        }
-        search(head, key);
-    }while(1);
+    elem2->data = 2;
+    elem2->prev = elem1;
+    elem2->next = elem3;
 
-    Deallocate(head);
+    elem3->data = 3;
+    elem3->prev = elem2;
+    elem3->next = elem1;
+
+
+    printf("%d \n",search(head, 2));
+    printf("%d \n",search(head, 10));
+    
+
+    return 0;
 }
